@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "E1/v2",
+    "E2/v2"
+  ],
+  "started_utc": "2026-10-30T22:42:48.247462+00:00",
+  "finished_utc": "2026-10-30T22:42:53.065457+00:00",
+  "argv": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "docs/E1-E2-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "E1_v2 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3),\n  (∀ (l : List (Fin 4)), ∀ q ∉ L, Summable fun a => ‖iteratedPartial l (regularizedJet j [] ↑a) q‖) ∧\n    (∀ (l : List (Fin 4)) (K : Set ℍ),\n        IsCompact K →\n          K ⊆ (↑L)ᶜ →\n            TendstoUniformlyOn (fun s q => ∑ a ∈ s, iteratedPartial l (regularizedJet j [] ↑a) q)\n              (iteratedPartial l (elliptic L j)) Filter.atTop K) ∧\n      (∀ (l : List (Fin 4)),\n          HasSumLocallyUniformlyOn (fun a => iteratedPartial l (regularizedJet j [] ↑a))\n            (iteratedPartial l (elliptic L j)) (↑L)ᶜ) ∧\n        TwoSidedRegularOn (elliptic L j) (↑L)ᶜ ∧\n          ∀ (w : ↥L),\n            ∃ U,\n              IsOpen U ∧\n                ↑w ∈ U ∧\n                  ∃ r, TwoSidedRegularOn r U ∧ ∀ q ∈ U, q ∉ L → r q = elliptic L j q - kernelSpatialPartial j (q - ↑w)\nE2_v2 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3),\n  ∀ q ∉ L, ∀ (w : ↥L), elliptic L j (-q) = elliptic L j q ∧ elliptic L j (q + ↑w) = elliptic L j q\ndef MathResearch.Fueter.elliptic : Submodule ℤ ℍ → Fin 3 → ℍ → ℍ :=\nfun L j q =>\n  kernelSpatialPartial j q + ∑' (a : { a // a ≠ 0 }), (kernelSpatialPartial j (q + ↑↑a) - kernelSpatialPartial j ↑↑a)\ndef MathResearch.Fueter.regularizedJet : Fin 3 → List (Fin 4) → ℍ → ℍ → ℍ :=\nfun j l a q => kernelJet j l (q + a) - if l = [] ∧ a ≠ 0 then kernelSpatialPartial j a else 0\ndef MathResearch.Fueter.kernelJet : Fin 3 → List (Fin 4) → ℍ → ℍ :=\nfun j l => iteratedPartial (l ++ [j.succ]) kernel\ndef MathResearch.Fueter.iteratedPartial : List (Fin 4) → (ℍ → ℍ) → ℍ → ℍ :=\nfun x x_1 => List.brecOn (motive := fun x => (ℍ → ℍ) → ℍ → ℍ) x iteratedPartial._f x_1\ndef MathResearch.Fueter.TwoSidedRegularOn : (ℍ → ℍ) → Set ℍ → Prop :=\nfun f U => ContDiffOn ℝ (↑⊤) f U ∧ (∀ q ∈ U, leftOperator f q = 0) ∧ ∀ q ∈ U, rightOperator f q = 0\nelliptic_iteratedPartial : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3)\n  (l : List (Fin 4)) {q : ℍ}, q ∉ L → iteratedPartial l (elliptic L j) q = ∑' (a : ↥L), regularizedJet j l (↑a) q\nelliptic_regular_remainder : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3) (w : ↥L),\n  ∃ U,\n    IsOpen U ∧\n      ↑w ∈ U ∧ ∃ r, TwoSidedRegularOn r U ∧ ∀ q ∈ U, q ∉ L → r q = elliptic L j q - kernelSpatialPartial j (q - ↑w)\n'MathResearch.Fueter.E1_v2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Fueter.E2_v2' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "source": "docs/E1-E2-statement-check.lean",
+  "source_sha256": "22b2b94c2d413ed38d3be9c719e30b27e863e1b76c934bab540487ac97b474bd",
+  "proof_source_commit": "f34165b001457b0ce4a0e4a9ca05d2c6572068b2",
+  "clean_build_evidence": "evidence/E1-E2-v2-2026-10-30.json",
+  "clean_build_evidence_sha256": "087887219a90e5ac78986deb61d1b60e8812d70c12f1ff2b520b8172b51d2499",
+  "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679"
+}
