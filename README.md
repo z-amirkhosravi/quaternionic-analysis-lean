@@ -24,6 +24,12 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [E1 proof](MathResearch/Fueter/Elliptic.lean) ·
   [E2 proof](MathResearch/Fueter/EllipticPeriodicity.lean).
 
+- **N1, version 2:** every positive-order spatial derivative at zero of the
+  smooth elliptic remainder equals the corresponding Eisenstein coefficient,
+  independently of the chosen smooth extension.
+  [Statement and correspondence](docs/N1.md) ·
+  [Proof](MathResearch/Fueter/EllipticCoefficients.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.
