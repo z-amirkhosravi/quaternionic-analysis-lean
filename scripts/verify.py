@@ -22,7 +22,7 @@ def fingerprint(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, help="JSON run record (relative to formal/)")
+    parser.add_argument("--output", type=Path, help="JSON run record (relative to the library root)")
     parser.add_argument("--clean-local", action="store_true",
                         help="Remove only this project’s build outputs before compiling; keep dependencies")
     parser.add_argument("--verbose-build", action="store_true",
@@ -36,9 +36,12 @@ def main():
         parser.error(f"Refusing to overwrite an existing evidence record: {output}")
 
     env = os.environ.copy()
-    env["ELAN_HOME"] = str((ROOT / ".elan").resolve())
-    env["XDG_CACHE_HOME"] = str((ROOT / ".cache").resolve())
-    env["PATH"] = str((ROOT / ".elan/bin").resolve()) + os.pathsep + env["PATH"]
+    # Support both the optional local bootstrap and an ordinary elan installation.
+    if (ROOT / ".elan").is_dir():
+        env["ELAN_HOME"] = str((ROOT / ".elan").resolve())
+        env["PATH"] = str((ROOT / ".elan/bin").resolve()) + os.pathsep + env["PATH"]
+    if (ROOT / ".cache").is_dir():
+        env["XDG_CACHE_HOME"] = str((ROOT / ".cache").resolve())
     sources = [ROOT / "MathResearch.lean", *sorted((ROOT / "MathResearch").rglob("*.lean"))]
     inputs = sources + [ROOT / "lean-toolchain", ROOT / "lakefile.toml",
                        ROOT / "lake-manifest.json", *sorted((ROOT / "scripts").glob("*.*"))]
