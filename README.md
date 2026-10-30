@@ -10,6 +10,12 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Statement and correspondence](docs/F2.md) ·
   [Proof](MathResearch/Fueter/KernelEstimates.lean).
 
+- **N2 and N3, version 1:** absolute and local uniform convergence of higher
+  lattice sums, periodicity for every lattice period, and even-order parity
+  cancellation of their Eisenstein coefficients.
+  [Statements and correspondence](docs/N2-N3.md) ·
+  [Proof](MathResearch/Fueter/LatticeSums.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.

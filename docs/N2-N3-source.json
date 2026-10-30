@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "N2/v1",
+    "N3/v1"
+  ],
+  "source_path": "wiki/content/quaternionic-analysis/directions.md",
+  "source_sha256": "7e174353bb8572d862e2b859112a96c3e6bbd7fae6f4775b9f3e6bbbdce6d4ad",
+  "excerpt": "<span id=\"n-d1\"></span>\n<span id=\"n-d1-title\"></span>\nFor $\\nu=(n_1,n_2,n_3)\\in\\mathbb N_0^3$, set\n$$\n|\\nu|=n_1+n_2+n_3,\\quad\n\\partial^\\nu=\\partial_{x_1}^{n_1}\\partial_{x_2}^{n_2}\\partial_{x_3}^{n_3},\n\\quad G_\\nu=\\partial^\\nu G.\n$$\nWrite $\\epsilon_j$ for the multi-index with a single $1$ in position $j$, for $j\\in\\{1,2,3\\}$.\n\n::::construction N-C1 | Higher Eisenstein and elliptic sums\nVersion: 1\nUses: [N-D1](#n-d1), [lattice setup](elliptic-functions.md#e-d1).\nJustification: Absolute convergence and periodicity in [N2](#n2).\nOrigin: literature\nCite: [[1, §§3–5]](#ref-krausshar-2001)\n---\nLet $L\\subset\\mathbb H$ be a full-rank lattice and let $\\nu\\in\\mathbb N_0^3$ satisfy $|\\nu|\\ge2$. Form\n$$\nE_\\nu(L)=\\sum_{\\lambda\\in L^*}G_\\nu(\\lambda),\n\\qquad\n\\wp_{L,\\nu}(q)=\\sum_{\\lambda\\in L}G_\\nu(q+\\lambda)-E_\\nu(L)\n\\quad(q\\notin L).\n$$\n::::\n\n::::proposition N2 | Convergence and periodicity of the higher sums\nVersion: 1\nUses: [N-C1](#n-c1), [F2](foundations.md#f2), the lattice-count estimate in [E1](elliptic-functions.md#e1).\nReview: pending\nFormal: none\nOrigin: literature\nCite: [[1, §§3–5]](#ref-krausshar-2001)\nProof-cite: [[1, §§3–5]](#ref-krausshar-2001)\n---\nFor every full-rank lattice $L\\subset\\mathbb H$ and every $\\nu\\in\\mathbb N_0^3$ with $|\\nu|\\ge2$, the Eisenstein series in N-C1 converges absolutely. The defining series for $\\wp_{L,\\nu}$ converges absolutely and locally uniformly on $\\mathbb H\\setminus L$. For every $\\omega\\in L$ and $q\\notin L$,\n$$\n\\wp_{L,\\nu}(q+\\omega)=\\wp_{L,\\nu}(q).\n$$\n\n:::proof Proof of N2\nF2 gives decay $|q|^{-3-|\\nu|}$, with exponent at least $5$. The lattice-count estimate from the proof of E1 therefore proves absolute convergence, uniformly on compact sets away from the lattice for the translated sum. Absolute convergence permits reindexing $\\lambda\\mapsto\\lambda+\\omega$, which proves periodicity.\n:::\n::::\n\n::::proposition N1 | Coefficients at the singularity\nVersion: 2\nUses: [N-D1](#n-d1), [N-C1](#n-c1), [N2](#n2), [E1](elliptic-functions.md#e1).\nReview: pending\nFormal: none\nOrigin: literature\nCite: [[1, §§3–5]](#ref-krausshar-2001)\nProof-cite: [[1, §§3–5]](#ref-krausshar-2001)\n---\nLet $L\\subset\\mathbb H$ be a full-rank lattice and $j\\in\\{1,2,3\\}$. Let $h_j$ be the smooth extension near $0$ of $\\wp_{L,j}-G_j$ supplied by E1. For every $\\mu\\in\\mathbb N_0^3$ with $|\\mu|\\ge1$,\n$$\n\\partial^\\mu h_j(0)=E_{\\mu+\\epsilon_j}(L).\n$$\n\n:::proof Proof of N1\nDifferentiate the convergent series for $h_j$ from E1 and evaluate at $q=0$. The subtracted constants disappear, leaving $\\sum_{\\lambda\\in L^*}G_{\\mu+\\epsilon_j}(\\lambda)$. This converges absolutely since $|\\mu+\\epsilon_j|\\ge2$.\n:::\n::::\n\n::::corollary N3 | Parity cancellation\nVersion: 1\nUses: [N-C1](#n-c1), [N2](#n2), [F2](foundations.md#f2).\nReview: pending\nFormal: none\nOrigin: derivation\n---\nFor every full-rank lattice $L\\subset\\mathbb H$ and every $\\nu\\in\\mathbb N_0^3$ with even $|\\nu|\\ge2$,\n$$\nE_\\nu(L)=0.\n$$\n\n:::proof Proof of N3\nBy F2, $G_\\nu$ is odd when $|\\nu|$ is even. The terms at $\\lambda$ and $-\\lambda$ cancel, and absolute convergence from N2 justifies pairing them.\n:::\n::::\n\n",
+  "blocks": {
+    "N-C1": {
+      "version": 1,
+      "statement": "Let $L\\subset\\mathbb H$ be a full-rank lattice and let $\\nu\\in\\mathbb N_0^3$ satisfy $|\\nu|\\ge2$. Form\n$$\nE_\\nu(L)=\\sum_{\\lambda\\in L^*}G_\\nu(\\lambda),\n\\qquad\n\\wp_{L,\\nu}(q)=\\sum_{\\lambda\\in L}G_\\nu(q+\\lambda)-E_\\nu(L)\n\\quad(q\\notin L).\n$$",
+      "statement_sha256": "732391db8dd0b192dbd0ac88cb1d0781b8e3e3ac153522687e3ab984a8780b40"
+    },
+    "N2": {
+      "version": 1,
+      "statement": "For every full-rank lattice $L\\subset\\mathbb H$ and every $\\nu\\in\\mathbb N_0^3$ with $|\\nu|\\ge2$, the Eisenstein series in N-C1 converges absolutely. The defining series for $\\wp_{L,\\nu}$ converges absolutely and locally uniformly on $\\mathbb H\\setminus L$. For every $\\omega\\in L$ and $q\\notin L$,\n$$\n\\wp_{L,\\nu}(q+\\omega)=\\wp_{L,\\nu}(q).\n$$\n",
+      "statement_sha256": "feb4c33b1e8f1ad3e0ee7e00a69cb5aafb65e54d800b8ccff89c4750c2c1151d"
+    },
+    "N3": {
+      "version": 1,
+      "statement": "For every full-rank lattice $L\\subset\\mathbb H$ and every $\\nu\\in\\mathbb N_0^3$ with even $|\\nu|\\ge2$,\n$$\nE_\\nu(L)=0.\n$$\n",
+      "statement_sha256": "1ecd8793494b295838edc8dc57039b8da7469fedec4d40be3673c7ee3c764cce"
+    }
+  },
+  "lattice_source_path": "wiki/content/quaternionic-analysis/elliptic-functions.md",
+  "lattice_setup": "<span id=\"e-d1\"></span>\n<span id=\"e-d1-title\"></span>\nFix a full-rank lattice $L\\subset\\mathbb H$, written as\n$$\nL=\\mathbb Z\\omega_0+\\mathbb Z\\omega_1+\\mathbb Z\\omega_2+\\mathbb Z\\omega_3,\n$$\nwhere the four generators are linearly independent over $\\mathbb R$.\n\n",
+  "preserved_F1_F2_environment_sha256": {
+    "MathResearch/Fueter/Operators.lean": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+    "MathResearch/Fueter/Kernel.lean": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+    "MathResearch/Fueter/KernelEstimates.lean": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+    "MathResearch/SmokeTest.lean": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    "lakefile.toml": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+    "lake-manifest.json": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78"
+  },
+  "note": "Written-statement snapshot and compatibility fingerprints; proof-checking evidence is separate."
+}

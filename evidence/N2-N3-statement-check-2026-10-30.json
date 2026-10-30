@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "purpose": "Inspect exact signatures and instantiate lattice hypotheses after the clean library build.",
+  "command": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "docs/N2-N3-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "N2_v1 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (ν : Fin 3 → ℕ),\n  2 ≤ ∑ j, ν j →\n    (Summable fun l => ‖higherKernel ν ↑↑l‖) ∧\n      (∀ q ∉ L, Summable fun l => ‖higherKernel ν (q + ↑l)‖) ∧\n        HasSumLocallyUniformlyOn (fun l q => higherKernel ν (q + ↑l)) (higherLatticeSum L ν) (↑L)ᶜ ∧\n          ∀ (ω : ↥L), ∀ q ∉ L, higherElliptic L ν (q + ↑ω) = higherElliptic L ν q\nN3_v1 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (ν : Fin 3 → ℕ),\n  2 ≤ ∑ j, ν j → Even (∑ j, ν j) → eisensteinCoefficient L ν = 0\ndef MathResearch.Fueter.spatialMultiIndex : (Fin 3 → ℕ) → Fin 4 → ℕ :=\nfun ν => Fin.cons 0 ν\ndef MathResearch.Fueter.higherKernel : (Fin 3 → ℕ) → ℍ → ℍ :=\nfun ν => multiIndexPartial (spatialMultiIndex ν) kernel\ndef MathResearch.Fueter.eisensteinCoefficient : Submodule ℤ ℍ → (Fin 3 → ℕ) → ℍ :=\nfun L ν => ∑' (l : { l // l ≠ 0 }), higherKernel ν ↑↑l\ndef MathResearch.Fueter.higherLatticeSum : Submodule ℤ ℍ → (Fin 3 → ℕ) → ℍ → ℍ :=\nfun L ν q => ∑' (l : ↥L), higherKernel ν (q + ↑l)\ndef MathResearch.Fueter.higherElliptic : Submodule ℤ ℍ → (Fin 3 → ℕ) → ℍ → ℍ :=\nfun L ν q => higherLatticeSum L ν q - eisensteinCoefficient L ν\n'MathResearch.Fueter.N2_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Fueter.N3_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "proof_evidence": "N2-N3-v1-2026-10-30.json",
+  "proof_evidence_sha256": "86a9c00d358ed7922fd3a5cc10ffd6e57b04ef73d79678df71e79ac1fcdca019",
+  "statement_check_source": "docs/N2-N3-statement-check.lean",
+  "statement_check_source_sha256": "5117d0114b44db021a05ed44da3a313126298195cd8522d5333bb3bfd3a3483e"
+}
