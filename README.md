@@ -16,6 +16,14 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Statements and correspondence](docs/N2-N3.md) ·
   [Proof](MathResearch/Fueter/LatticeSums.lean).
 
+- **E1 and E2, version 2:** absolute and compact-uniform convergence of the
+  regularized first-derivative elliptic series; termwise differentiation to
+  every real order; both Fueter regularities; smooth regular remainders at
+  all lattice poles; evenness and lattice periodicity.
+  [Statements and correspondence](docs/E1-E2.md) ·
+  [E1 proof](MathResearch/Fueter/Elliptic.lean) ·
+  [E2 proof](MathResearch/Fueter/EllipticPeriodicity.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.
