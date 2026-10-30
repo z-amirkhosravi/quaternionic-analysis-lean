@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "N1/v2"
+  ],
+  "started_utc": "2026-10-30T23:03:45.178654+00:00",
+  "finished_utc": "2026-10-30T23:03:49.917365+00:00",
+  "argv": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "docs/N1-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "N1_v2 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3) {U : Set ℍ},\n  IsOpen U →\n    0 ∈ U →\n      ∀ {h : ℍ → ℍ},\n        ContDiffOn ℝ ∞ h U →\n          (∀ q ∈ U, q ∉ L → h q = elliptic L j q - kernelSpatialPartial j q) →\n            ∀ (μ : Fin 3 → ℕ),\n              1 ≤ ∑ i, μ i → multiIndexPartial (spatialMultiIndex μ) h 0 = eisensteinCoefficient L (μ + Pi.single j 1)\nN1_coefficient_summable : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (μ : Fin 3 → ℕ),\n  1 ≤ ∑ i, μ i → ∀ (j : Fin 3), Summable fun a => ‖higherKernel (μ + Pi.single j 1) ↑↑a‖\ndef MathResearch.Fueter.ellipticRegularPart : Submodule ℤ ℍ → Fin 3 → ℍ → ℍ :=\nfun L j => ellipticJetSum L {a | a ≠ 0} j []\ndef MathResearch.Fueter.ellipticRegularPartDomain : Submodule ℤ ℍ → Set ℍ :=\nfun L => latticeSeriesDomain L {a | a ≠ 0}\ndef MathResearch.Fueter.spatialDerivativeList : (Fin 3 → ℕ) → List (Fin 4) :=\nfun μ => List.replicate (μ 0) 1 ++ List.replicate (μ 1) 2 ++ List.replicate (μ 2) 3\ndef MathResearch.Fueter.spatialMultiIndex : (Fin 3 → ℕ) → Fin 4 → ℕ :=\nfun ν => Fin.cons 0 ν\ndef MathResearch.Fueter.higherKernel : (Fin 3 → ℕ) → ℍ → ℍ :=\nfun ν => multiIndexPartial (spatialMultiIndex ν) kernel\ndef MathResearch.Fueter.eisensteinCoefficient : Submodule ℤ ℍ → (Fin 3 → ℕ) → ℍ :=\nfun L ν => ∑' (l : { l // l ≠ 0 }), higherKernel ν ↑↑l\nellipticRegularPart_eq : ∀ (L : Submodule ℤ ℍ) (j : Fin 3) (q : ℍ),\n  ellipticRegularPart L j q = ∑' (a : { a // a ≠ 0 }), (kernelSpatialPartial j (q + ↑↑a) - kernelSpatialPartial j ↑↑a)\nellipticRegularPart_regular : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3),\n  TwoSidedRegularOn (ellipticRegularPart L j) (ellipticRegularPartDomain L)\nellipticRegularPart_coefficient : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (μ : Fin 3 → ℕ),\n  1 ≤ ∑ i, μ i →\n    ∀ (j : Fin 3),\n      multiIndexPartial (spatialMultiIndex μ) (ellipticRegularPart L j) 0 = eisensteinCoefficient L (μ + Pi.single j 1)\nellipticRegularPart_extension_eqOn : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3)\n  {U : Set ℍ},\n  IsOpen U →\n    0 ∈ U →\n      ∀ {h : ℍ → ℍ},\n        ContinuousOn h U →\n          (∀ q ∈ U, q ∉ L → h q = elliptic L j q - kernelSpatialPartial j q) →\n            Set.EqOn h (ellipticRegularPart L j) (U ∩ ellipticRegularPartDomain L)\n'MathResearch.Fueter.N1_v2' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "source": "docs/N1-statement-check.lean",
+  "source_sha256": "9c7cbb00406ff1ed71fa5ea0e7d4dfa202143bfe92e8a97bd3e9ea7e076b2be5",
+  "proof_source_commit": "2b8d2393ec25a1d17c8cbebf96d8b218bdb03a09",
+  "clean_build_evidence": "evidence/N1-v2-2026-10-30.json",
+  "clean_build_evidence_sha256": "1e6ed4671306372b5ca5e215a35659f25208cb7fed49789c944fbc68163483b3",
+  "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679"
+}
