@@ -1,0 +1,9 @@
+/.elan
+/.lake/
+/.cache
+/.runtime-migration/
+/runs/
+__pycache__/
+*.pyc
+
+/Scratch.lean
