@@ -1,0 +1,2826 @@
+{
+  "schema_version": 1,
+  "description": "Five verifier integration controls passed. The four failed verification records are the expected rejection cases; the valid orphan and explicit premise are accepted.",
+  "command": "python3 scripts/test_verification.py",
+  "exit_code": 0,
+  "result": "Ran 5 tests; OK",
+  "records": [
+    {
+      "record_file": "20261030T200932.637730Z.json",
+      "record_sha256": "36e49361088c2a4b4f92cdc91b01c47b98ae5b5201e18303d425ca1e4245dabf",
+      "record": {
+        "schema_version": 1,
+        "started_utc": "2026-10-30T20:09:32.637730+00:00",
+        "scope": "Local Lean declarations; correspondence with written mathematics is explained separately.",
+        "build_mode": "incremental",
+        "dependency_artifacts": "Pinned upstream release caches retained; not rebuilt from source.",
+        "source_sha256": {
+          "MathResearch.lean": "b9e6d26a2ce9e88e2f7ed30584c02063b7e04ad97c6e003f8be22a1ad9aa4662",
+          "MathResearch/Controldebbpgd9.lean": "1a8caef9ea01a6f12c735b71082e9344a0f668ba27610f17b744eb35462246a8",
+          "MathResearch/Fueter/Kernel.lean": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+          "MathResearch/Fueter/KernelEstimates.lean": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+          "MathResearch/Fueter/Operators.lean": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+          "MathResearch/SmokeTest.lean": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+          "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+          "lakefile.toml": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+          "lake-manifest.json": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+          "scripts/Audit.lean": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+          "scripts/env.sh": "a3bda70c322c6968d2af4db76660dc93ce39d798d233740fadb5c6d85930bbb9",
+          "scripts/lake.sh": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+          "scripts/prepare_storage.py": "26102b0cad4558d7fd3823736e4a0834abb14d3732726c5de9eb28028ac9fec2",
+          "scripts/setup.sh": "d15bf877ad8ef7ad8fea873a7c425a658bb0bd3a1f4b2e925282f0a0caf1d7de",
+          "scripts/test_verification.py": "67d03700f926aa038e3a6c57d4f941695ba9c0d96114fe0298ababdf61597d20",
+          "scripts/verify.py": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64"
+        },
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+        "python_version": "3.12.3",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "commands": [
+          {
+            "argv": [
+              "git",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "f66f0242c9d03498f09d66b3c070d7a9d6882988\n"
+          },
+          {
+            "argv": [
+              "lean",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)\n"
+          },
+          {
+            "argv": [
+              "elan",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "elan 4.2.4 (227caca13 2026-08-25)\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "56a005855ea17e0b0958f73ec801ae140b0a1679\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dfa4f38190d07c37e315953e08b90fe2d95b3c24\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "d6b4c7be5be75ec4917c873ac50c756dc1436372\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "df72b022e558978a1c50264cfc4d7fec86fa8e04\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "4a174c490d8707121c4a9290800489f105d85e07\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dce0ad79c486cb1fb504af04f953c3466b0c6db8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "66e469188fe07963e5cf666c7d4433f45b8131c5\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "c24fe6078c630e89b489bffe59b3e20ac30d12c8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "lake",
+              "build",
+              "MathResearch",
+              "MathResearch.Controldebbpgd9",
+              "MathResearch.Fueter.Kernel",
+              "MathResearch.Fueter.KernelEstimates",
+              "MathResearch.Fueter.Operators",
+              "MathResearch.SmokeTest"
+            ],
+            "exit_code": 1,
+            "output": "✖ [2577/2578] Building MathResearch.Controldebbpgd9 (1.8s)\ntrace: .> LEAN_PATH=<runtime>/packages/Cli/.lake/build/lib/lean:<runtime>/packages/batteries/.lake/build/lib/lean:<runtime>/packages/Qq/.lake/build/lib/lean:<runtime>/packages/aesop/.lake/build/lib/lean:<runtime>/packages/proofwidgets/.lake/build/lib/lean:<runtime>/packages/importGraph/.lake/build/lib/lean:<runtime>/packages/LeanSearchClient/.lake/build/lib/lean:<runtime>/packages/plausible/.lake/build/lib/lean:<runtime>/packages/mathlib/.lake/build/lib/lean:<library>/.lake/build/lib/lean <runtime>/elan/toolchains/leanprover--lean4---v4.35.0/bin/lean <library>/MathResearch/Controldebbpgd9.lean -o <library>/.lake/build/lib/lean/MathResearch/Controldebbpgd9.olean -i <library>/.lake/build/lib/lean/MathResearch/Controldebbpgd9.ilean -c <library>/.lake/build/ir/MathResearch/Controldebbpgd9.c --setup <library>/.lake/build/ir/MathResearch/Controldebbpgd9.setup.json --json\nerror: MathResearch/Controldebbpgd9.lean:5:47: Type mismatch\n  True.intro\nhas type\n  True\nbut is expected to have type\n  False\nSome required targets logged failures:\n- MathResearch.Controldebbpgd9\nerror: build failed\n"
+          }
+        ],
+        "declarations": [],
+        "status": "failed",
+        "repository_head": "f66f0242c9d03498f09d66b3c070d7a9d6882988",
+        "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "lake_version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)",
+        "elan_version": "elan 4.2.4 (227caca13 2026-08-25)",
+        "dependency_pins": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "dependency_heads": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "error": "Command failed (1): lake build MathResearch MathResearch.Controldebbpgd9 MathResearch.Fueter.Kernel MathResearch.Fueter.KernelEstimates MathResearch.Fueter.Operators MathResearch.SmokeTest",
+        "finished_utc": "2026-10-30T20:09:35.597526+00:00"
+      }
+    },
+    {
+      "record_file": "20261030T200935.656561Z.json",
+      "record_sha256": "d99597584d4879c1c425a46a1306fb4c2eca2c3f90a7963efa66c70d75ca3699",
+      "record": {
+        "schema_version": 1,
+        "started_utc": "2026-10-30T20:09:35.656561+00:00",
+        "scope": "Local Lean declarations; correspondence with written mathematics is explained separately.",
+        "build_mode": "incremental",
+        "dependency_artifacts": "Pinned upstream release caches retained; not rebuilt from source.",
+        "source_sha256": {
+          "MathResearch.lean": "b9e6d26a2ce9e88e2f7ed30584c02063b7e04ad97c6e003f8be22a1ad9aa4662",
+          "MathResearch/Control28ty0fi_.lean": "7ae5a3fff40275277a45e01856d9fedfc240ade9e8ae829acb14767da123fcdb",
+          "MathResearch/Fueter/Kernel.lean": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+          "MathResearch/Fueter/KernelEstimates.lean": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+          "MathResearch/Fueter/Operators.lean": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+          "MathResearch/SmokeTest.lean": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+          "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+          "lakefile.toml": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+          "lake-manifest.json": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+          "scripts/Audit.lean": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+          "scripts/env.sh": "a3bda70c322c6968d2af4db76660dc93ce39d798d233740fadb5c6d85930bbb9",
+          "scripts/lake.sh": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+          "scripts/prepare_storage.py": "26102b0cad4558d7fd3823736e4a0834abb14d3732726c5de9eb28028ac9fec2",
+          "scripts/setup.sh": "d15bf877ad8ef7ad8fea873a7c425a658bb0bd3a1f4b2e925282f0a0caf1d7de",
+          "scripts/test_verification.py": "67d03700f926aa038e3a6c57d4f941695ba9c0d96114fe0298ababdf61597d20",
+          "scripts/verify.py": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64"
+        },
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+        "python_version": "3.12.3",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "commands": [
+          {
+            "argv": [
+              "git",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "f66f0242c9d03498f09d66b3c070d7a9d6882988\n"
+          },
+          {
+            "argv": [
+              "lean",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)\n"
+          },
+          {
+            "argv": [
+              "elan",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "elan 4.2.4 (227caca13 2026-08-25)\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "56a005855ea17e0b0958f73ec801ae140b0a1679\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dfa4f38190d07c37e315953e08b90fe2d95b3c24\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "d6b4c7be5be75ec4917c873ac50c756dc1436372\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "df72b022e558978a1c50264cfc4d7fec86fa8e04\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "4a174c490d8707121c4a9290800489f105d85e07\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dce0ad79c486cb1fb504af04f953c3466b0c6db8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "66e469188fe07963e5cf666c7d4433f45b8131c5\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "c24fe6078c630e89b489bffe59b3e20ac30d12c8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "lake",
+              "build",
+              "MathResearch",
+              "MathResearch.Control28ty0fi_",
+              "MathResearch.Fueter.Kernel",
+              "MathResearch.Fueter.KernelEstimates",
+              "MathResearch.Fueter.Operators",
+              "MathResearch.SmokeTest"
+            ],
+            "exit_code": 0,
+            "output": "⚠ [2577/2578] Built MathResearch.Control28ty0fi_ (2.0s)\nwarning: MathResearch/Control28ty0fi_.lean:7:16: declaration uses `sorry`\nBuild completed successfully (2578 jobs).\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              ".lake/MathResearchAudit.lean"
+            ],
+            "exit_code": 1,
+            "output": ".lake/MathResearchAudit.lean:53:0: error: Project declarations use unfinished proofs or additional axioms; see audit output\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_kernel\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.instStarModuleRealQuaternion_mathResearch\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F2_v1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smooth\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_12\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.multiIndexPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_right\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._unsafe_rec\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.sum_add\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.match_1\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.left_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_left\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.splitter\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"sorryAx\"],\"declaration\":\"_private.MathResearch.Control28ty0fi_.0.VerificationControl.unfinished\",\"kind\":\"theorem\",\"module\":\"MathResearch.Control28ty0fi_\",\"unexpected_axioms\":[\"sorryAx\"]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.punctured\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.contDiff_normSq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.star_spatial_basis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F1_v2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_even\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_13\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_def\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.iteratedPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.inner_coordinateBasis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"sorryAx\"],\"declaration\":\"VerificationControl.dependent\",\"kind\":\"theorem\",\"module\":\"MathResearch.Control28ty0fi_\",\"unexpected_axioms\":[\"sorryAx\"]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._f\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._sunfold\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.directional_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiffOn_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_odd\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_9\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_11\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional_smul_of_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.partial_list_length\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.right_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_10\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contraction_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.isOpen_punctured\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_14\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiff_normSq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.fderiv_kernel._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.square_expansion\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\n"
+          }
+        ],
+        "declarations": [],
+        "status": "failed",
+        "repository_head": "f66f0242c9d03498f09d66b3c070d7a9d6882988",
+        "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "lake_version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)",
+        "elan_version": "elan 4.2.4 (227caca13 2026-08-25)",
+        "dependency_pins": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "dependency_heads": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "audit_source_sha256": "822a4f6609a15f73f18403de9dfe328e9412d5b7e8e799d71c72d428ae8e3af4",
+        "error": "Command failed (1): lake env lean -DwarningAsError=true .lake/MathResearchAudit.lean",
+        "finished_utc": "2026-10-30T20:09:54.787840+00:00"
+      }
+    },
+    {
+      "record_file": "20261030T200954.857297Z.json",
+      "record_sha256": "4763881394cfc9a110071a96b8a3078eb2cff38f0da274ea183851407c3fd977",
+      "record": {
+        "schema_version": 1,
+        "started_utc": "2026-10-30T20:09:54.857297+00:00",
+        "scope": "Local Lean declarations; correspondence with written mathematics is explained separately.",
+        "build_mode": "incremental",
+        "dependency_artifacts": "Pinned upstream release caches retained; not rebuilt from source.",
+        "source_sha256": {
+          "MathResearch.lean": "b9e6d26a2ce9e88e2f7ed30584c02063b7e04ad97c6e003f8be22a1ad9aa4662",
+          "MathResearch/Controlko43gjks.lean": "9fb4c6c0635930fbed50d5062ab75aefe7b3902284d22767aaf32044e6fb3174",
+          "MathResearch/Fueter/Kernel.lean": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+          "MathResearch/Fueter/KernelEstimates.lean": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+          "MathResearch/Fueter/Operators.lean": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+          "MathResearch/SmokeTest.lean": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+          "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+          "lakefile.toml": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+          "lake-manifest.json": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+          "scripts/Audit.lean": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+          "scripts/env.sh": "a3bda70c322c6968d2af4db76660dc93ce39d798d233740fadb5c6d85930bbb9",
+          "scripts/lake.sh": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+          "scripts/prepare_storage.py": "26102b0cad4558d7fd3823736e4a0834abb14d3732726c5de9eb28028ac9fec2",
+          "scripts/setup.sh": "d15bf877ad8ef7ad8fea873a7c425a658bb0bd3a1f4b2e925282f0a0caf1d7de",
+          "scripts/test_verification.py": "67d03700f926aa038e3a6c57d4f941695ba9c0d96114fe0298ababdf61597d20",
+          "scripts/verify.py": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64"
+        },
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+        "python_version": "3.12.3",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "commands": [
+          {
+            "argv": [
+              "git",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "f66f0242c9d03498f09d66b3c070d7a9d6882988\n"
+          },
+          {
+            "argv": [
+              "lean",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)\n"
+          },
+          {
+            "argv": [
+              "elan",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "elan 4.2.4 (227caca13 2026-08-25)\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "56a005855ea17e0b0958f73ec801ae140b0a1679\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dfa4f38190d07c37e315953e08b90fe2d95b3c24\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "d6b4c7be5be75ec4917c873ac50c756dc1436372\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "df72b022e558978a1c50264cfc4d7fec86fa8e04\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "4a174c490d8707121c4a9290800489f105d85e07\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dce0ad79c486cb1fb504af04f953c3466b0c6db8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "66e469188fe07963e5cf666c7d4433f45b8131c5\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "c24fe6078c630e89b489bffe59b3e20ac30d12c8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "lake",
+              "build",
+              "MathResearch",
+              "MathResearch.Controlko43gjks",
+              "MathResearch.Fueter.Kernel",
+              "MathResearch.Fueter.KernelEstimates",
+              "MathResearch.Fueter.Operators",
+              "MathResearch.SmokeTest"
+            ],
+            "exit_code": 0,
+            "output": "✔ [2577/2578] Built MathResearch.Controlko43gjks (1.6s)\nBuild completed successfully (2578 jobs).\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              ".lake/MathResearchAudit.lean"
+            ],
+            "exit_code": 1,
+            "output": ".lake/MathResearchAudit.lean:53:0: error: Project declarations use unfinished proofs or additional axioms; see audit output\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_kernel\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.instStarModuleRealQuaternion_mathResearch\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F2_v1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smooth\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_12\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.multiIndexPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_right\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._unsafe_rec\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.sum_add\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.match_1\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.left_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_left\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.splitter\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.punctured\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.contDiff_normSq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.star_spatial_basis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F1_v2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_even\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_13\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_def\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.iteratedPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.inner_coordinateBasis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._f\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._sunfold\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.directional_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiffOn_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_odd\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_9\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_11\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional_smul_of_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.partial_list_length\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.right_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_10\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"VerificationControl.unproved\"],\"declaration\":\"VerificationControl.unproved\",\"kind\":\"axiom\",\"module\":\"MathResearch.Controlko43gjks\",\"unexpected_axioms\":[\"VerificationControl.unproved\"]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contraction_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.isOpen_punctured\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_14\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiff_normSq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.fderiv_kernel._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.square_expansion\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\n"
+          }
+        ],
+        "declarations": [],
+        "status": "failed",
+        "repository_head": "f66f0242c9d03498f09d66b3c070d7a9d6882988",
+        "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "lake_version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)",
+        "elan_version": "elan 4.2.4 (227caca13 2026-08-25)",
+        "dependency_pins": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "dependency_heads": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "audit_source_sha256": "18fae3a69b7e4c3e3351b5347cbcd470293b5d54c47adcc37c058297ecd0338e",
+        "error": "Command failed (1): lake env lean -DwarningAsError=true .lake/MathResearchAudit.lean",
+        "finished_utc": "2026-10-30T20:10:15.004494+00:00"
+      }
+    },
+    {
+      "record_file": "20261030T201015.064677Z.json",
+      "record_sha256": "a7bec9042c83284b0868d01e99d2601823552f8391517f52ab8e4e6eb10290a2",
+      "record": {
+        "schema_version": 1,
+        "started_utc": "2026-10-30T20:10:15.064677+00:00",
+        "scope": "Local Lean declarations; correspondence with written mathematics is explained separately.",
+        "build_mode": "incremental",
+        "dependency_artifacts": "Pinned upstream release caches retained; not rebuilt from source.",
+        "source_sha256": {
+          "MathResearch.lean": "b9e6d26a2ce9e88e2f7ed30584c02063b7e04ad97c6e003f8be22a1ad9aa4662",
+          "MathResearch/Controld9bp4acs.lean": "c2804bbd9b397bb26765fc7793b7d0174aa504073f67044e658f12ebedba4876",
+          "MathResearch/Fueter/Kernel.lean": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+          "MathResearch/Fueter/KernelEstimates.lean": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+          "MathResearch/Fueter/Operators.lean": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+          "MathResearch/SmokeTest.lean": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+          "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+          "lakefile.toml": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+          "lake-manifest.json": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+          "scripts/Audit.lean": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+          "scripts/env.sh": "a3bda70c322c6968d2af4db76660dc93ce39d798d233740fadb5c6d85930bbb9",
+          "scripts/lake.sh": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+          "scripts/prepare_storage.py": "26102b0cad4558d7fd3823736e4a0834abb14d3732726c5de9eb28028ac9fec2",
+          "scripts/setup.sh": "d15bf877ad8ef7ad8fea873a7c425a658bb0bd3a1f4b2e925282f0a0caf1d7de",
+          "scripts/test_verification.py": "67d03700f926aa038e3a6c57d4f941695ba9c0d96114fe0298ababdf61597d20",
+          "scripts/verify.py": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64"
+        },
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+        "python_version": "3.12.3",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "commands": [
+          {
+            "argv": [
+              "git",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "f66f0242c9d03498f09d66b3c070d7a9d6882988\n"
+          },
+          {
+            "argv": [
+              "lean",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)\n"
+          },
+          {
+            "argv": [
+              "elan",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "elan 4.2.4 (227caca13 2026-08-25)\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "56a005855ea17e0b0958f73ec801ae140b0a1679\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dfa4f38190d07c37e315953e08b90fe2d95b3c24\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "d6b4c7be5be75ec4917c873ac50c756dc1436372\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "df72b022e558978a1c50264cfc4d7fec86fa8e04\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "4a174c490d8707121c4a9290800489f105d85e07\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dce0ad79c486cb1fb504af04f953c3466b0c6db8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "66e469188fe07963e5cf666c7d4433f45b8131c5\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "c24fe6078c630e89b489bffe59b3e20ac30d12c8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "lake",
+              "build",
+              "MathResearch",
+              "MathResearch.Controld9bp4acs",
+              "MathResearch.Fueter.Kernel",
+              "MathResearch.Fueter.KernelEstimates",
+              "MathResearch.Fueter.Operators",
+              "MathResearch.SmokeTest"
+            ],
+            "exit_code": 0,
+            "output": "✔ [2577/2578] Built MathResearch.Controld9bp4acs (1.5s)\nBuild completed successfully (2578 jobs).\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              ".lake/MathResearchAudit.lean"
+            ],
+            "exit_code": 1,
+            "output": ".lake/MathResearchAudit.lean:53:0: error: Project declarations use unfinished proofs or additional axioms; see audit output\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_kernel\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.instStarModuleRealQuaternion_mathResearch\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F2_v1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smooth\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_12\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.multiIndexPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"_private.MathResearch.Controld9bp4acs.0.VerificationControl.unproved\"],\"declaration\":\"_private.MathResearch.Controld9bp4acs.0.VerificationControl.unproved\",\"kind\":\"axiom\",\"module\":\"MathResearch.Controld9bp4acs\",\"unexpected_axioms\":[\"_private.MathResearch.Controld9bp4acs.0.VerificationControl.unproved\"]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_right\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._unsafe_rec\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.sum_add\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.match_1\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.left_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_left\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.splitter\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.punctured\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.contDiff_normSq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.star_spatial_basis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F1_v2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_even\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_13\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_def\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.iteratedPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.inner_coordinateBasis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._f\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._sunfold\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.directional_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiffOn_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_odd\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_9\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_11\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional_smul_of_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.partial_list_length\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.right_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_10\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contraction_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.isOpen_punctured\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_14\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiff_normSq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.fderiv_kernel._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.square_expansion\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\n"
+          }
+        ],
+        "declarations": [],
+        "status": "failed",
+        "repository_head": "f66f0242c9d03498f09d66b3c070d7a9d6882988",
+        "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "lake_version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)",
+        "elan_version": "elan 4.2.4 (227caca13 2026-08-25)",
+        "dependency_pins": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "dependency_heads": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "audit_source_sha256": "2d0ac05200937aed1a5a940a967796581bfb7cbef632fe3d90b07066d0e5af0f",
+        "error": "Command failed (1): lake env lean -DwarningAsError=true .lake/MathResearchAudit.lean",
+        "finished_utc": "2026-10-30T20:10:35.436756+00:00"
+      }
+    },
+    {
+      "record_file": "20261030T201035.518252Z.json",
+      "record_sha256": "2d004f8c29fdad6bd32c8e80cf77e4d87c858b760dd56440f51e3c6ef51ae654",
+      "record": {
+        "schema_version": 1,
+        "started_utc": "2026-10-30T20:10:35.518252+00:00",
+        "scope": "Local Lean declarations; correspondence with written mathematics is explained separately.",
+        "build_mode": "clean-local",
+        "dependency_artifacts": "Pinned upstream release caches retained; not rebuilt from source.",
+        "source_sha256": {
+          "MathResearch.lean": "b9e6d26a2ce9e88e2f7ed30584c02063b7e04ad97c6e003f8be22a1ad9aa4662",
+          "MathResearch/Controlax13l3r3.lean": "e79cf5b0eebd21c624539fdc275e6677c0089ef07221a2ca03afd4d7087a1ca7",
+          "MathResearch/Fueter/Kernel.lean": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+          "MathResearch/Fueter/KernelEstimates.lean": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+          "MathResearch/Fueter/Operators.lean": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+          "MathResearch/SmokeTest.lean": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+          "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+          "lakefile.toml": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+          "lake-manifest.json": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+          "scripts/Audit.lean": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+          "scripts/env.sh": "a3bda70c322c6968d2af4db76660dc93ce39d798d233740fadb5c6d85930bbb9",
+          "scripts/lake.sh": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+          "scripts/prepare_storage.py": "26102b0cad4558d7fd3823736e4a0834abb14d3732726c5de9eb28028ac9fec2",
+          "scripts/setup.sh": "d15bf877ad8ef7ad8fea873a7c425a658bb0bd3a1f4b2e925282f0a0caf1d7de",
+          "scripts/test_verification.py": "67d03700f926aa038e3a6c57d4f941695ba9c0d96114fe0298ababdf61597d20",
+          "scripts/verify.py": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64"
+        },
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+        "python_version": "3.12.3",
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "commands": [
+          {
+            "argv": [
+              "git",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "f66f0242c9d03498f09d66b3c070d7a9d6882988\n"
+          },
+          {
+            "argv": [
+              "lean",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)\n"
+          },
+          {
+            "argv": [
+              "elan",
+              "--version"
+            ],
+            "exit_code": 0,
+            "output": "elan 4.2.4 (227caca13 2026-08-25)\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "56a005855ea17e0b0958f73ec801ae140b0a1679\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/mathlib",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dfa4f38190d07c37e315953e08b90fe2d95b3c24\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/plausible",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "d6b4c7be5be75ec4917c873ac50c756dc1436372\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/LeanSearchClient",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/importGraph",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "df72b022e558978a1c50264cfc4d7fec86fa8e04\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/proofwidgets",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "4a174c490d8707121c4a9290800489f105d85e07\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/aesop",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "dce0ad79c486cb1fb504af04f953c3466b0c6db8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Qq",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "66e469188fe07963e5cf666c7d4433f45b8131c5\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/batteries",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "rev-parse",
+              "HEAD"
+            ],
+            "exit_code": 0,
+            "output": "c24fe6078c630e89b489bffe59b3e20ac30d12c8\n"
+          },
+          {
+            "argv": [
+              "git",
+              "-C",
+              ".lake/packages/Cli",
+              "diff",
+              "--exit-code",
+              "HEAD",
+              "--"
+            ],
+            "exit_code": 0,
+            "output": ""
+          },
+          {
+            "argv": [
+              "lake",
+              "build",
+              "MathResearch",
+              "MathResearch.Controlax13l3r3",
+              "MathResearch.Fueter.Kernel",
+              "MathResearch.Fueter.KernelEstimates",
+              "MathResearch.Fueter.Operators",
+              "MathResearch.SmokeTest"
+            ],
+            "exit_code": 0,
+            "output": "✔ [2572/2578] Built MathResearch.Controlax13l3r3 (617ms)\n✔ [2573/2578] Built MathResearch.SmokeTest (1.8s)\n✔ [2574/2578] Built MathResearch.Fueter.Operators (2.7s)\n✔ [2575/2578] Built MathResearch.Fueter.Kernel (3.5s)\n✔ [2576/2578] Built MathResearch.Fueter.KernelEstimates (3.4s)\n✔ [2577/2578] Built MathResearch (2.0s)\nBuild completed successfully (2578 jobs).\n"
+          },
+          {
+            "argv": [
+              "lake",
+              "env",
+              "lean",
+              "-DwarningAsError=true",
+              ".lake/MathResearchAudit.lean"
+            ],
+            "exit_code": 0,
+            "output": "MATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_kernel\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.instStarModuleRealQuaternion_mathResearch\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F2_v1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smooth\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_12\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.multiIndexPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_right\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_smul\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._unsafe_rec\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.sum_add\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.match_1\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.left_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_left\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.splitter\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.fderiv_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.punctured\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.contDiff_normSq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.star_spatial_basis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.F1_v2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_8\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_even\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_13\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial.eq_def\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_3\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_5\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.iteratedPartial\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.inner_coordinateBasis\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_norm_le\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftOperator_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._f\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_7\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.iteratedPartial._sunfold\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.TwoSidedRegularOn.directional_regular\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightContraction._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiffOn_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.coordinateBasis_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_odd\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_9\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_11\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_6\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional_smul_of_eq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.partial_list_length\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"VerificationControl.conditional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Controlax13l3r3\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.right_kernel_algebra\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_10\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contraction_directional\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator.eq_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"VerificationControl.valid\",\"kind\":\"theorem\",\"module\":\"MathResearch.Controlax13l3r3\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_2\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.directional\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.isOpen_punctured\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_14\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernelSpatialPartial\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_iteratedPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[],\"declaration\":\"_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.leftContraction._proof_4\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.contDiff_normSq\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.fderiv_kernel._simp_1_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Kernel\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\"],\"declaration\":\"MathResearch.Fueter.multiIndexPartial._proof_1\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.rightOperator\",\"kind\":\"definition-or-generated\",\"module\":\"MathResearch.Fueter.Operators\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.SmokeTest.square_expansion\",\"kind\":\"theorem\",\"module\":\"MathResearch.SmokeTest\",\"unexpected_axioms\":[]}\nMATH_RESEARCH_AUDIT {\"axioms\":[\"propext\",\"Classical.choice\",\"Quot.sound\"],\"declaration\":\"MathResearch.Fueter.kernel_multiIndexPartial_neg\",\"kind\":\"theorem\",\"module\":\"MathResearch.Fueter.KernelEstimates\",\"unexpected_axioms\":[]}\n"
+          }
+        ],
+        "declarations": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.F1_v2",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.F2_v1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.TwoSidedRegularOn",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.TwoSidedRegularOn.directional_regular",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.TwoSidedRegularOn.iteratedPartial",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.TwoSidedRegularOn.multiIndexPartial",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.contDiffOn_directional",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.contDiff_normSq",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.contraction_directional",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.coordPartial",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.coordPartial.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.coordinateBasis",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.coordinateBasis.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.coordinateBasis_eq",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.directional",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.directional.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.directional_smul_of_eq",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.fderiv_directional",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.fderiv_kernel",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.inner_coordinateBasis",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.instStarModuleRealQuaternion_mathResearch",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.isOpen_punctured",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial._f",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial._sunfold",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial._unsafe_rec",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial.eq_2",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial.eq_def",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.iteratedPartial.match_1",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernelSpatialPartial",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernelSpatialPartial.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernelSpatialPartial_eq",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernelSpatialPartial_even",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_eq",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_iteratedPartial_neg",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_iteratedPartial_norm_le",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_iteratedPartial_regular",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_iteratedPartial_smul",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_left",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_multiIndexPartial_neg",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_multiIndexPartial_norm_le",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_multiIndexPartial_smul",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_odd",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_regular",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_right",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_smooth",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.kernel_smul",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_10",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_11",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_12",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_13",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_14",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_2",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_3",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_4",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_5",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_6",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_7",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_8",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction._proof_9",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftContraction.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftOperator",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftOperator.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.leftOperator_eq",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.left_kernel_algebra",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.multiIndexPartial",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "MathResearch.Fueter.multiIndexPartial._proof_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.punctured",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightContraction",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightContraction._proof_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightContraction._proof_2",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightContraction._proof_3",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightContraction._proof_4",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightContraction.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightOperator",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightOperator.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.rightOperator_eq",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Operators",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.right_kernel_algebra",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.Fueter.star_spatial_basis",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.SmokeTest.square_expansion",
+            "kind": "theorem",
+            "module": "MathResearch.SmokeTest",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "MathResearch.SmokeTest.sum_add",
+            "kind": "theorem",
+            "module": "MathResearch.SmokeTest",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [],
+            "declaration": "VerificationControl.conditional",
+            "kind": "theorem",
+            "module": "MathResearch.Controlax13l3r3",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [],
+            "declaration": "VerificationControl.valid",
+            "kind": "theorem",
+            "module": "MathResearch.Controlax13l3r3",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.contDiff_normSq._simp_1_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "_private.MathResearch.Fueter.Kernel.0.MathResearch.Fueter.fderiv_kernel._simp_1_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.Kernel",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.eq_2",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.iteratedPartial.match_1.splitter",
+            "kind": "definition-or-generated",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_1",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_2",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernelSpatialPartial_eq._simp_1_3",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_2",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_3",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_4",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_5",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_6",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_7",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.kernel_smul._simp_1_8",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "_private.MathResearch.Fueter.KernelEstimates.0.MathResearch.Fueter.partial_list_length",
+            "kind": "theorem",
+            "module": "MathResearch.Fueter.KernelEstimates",
+            "unexpected_axioms": []
+          }
+        ],
+        "status": "passed",
+        "repository_head": "f66f0242c9d03498f09d66b3c070d7a9d6882988",
+        "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+        "lake_version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)",
+        "elan_version": "elan 4.2.4 (227caca13 2026-08-25)",
+        "dependency_pins": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "dependency_heads": {
+          "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+          "plausible": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+          "LeanSearchClient": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+          "importGraph": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+          "proofwidgets": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+          "aesop": "4a174c490d8707121c4a9290800489f105d85e07",
+          "Qq": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+          "batteries": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+          "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+        },
+        "local_build_cleaned": true,
+        "audit_source_sha256": "5950ae3406160f9365ccd2f3c4334efa8a803e40803a2a8cbec27b51ec08e936",
+        "finished_utc": "2026-10-30T20:11:04.837348+00:00"
+      }
+    }
+  ],
+  "privacy_note": "Absolute local repository and runtime prefixes in compiler trace output are replaced by <library> and <runtime>. Raw record hashes identify the retained local originals; theorem names, fingerprints, commands, outcomes and axiom reports are unchanged."
+}
