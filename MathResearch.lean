@@ -17,3 +17,5 @@ public import MathResearch.Fueter.ZetaQuasiperiods
 public import MathResearch.Fueter.HalfPeriods
 
 public import MathResearch.Fueter.EllipticDilation
+
+public import MathResearch.Fueter.HarmonicTheta

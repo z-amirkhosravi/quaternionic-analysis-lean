@@ -44,6 +44,14 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Half-period proofs](MathResearch/Fueter/HalfPeriods.lean) ·
   [Dilation proofs](MathResearch/Fueter/EllipticDilation.lean).
 
+- **EI1 and TH1, version 1:** homogeneous harmonic polynomial numerators for
+  every spatial kernel derivative, their recurrence in all spatial directions,
+  and the absolutely convergent Mellin formula for each real component of
+  every odd-order coefficient of order at least three.
+  [Statements and correspondence](docs/EI1-TH1.md) ·
+  [EI1 proof](MathResearch/Fueter/KernelNumerator.lean) ·
+  [TH1 proof](MathResearch/Fueter/HarmonicTheta.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.
