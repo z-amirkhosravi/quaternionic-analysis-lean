@@ -122,3 +122,9 @@ Allowed axioms are only `propext`, `Classical.choice`, `Quot.sound`.
 Upstream pinned release caches are retained; this is not an independent rebuild
 of mathlib or a second proof-kernel check. Formal proof checking does not by itself
 certify fidelity to prose, significance, or the larger research branch.
+
+The retained run passed: **33 local modules rebuilt, 743 declarations audited,
+zero warnings, and no unexpected axioms**. Its checked source commit is
+`ed1228b002296f8c04f5c78a5533334f9c8302d9`. The statement check passed after
+that clean rebuild. All 29 earlier mathematical module files and the pinned
+configuration/checker files remained byte-identical to the EI7 delivery.

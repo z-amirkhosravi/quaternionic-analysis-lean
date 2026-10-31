@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "DS1/v1"
+  ],
+  "started_utc": "2026-10-31T19:31:42.088194+00:00",
+  "source_repository_head": "ed1228b002296f8c04f5c78a5533334f9c8302d9",
+  "script_path": "docs/DS1-statement-check.lean",
+  "script_sha256": "c2cc2384b707adb77e619651c9483875fbdd5930b1cfda92e4f81a238985ab00",
+  "build_evidence_path": "evidence/DS1-v1-2026-10-31.json",
+  "build_evidence_sha256": "818f81c24dd83596107bb631ceb282f1f43f25ef94dd9428a2715ea868b363d7",
+  "scope": "Exact DS1 signature for every n\u22651; actual homogeneous polynomial subspaces and partial derivatives, independent binomial norms, quaternion A-jB convention and right complex scalars, exact inverse, n=1 endpoint, and degree-two middle-monomial norm. No independent human review is claimed.",
+  "command": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "-DautoImplicit=false",
+    "docs/DS1-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "MathResearch.Spinor.DS1_v1 (n : \u2115) (hn : 1 \u2264 n) :\n  \u2203 (e : \u21a5(BinaryForm n) \u2243\u2097\u1d62[\u2102] \u21a5(CompatibleRow (n - 1))),\n    (\u2200 (p : \u21a5(BinaryForm n)) (i : Fin 2), \u2191((\u2191(e p)).ofLp i) = (\u2191n)\u207b\u00b9 \u2022 (pderiv i) \u2191p) \u2227\n      (\u2200 (h : \u21a5(CompatibleRow (n - 1))), \u2191(e.symm h) = X 0 * \u2191((\u2191h).ofLp 0) + X 1 * \u2191((\u2191h).ofLp 1)) \u2227\n        Module.finrank \u2102 \u21a5(CompatibleRow (n - 1)) = n + 1\nMathResearch.Spinor.spinorIsometry (m : \u2115) : \u21a5(BinaryForm (m + 1)) \u2243\u2097\u1d62[\u2102] \u21a5(CompatibleRow m)\nMathResearch.Spinor.binaryForm_norm_sq (n : \u2115) (p : \u21a5(BinaryForm n)) :\n  \u2016p\u2016 ^ 2 = \u2211 k : Fin (n + 1), \u2016(coefficients n) p k\u2016 ^ 2 / \u2191(n.choose \u2191k)\nMathResearch.Spinor.formRow_norm_sq (m : \u2115) (h : FormRow m) :\n  \u2016h\u2016 ^ 2 = \u2211 k : Fin (m + 1), \u2016quaternionCoefficients m h k\u2016 ^ 2 / \u2191(m.choose \u2191k)\nMathResearch.Spinor.quaternionCoefficients_bijective (m : \u2115) : Function.Bijective (quaternionCoefficients m)\nMathResearch.Spinor.pack_smul (z a b : \u2102) : pack (z * a) (z * b) = pack a b * \u2191z\nMathResearch.Spinor.normalizedGradient_quaternionCoefficients (m : \u2115) (p : \u21a5(BinaryForm (m + 1))) (k : Fin (m + 1)) :\n  quaternionCoefficients m (\u2191((normalizedGradient m) p)) k =\n    pack ((coefficients m) ((derivative m 0) p) k) ((coefficients m) ((derivative m 1) p) k) * (\u2191(\u2191m + 1))\u207b\u00b9\nMathResearch.Spinor.derivative_norm_sq (m : \u2115) (p : \u21a5(BinaryForm (m + 1))) :\n  \u2016(derivative m 0) p\u2016 ^ 2 + \u2016(derivative m 1) p\u2016 ^ 2 = (\u2191m + 1) ^ 2 * \u2016p\u2016 ^ 2\nMathResearch.Spinor.finrank_compatibleRow (m : \u2115) : Module.finrank \u2102 \u21a5(CompatibleRow m) = m + 2\n'MathResearch.Spinor.DS1_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "finished_utc": "2026-10-31T19:31:46.510967+00:00",
+  "status": "passed"
+}
