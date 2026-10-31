@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "base_revision": "fac3844dcaaa66a3ffe99ab8dc48213bc6e48c62",
+  "target": "DS2/v1",
+  "canonical_snapshot": "docs/DS2-proof-source.json",
+  "snapshot_sha256": "4418eb75c5d3af037e4895b6882fb2b6fb904f4d7297babafa2809a53931e1e7",
+  "canonical_proof_file_sha256": "a68b805e519240fe45a9eb4da658546bffc3b787352b9eb2da8e0e76b79a297e",
+  "canonical_proof_section_sha256": "9a0cd31e6e15ad7a75fd7347059e72f269c0f03d415225452005fa0056f2ac7d",
+  "accepted_revision": "8753be59dcf8725a8dd83ce905293b015030ba7c",
+  "internal_note": "formal/notes/DS2-weyl-proof-notes-2026-10-31.md",
+  "internal_note_sha256": "16b445b5e8e483d048c83c0c750803f11c7d55f7b0529ab7c9938cceec2001df",
+  "standalone_note_copy": "docs/DS2-weyl-proof-notes.md",
+  "status": "partial_with_proof_correspondence_obligations"
+}

@@ -2,6 +2,12 @@
 
 A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathlib.
 
+Latest continuation: [DS2 Weyl regularity](docs/DS2-weyl.md) proves the
+previously missing regularity input, classical/weak and smooth-row comparisons,
+the regular unitary action and bounded evaluation. The complete canonical DS2
+proof remains unfinished; [proof correspondence and remaining obligations](docs/DS2-weyl-proof-correspondence.md)
+are recorded separately. Earlier delivery records below retain their original scope.
+
 - **F1, version 2:** both left and right regularity of the Cauchy–Fueter kernel
   and every real coordinate partial derivative.
   [Proof](MathResearch/Fueter/Kernel.lean).

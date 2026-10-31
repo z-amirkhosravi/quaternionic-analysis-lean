@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "target_status": {
+    "DS2/v1": "partial_with_proof_correspondence_obligations",
+    "DS3/v1": "conditional_not_instantiated",
+    "DS4/v1": "conditional_not_instantiated"
+  },
+  "complete_new_wiki_targets": [],
+  "proof_source": "docs/DS2-proof-source.json",
+  "source_snapshot": "docs/DS2-weyl-source.json",
+  "proof_correspondence": "docs/DS2-weyl-proof-correspondence.md",
+  "internal_proof_notes": "docs/DS2-weyl-proof-notes.md",
+  "additional_axioms_introduced": [],
+  "new_unproved_external_inputs": [],
+  "discharged_input": {
+    "proposition": "MathResearch.Spinor.WeylRegularityOnBall",
+    "proof": "MathResearch.Spinor.weylRegularityOnBall",
+    "status": "proved_unconditionally_using_mathlib_foundations"
+  },
+  "unconditional_results": [
+    "MathResearch.Spinor.smooth_harmonic_representative",
+    "MathResearch.Spinor.weylRegularityOnBall",
+    "MathResearch.Spinor.weakKernel_smoothRepresentative",
+    "MathResearch.Spinor.mem_weakKernel_iff_classicalFueter",
+    "MathResearch.Spinor.weakKernel_classicalRepresentative",
+    "MathResearch.Spinor.weightedL2Action_mem_weakKernel",
+    "MathResearch.Spinor.regularRepresentation",
+    "MathResearch.Spinor.stronglyContinuous_regularRepresentation",
+    "MathResearch.Spinor.regularEvaluation_eq_representative",
+    "MathResearch.Spinor.regularEvaluation_bound",
+    "MathResearch.Spinor.mem_weakRowKernel_iff_classical"
+  ],
+  "remaining_dependencies": [
+    "Canonical compact-support approximation argument: checked bounded-continuous alternative is retained, not a verification of that written route",
+    "Higher interior derivative estimates and justification of differentiation/averaging in the canonical proof",
+    "Full independent C3 row-action bundle, normalized measure bookkeeping and consolidated DS2 signature",
+    "DS3 compact averaging and finite-dimensional irreducibility inputs",
+    "DS4 Haar/Schur and actual coefficient realization inputs"
+  ],
+  "audit_caveat": "Only propext, Classical.choice and Quot.sound are permitted. Axiom checks do not establish proof correspondence or discharge theorem parameters.",
+  "wiki_changed": false
+}

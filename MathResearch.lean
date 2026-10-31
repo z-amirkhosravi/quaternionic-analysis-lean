@@ -39,3 +39,7 @@ public import MathResearch.Spinor.LocalClosure
 public import MathResearch.Spinor.WeylBridge
 
 public import MathResearch.Spinor.L2StrongContinuity
+
+public import MathResearch.Spinor.ClassicalRow
+
+public import MathResearch.Spinor.RegularEvaluation
