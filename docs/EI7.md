@@ -77,6 +77,12 @@ python3 scripts/verify.py --clean-local
 bash scripts/lake.sh env lean -DwarningAsError=true docs/EI7-statement-check.lean
 ```
 
+The retained run passed: **30 local modules rebuilt, 629 declarations audited,
+zero warnings**. Every local declaration, including private and generated
+helpers, uses only the allowed standard axioms. The checked source revision is
+`77bdcc565295c577b383af0ba3f0c0f90e791967`. The post-clean statement check also
+passed; it includes equivalence between unitary and unit-norm quaternions.
+
 The retained clean-build/axiom audit is
 [evidence/EI7-v1-2026-10-31.json](../evidence/EI7-v1-2026-10-31.json), with the
 printed statements and definition comparisons in

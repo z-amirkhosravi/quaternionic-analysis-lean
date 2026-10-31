@@ -25,6 +25,16 @@ open MathResearch.Fueter
 -- The standard orthonormal basis identifies this space with Euclidean R^4.
 example : Orthonormal ℝ coordinateBasis := coordinateBasis_orthonormal
 
+-- Mathlib's unitary condition is exactly the usual unit-norm condition here.
+example (q : ℍ) : q ∈ unitary ℍ ↔ ‖q‖ = 1 := by
+  constructor
+  · intro h
+    exact unitQuaternion_norm ⟨q, h⟩
+  · intro h
+    constructor
+    · rw [Quaternion.star_mul_self, Quaternion.normSq_eq_norm_mul_self, h, one_mul, Quaternion.coe_one]
+    · rw [Quaternion.self_mul_star, Quaternion.normSq_eq_norm_mul_self, h, one_mul, Quaternion.coe_one]
+
 -- Right multiplication really is the opposite-ring scalar action.
 example (c : ℍ) (f : SmoothPunctured) (q : ℍ) :
     (MulOpposite.op c • f) q = f q * c := rfl
