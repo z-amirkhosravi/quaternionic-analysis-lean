@@ -144,9 +144,20 @@ The statement check prints both signatures and the relevant definitions, checks
 the sign and coefficient of an explicit first derivative, extracts EI1's actual
 kernel identity and harmonicity, checks the arbitrary-direction recurrence,
 and instantiates TH1 at order three for the integer span of an arbitrary real
-quaternion basis. It also checks the scalar coefficient bridge.
+quaternion basis. It also checks the scalar coefficient bridge and proves that
+TH-D1’s complex theta exponential at τ=it is exactly the real exponential used
+in `harmonicTheta`, including the factor Q=N/2.
 
-VERIFICATION_RECORD_PENDING
+The [clean build and axiom audit](../evidence/EI1-TH1-v1-2026-10-31.json)
+passed at proof-source commit `044bb5f47e92b016f63eea6e0e8dfbdabc37f946`:
+**25 local modules rebuilt, 444 declarations audited, zero warnings**. Every
+declaration passed. `EI1_v1` and `TH1_v1` use only `propext`, `Classical.choice`
+and `Quot.sound`. Evidence SHA-256: `75bbfd4f66b01b43cc814cc61de4f996d9615424f203e74c09ca7bbfd9b7535a`.
+
+The [post-clean statement check](../evidence/EI1-TH1-statement-check-2026-10-31.json)
+also passed with warnings as errors. Its record includes the exact checked
+script hash and output. The final evidence/documentation commit changes no
+fingerprinted build input.
 
 The verifier rebuilds all local Lean modules and audits every local declaration,
 including private and generated ones. It permits only `propext`,

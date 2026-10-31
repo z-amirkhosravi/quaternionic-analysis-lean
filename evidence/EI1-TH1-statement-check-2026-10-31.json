@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "EI1/v1",
+    "TH1/v1"
+  ],
+  "started_utc": "2026-10-31T11:25:57.796410+00:00",
+  "source_repository_head": "044bb5f47e92b016f63eea6e0e8dfbdabc37f946",
+  "script_path": "docs/EI1-TH1-statement-check.lean",
+  "script_sha256": "2986febf996c714db771f580352a77c14edfb7833f4cbe669abe2df551ce646a",
+  "build_evidence_path": "evidence/EI1-TH1-v1-2026-10-31.json",
+  "build_evidence_sha256": "75bbfd4f66b01b43cc814cc61de4f996d9615424f203e74c09ca7bbfd9b7535a",
+  "scope": "Print exact declarations and definitions; check actual derivative and harmonicity conclusions, every-direction recurrence, explicit first numerator, order-three Mellin formula for an arbitrary real-basis lattice, scalar coefficient bridge, and the TH-D1 complex-to-real exponential normalization.",
+  "command": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "docs/EI1-TH1-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "EI1_v1 : (∀ (ν : Fin 3 → ℕ) (k : Fin 4),\n    MvPolynomial.IsHomogeneous (kernelNumerator ν k) (∑ i, ν i + 1) ∧\n      InnerProductSpace.HarmonicOnNhd (polyEval (kernelNumerator ν k)) univ) ∧\n  (∀ (ν : Fin 3 → ℕ) (q : ℍ),\n      q ≠ 0 → higherKernel ν q = (Quaternion.normSq q ^ (∑ i, ν i + 2))⁻¹ • harmonicNumerator ν q) ∧\n    (∀ (q : ℍ), harmonicNumerator 0 q = star q) ∧\n      ∀ (ν : Fin 3 → ℕ) (j : Fin 3) (k : Fin 4),\n        kernelNumerator (ν + Pi.single j 1) k =\n          normSqPoly * (MvPolynomial.pderiv j.succ) (kernelNumerator ν k) -\n            MvPolynomial.C (2 * ↑(∑ i, ν i) + 4) * (MvPolynomial.X j.succ * kernelNumerator ν k)\nTH1_v1 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (ν : Fin 3 → ℕ) (k : Fin 4),\n  Odd (∑ i, ν i) →\n    3 ≤ ∑ i, ν i →\n      (∀ (t : ℝ),\n          0 < t →\n            Summable fun l => polyEval (kernelNumerator ν k) ↑l * Real.exp (-Real.pi * t * Quaternion.normSq ↑l)) ∧\n        (Summable fun l => |polyEval (kernelNumerator ν k) ↑↑l| / Quaternion.normSq ↑↑l ^ (∑ i, ν i + 2)) ∧\n          (Summable fun l =>\n              ∫ (t : ℝ) in Ioi 0,\n                ‖t ^ (∑ i, ν i + 1) *\n                    (polyEval (kernelNumerator ν k) ↑↑l * Real.exp (-Real.pi * t * Quaternion.normSq ↑↑l))‖) ∧\n            IntegrableOn (fun t => t ^ (∑ i, ν i + 1) * harmonicTheta L ν k t) (Ioi 0) volume ∧\n              numeratorCoefficient L ν k = (realCoord k) (eisensteinCoefficient L ν) ∧\n                numeratorCoefficient L ν k =\n                  Real.pi ^ (∑ i, ν i + 2) / Real.Gamma (↑(∑ i, ν i) + 2) *\n                    ∫ (t : ℝ) in Ioi 0, t ^ (∑ i, ν i + 1) * harmonicTheta L ν k t\ndef MathResearch.Fueter.realCoord : Fin 4 → ℍ →L[ℝ] ℝ :=\nfun i => ContinuousLinearMap.proj i ∘SL ↑coordinateBasis.equivFunL\ndef MathResearch.Fueter.polyEval : RealPoly4 → ℍ → ℝ :=\nfun P q => (MvPolynomial.eval ⇑(coordinateBasis.repr q)) P\ndef MathResearch.Fueter.kernelNumerator : (Fin 3 → ℕ) → Fin 4 → RealPoly4 :=\nfun ν k => numeratorJet (spatialDerivativeList ν) k\ndef MathResearch.Fueter.harmonicNumerator : (Fin 3 → ℕ) → ℍ → ℍ :=\nfun ν q => ∑ k, polyEval (kernelNumerator ν k) q • coordinateBasis k\ndef MathResearch.Fueter.numeratorCoefficient : Submodule ℤ ℍ → (Fin 3 → ℕ) → Fin 4 → ℝ :=\nfun L ν k => ∑' (l : { l // l ≠ 0 }), polyEval (kernelNumerator ν k) ↑↑l / Quaternion.normSq ↑↑l ^ (∑ i, ν i + 2)\ndef MathResearch.Fueter.harmonicTheta : Submodule ℤ ℍ → (Fin 3 → ℕ) → Fin 4 → ℝ → ℝ :=\nfun L ν k t => ∑' (l : ↥L), polyEval (kernelNumerator ν k) ↑l * Real.exp (-Real.pi * t * Quaternion.normSq ↑l)\npolyEval_pderiv : ∀ (P : RealPoly4) (j : Fin 4) (q : ℍ),\n  (fderiv ℝ (polyEval P) q) (coordinateBasis j) = polyEval ((MvPolynomial.pderiv j) P) q\npolyEval_laplacian : ∀ (P : RealPoly4), Laplacian.laplacian (polyEval P) = polyEval (polyLaplacian P)\nnumeratorJet_represents : ∀ (l : List (Fin 4)) (k : Fin 4) {q : ℍ},\n  q ≠ 0 →\n    (realCoord k) (iteratedPartial l kernel q) = polyEval (numeratorJet l k) q / Quaternion.normSq q ^ (l.length + 2)\nkernelNumerator_recurrence : ∀ (ν : Fin 3 → ℕ) (j : Fin 3) (k : Fin 4),\n  kernelNumerator (ν + Pi.single j 1) k = numeratorStep (∑ i, ν i) j.succ (kernelNumerator ν k)\nharmonicTheta_mellin : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (ν : Fin 3 → ℕ) (k : Fin 4),\n  2 ≤ ∑ i, ν i →\n    numeratorCoefficient L ν k =\n      Real.pi ^ (∑ i, ν i + 2) / Real.Gamma (↑(∑ i, ν i) + 2) *\n        ∫ (t : ℝ) in Ioi 0, t ^ (∑ i, ν i + 1) * harmonicTheta L ν k t\n'MathResearch.Fueter.EI1_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Fueter.TH1_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "finished_utc": "2026-10-31T11:26:02.518887+00:00",
+  "status": "passed"
+}

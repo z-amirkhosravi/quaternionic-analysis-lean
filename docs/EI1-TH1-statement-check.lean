@@ -58,3 +58,17 @@ example (L : Submodule ℤ ℍ) [DiscreteTopology L] [IsZLattice ℝ L]
     (ν : Fin 3 → ℕ) (k : Fin 4) (hν : 2 ≤ ∑ i, ν i) :
     numeratorCoefficient L ν k = realCoord k (eisensteinCoefficient L ν) :=
   numeratorCoefficient_eq_component L ν k hν
+
+-- TH-D1 has exp(2πiτQ), with Q=N/2. At τ=it this is the exact real exponential used here.
+example (t N : ℝ) :
+    Complex.exp (2 * (Real.pi : ℂ) * Complex.I * ((t : ℂ) * Complex.I) * ((N : ℂ) / 2)) =
+      (Real.exp (-Real.pi * t * N) : ℂ) := by
+  rw [Complex.ofReal_exp]
+  congr 1
+  push_cast
+  calc
+    _ = -(Real.pi : ℂ) * (t : ℂ) * (N : ℂ) := by
+      calc
+        _ = (Real.pi : ℂ) * (t : ℂ) * (N : ℂ) * Complex.I ^ 2 := by ring
+        _ = _ := by rw [Complex.I_sq]; ring
+    _ = _ := rfl
