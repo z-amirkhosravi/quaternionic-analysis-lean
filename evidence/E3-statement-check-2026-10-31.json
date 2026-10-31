@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "E3/v2"
+  ],
+  "started_utc": "2026-10-31T09:56:26.030491+00:00",
+  "finished_utc": "2026-10-31T09:56:30.773976+00:00",
+  "argv": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "docs/E3-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "E3_v2 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L],\n  (∀ (l : List (Fin 4)), ∀ q ∉ L, Summable fun a => ‖iteratedPartial l (zetaJet [] ↑a) q‖) ∧\n    (∀ (l : List (Fin 4)) (K : Set ℍ),\n        IsCompact K →\n          K ⊆ (↑L)ᶜ →\n            TendstoUniformlyOn (fun s q => ∑ a ∈ s, iteratedPartial l (zetaJet [] ↑a) q) (iteratedPartial l (zeta L))\n              Filter.atTop K) ∧\n      (∀ (l : List (Fin 4)),\n          HasSumLocallyUniformlyOn (fun a => iteratedPartial l (zetaJet [] ↑a)) (iteratedPartial l (zeta L)) (↑L)ᶜ) ∧\n        Function.Odd (zeta L) ∧\n          TwoSidedRegularOn (zeta L) (↑L)ᶜ ∧\n            (∀ (j : Fin 3), ∀ q ∉ L, coordPartial j.succ (zeta L) q = elliptic L j q) ∧\n              ∃! η, ∀ (w : ↥L), ∀ q ∉ L, zeta L (q + ↑w) - zeta L q = η w\ndef MathResearch.Fueter.zeta : Submodule ℤ ℍ → ℍ → ℍ :=\nfun L q => kernel q + ∑' (a : { a // a ≠ 0 }), (kernel (q + ↑↑a) - kernel ↑↑a - (fderiv ℝ kernel ↑↑a) q)\ndef MathResearch.Fueter.zetaJet : List (Fin 4) → ℍ → ℍ → ℍ :=\nfun l a q =>\n  iteratedPartial l kernel (q + a) -\n    if a = 0 then 0\n    else\n      match l with\n      | [] => kernel a + (fderiv ℝ kernel a) q\n      | [μ] => coordPartial μ kernel a\n      | head :: head_1 :: tail => 0\ndef MathResearch.Fueter.coordPartial : Fin 4 → (ℍ → ℍ) → ℍ → ℍ :=\nfun μ => directional (coordinateBasis μ)\ndef MathResearch.Fueter.iteratedPartial : List (Fin 4) → (ℍ → ℍ) → ℍ → ℍ :=\nfun x x_1 => List.brecOn (motive := fun x => (ℍ → ℍ) → ℍ → ℍ) x iteratedPartial._f x_1\ndef MathResearch.Fueter.TwoSidedRegularOn : (ℍ → ℍ) → Set ℍ → Prop :=\nfun f U => ContDiffOn ℝ ∞ f U ∧ (∀ q ∈ U, leftOperator f q = 0) ∧ ∀ q ∈ U, rightOperator f q = 0\ndef MathResearch.Fueter.zetaQuasiperiod : (L : Submodule ℤ ℍ) →\n  [inst : DiscreteTopology ↥L] → [IsZLattice ℝ L] → ↥L →+ ℍ :=\nfun L [DiscreteTopology ↥L] [IsZLattice ℝ L] =>\n  { toFun := fun w => zeta L (zetaBasepoint L + ↑w) - zeta L (zetaBasepoint L), map_zero' := ⋯, map_add' := ⋯ }\nzetaJet_zero : ∀ (l : List (Fin 4)) (q : ℍ), zetaJet l 0 q = iteratedPartial l kernel q\nzetaJet_nil : ∀ (a q : ℍ), a ≠ 0 → zetaJet [] a q = kernel (q + a) - kernel a - (fderiv ℝ kernel a) q\nkernel_differential_coordinates : ∀ (a q : ℍ),\n  (fderiv ℝ kernel a) q = ∑ μ, (coordinateBasis.repr q) μ • coordPartial μ kernel a\nzeta_spatialPartial : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3) {q : ℍ},\n  q ∉ L → coordPartial j.succ (zeta L) q = elliptic L j q\nzeta_timePartial : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] {q : ℍ},\n  q ∉ L → coordPartial 0 (zeta L) q = -∑ j, coordinateBasis j.succ * elliptic L j q\nzeta_add : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [inst_1 : IsZLattice ℝ L] (w : ↥L) {q : ℍ},\n  q ∉ L → zeta L (q + ↑w) - zeta L q = (zetaQuasiperiod L) w\nzeta_unique_quasiperiod : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L],\n  ∃! η, ∀ (w : ↥L), ∀ q ∉ L, zeta L (q + ↑w) - zeta L q = η w\n'MathResearch.Fueter.E3_v2' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "source": "docs/E3-statement-check.lean",
+  "source_sha256": "3c025d840d4d3fcbf4dbf9cf1c68fe740949f7304a98aa8bf4029a6d68e80e0c",
+  "proof_source_commit": "1ad35030e816a4706e505a3786f41d1b07a59046",
+  "clean_build_evidence": "evidence/E3-v2-2026-10-31.json",
+  "clean_build_evidence_sha256": "6668bcf9dd038d5e67e8c76eebcdee3ab04bfd14a8df95bdfcc72d143cf80733",
+  "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679"
+}
