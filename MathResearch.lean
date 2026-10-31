@@ -11,3 +11,5 @@ public import MathResearch.Fueter.LatticeSums
 public import MathResearch.Fueter.EllipticPeriodicity
 
 public import MathResearch.Fueter.EllipticCoefficients
+
+public import MathResearch.Fueter.ZetaQuasiperiods

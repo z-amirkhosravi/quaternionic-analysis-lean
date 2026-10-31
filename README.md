@@ -30,6 +30,13 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Statement and correspondence](docs/N1.md) ·
   [Proof](MathResearch/Fueter/EllipticCoefficients.lean).
 
+- **E3, version 2:** absolute and locally uniform convergence of the zeta Taylor
+  brackets and all termwise real derivatives; oddness; both Fueter regularities;
+  spatial derivatives equal to the elliptic functions; and the unique additive
+  quasiperiod map for every lattice period.
+  [Statement and correspondence](docs/E3.md) ·
+  [Proof](MathResearch/Fueter/ZetaQuasiperiods.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.
