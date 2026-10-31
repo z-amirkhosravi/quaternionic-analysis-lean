@@ -33,3 +33,9 @@ public import MathResearch.Spinor.CurvatureWitness
 public import MathResearch.Spinor.WeakRowSpace
 
 public import MathResearch.Spinor.CompactAveraging
+
+public import MathResearch.Spinor.LocalClosure
+
+public import MathResearch.Spinor.WeylBridge
+
+public import MathResearch.Spinor.L2StrongContinuity

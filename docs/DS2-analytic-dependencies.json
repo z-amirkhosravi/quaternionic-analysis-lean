@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "target_status": {
+    "DS2/v1": "partial_with_proof_correspondence_obligations",
+    "DS3/v1": "conditional_not_instantiated",
+    "DS4/v1": "conditional_not_instantiated"
+  },
+  "complete_new_wiki_targets": [],
+  "source_snapshot": "docs/DS2-analytic-source.json",
+  "proof_source": "docs/DS2-proof-source.json",
+  "proof_correspondence": "docs/DS2-proof-correspondence.md",
+  "guide": "docs/DS2-analytic.md",
+  "canonical_internal_proof_sha256": "9a0cd31e6e15ad7a75fd7347059e72f269c0f03d415225452005fa0056f2ac7d",
+  "expository_proof_sha256": "d2b84eee2f7045e064508711a44d0b445ada435f109e7ac0085e7275acf63661",
+  "additional_axioms_introduced": [],
+  "explicit_unproved_inputs": [
+    {
+      "declaration": "MathResearch.Spinor.WeylRegularityOnBall",
+      "status": "unproved_proposition_not_axiom_or_instance",
+      "used_by": "MathResearch.Spinor.weakKernel_smoothRepresentative_of_weyl",
+      "scope": "General finite-dimensional real-valued-vector Weyl regularity on the quaternionic Euclidean ball, with actual mathlib distributions and harmonicity.",
+      "outside_source_status": "No exact external theorem is registered or claimed imported."
+    }
+  ],
+  "unconditional_results": [
+    "spinorDistribution_injective",
+    "weakKernel_distributionLaplacian_zero",
+    "weightedL2_tendsto_locally",
+    "weakKernel_closed_under_localL2_limits",
+    "weakKernel_isClosed_by_localL2",
+    "mobius_map_jacobian",
+    "mobius_quasiMeasurePreserving_weighted",
+    "ballAction_memLp",
+    "ballRepresentation_mul_by_cocycle",
+    "weightedL2Representation",
+    "continuous_weightedL2Representation",
+    "stronglyContinuous_weightedL2Representation",
+    "continuousRepresentative_unique"
+  ],
+  "proof_correspondence_repairs": [
+    {
+      "step": "local_limit_closedness",
+      "repair": "Implemented the compact density lower bound, ordinary L2 restriction and passage of every test equation to the limit; the new proof does not use the older intersection-of-closed-kernels result."
+    },
+    {
+      "step": "group_law",
+      "repair": "Added direct cocycle proofs and used them in the new L2 representation; the earlier function-level proof instead passed through the lifted realization."
+    }
+  ],
+  "alternative_argument": {
+    "step": "ambient_strong_continuity",
+    "canonical_route": "Compactly supported continuous approximation, followed by density and unitarity.",
+    "formal_route": "Bounded continuous approximation, explicit uniform multiplier bound near each group element, dominated convergence using finite weighted mass, then density and unitarity.",
+    "status": "Checked alternative; canonical proof correspondence remains unresolved for the choice of approximation argument.",
+    "internal_note": "formal/notes/DS2-analytic-proof-notes-2026-10-31.md",
+    "wiki_changed": false
+  },
+  "remaining_dependencies": [
+    "WeylRegularityOnBall itself",
+    "Classical/weak comparison and actual regular-kernel invariance",
+    "Identification with independently stated smooth compatible-row model",
+    "Restriction of the strongly continuous ambient action to that model",
+    "Interior harmonic estimates and bounded evaluation in the canonical proof",
+    "DS3 compact averaging/finite-dimensional irreducibility inputs",
+    "DS4 Haar/Schur inputs and actual coefficient realization"
+  ],
+  "audit_caveat": "Only propext, Classical.choice and Quot.sound are permitted. An axiom audit does not discharge explicit theorem parameters or certify correspondence with a written argument."
+}

@@ -93,6 +93,13 @@ Hilbert-space argument and DS4's norm/closed-image argument have explicit
 undischarged hypotheses. See [the precise scope and remaining dependencies](docs/DS2-DS4.md)
 and [machine-readable dependency record](docs/DS2-DS4-dependencies.json).
 
+The [DS2 analytic continuation](docs/DS2-analytic.md) adds distributional
+harmonicity, the written local L² closedness argument, and the actual strongly
+continuous ambient unitary L² action. Smooth representatives remain conditional
+on an explicit unproved Weyl input. Strong continuity uses a documented
+alternative approximation argument. The [proof correspondence audit](docs/DS2-proof-correspondence.md)
+distinguishes these from verification of the complete canonical written proof.
+
 ## Build and check
 
 Lean **4.35.0** and mathlib commit
