@@ -58,6 +58,12 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Statement and correspondence](docs/EI7.md) ·
   [Proof](MathResearch/Fueter/RotationCovariance.lean).
 
+- **DS1, version 1:** the spinor-to-Fueter complex linear isometric
+  isomorphism in every positive degree, including its explicit inverse,
+  right complex-scalar convention and dimension formula.
+  [Statement and correspondence](docs/DS1.md) ·
+  [Proof](MathResearch/Spinor/GradientIsometry.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.
