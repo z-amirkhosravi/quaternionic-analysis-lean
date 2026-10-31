@@ -23,3 +23,5 @@ public import MathResearch.Fueter.HarmonicTheta
 public import MathResearch.Fueter.RotationCovariance
 
 public import MathResearch.Spinor.GradientIsometry
+
+public import MathResearch.Spinor.ProjectedConnection

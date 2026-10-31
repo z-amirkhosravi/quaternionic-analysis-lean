@@ -64,6 +64,12 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Statement and correspondence](docs/DS1.md) ·
   [Proof](MathResearch/Spinor/GradientIsometry.lean).
 
+- **SC2, version 1, and the polynomial representation:** the exact matrix and
+  quaternion actions, their analytic infinitesimal actions, and both projected
+  connection identities for every positive degree and every quaternion.
+  [Statements and correspondence](docs/SC2.md) ·
+  [Proof](MathResearch/Spinor/ProjectedConnection.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.
