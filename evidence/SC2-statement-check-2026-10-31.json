@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "SC2/v1"
+  ],
+  "supporting_scope": "Polynomial matrix/quaternion representations and their actual infinitesimal actions",
+  "started_utc": "2026-10-31T19:49:23.108506+00:00",
+  "source_repository_head": "2a88f30201da6645988280054ea92bf5c4a2c3ce",
+  "script_path": "docs/SC2-statement-check.lean",
+  "script_sha256": "e5f510ee11f48fd8917d5ad700f54cc38aba00ac74bc134bba8932a3d2226954",
+  "script_version_note": "The script fingerprint identifies the exact checked text; it includes a final numeral-coercion proof correction made after the mathematical source commit.",
+  "build_evidence_path": "evidence/SC2-v1-2026-10-31.json",
+  "build_evidence_sha256": "342ca8b48a8e2ebbbe09886e83bb75a20cdd297cc0a3900777b0808ad68a606c",
+  "scope": "Exact all-degree SC2 signature and small correspondence checks: column substitution, action order and group inverse, genuine analytic differential, i/j/k conventions, real scalars, quaternion left multiplication, unnormalized T_n, C_v, n=1 factors, and nonzero connection contribution for q=1,p=X. Author correspondence checks, not independent review.",
+  "command": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "-DautoImplicit=false",
+    "docs/SC2-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "MathResearch.Spinor.polynomialRepresentation (n : \u2115) : Representation \u2102 Matrix2 \u21a5(BinaryForm n)\nMathResearch.Spinor.generalLinearPolynomialRepresentation (n : \u2115) : Representation \u2102 (GL (Fin 2) \u2102) \u21a5(BinaryForm n)\nMathResearch.Spinor.polynomialRepresentation_hasDerivAt (m : \u2115) (M : Matrix2) (p : \u21a5(BinaryForm (m + 1))) :\n  HasDerivAt (fun (t : \u2102) => ((polynomialRepresentation (m + 1)) (1 + t \u2022 M)) p) ((infinitesimalAction m M) p) 0\nMathResearch.Spinor.quaternionPolynomialRepresentation_hasDerivAt (m : \u2115) (v : \u210d) (p : \u21a5(BinaryForm (m + 1))) :\n  HasDerivAt (fun (t : \u211d) => ((quaternionPolynomialRepresentation (m + 1)) (1 + t \u2022 v)) p)\n    ((infinitesimalAction m (quaternionMatrix v)) p) 0\nMathResearch.Spinor.infinitesimal_commutator (M N : Matrix2) (p : ComplexPoly2) :\n  infinitesimal M (infinitesimal N p) - infinitesimal N (infinitesimal M p) = infinitesimal (M * N - N * M) p\nMathResearch.Spinor.quaternionMatrixHom : \u210d \u2192\u2090[\u211d] Matrix2\nMathResearch.Spinor.quaternionMatrix_pack (q : \u210d) (a b : \u2102) :\n  pack (quaternionMatrix q 0 0 * a + quaternionMatrix q 0 1 * b)\n      (quaternionMatrix q 1 0 * a + quaternionMatrix q 1 1 * b) =\n    q * pack a b\nMathResearch.Spinor.SC2_v1 (n : \u2115) (hn : 1 \u2264 n) (q : \u210d) (p : \u21a5(BinaryForm n)) :\n  ((fun (d : Fin 2 \u2192\u2080 \u2115) =>\n        \u2211 \u03bc : Fin 4,\n          MathResearch.Fueter.coordinateBasis \u03bc *\n            polynomialFueterCoefficients\n              (infinitesimal (quaternionMatrix (star (MathResearch.Fueter.coordinateBasis \u03bc) * q)) \u2191p) d) =\n      fun (d : Fin 2 \u2192\u2080 \u2115) => (2 * (\u2191n + 1)) \u2022 (q * polynomialFueterCoefficients (\u2191p) d)) \u2227\n    (fun (d : Fin 2 \u2192\u2080 \u2115) =>\n        \u2211 \u03bc : Fin 4,\n          MathResearch.Fueter.coordinateBasis \u03bc *\n            polynomialFueterCoefficients\n              (infinitesimal (quaternionMatrix (connectionCoefficient q (MathResearch.Fueter.coordinateBasis \u03bc))) \u2191p)\n              d) =\n      fun (d : Fin 2 \u2192\u2080 \u2115) => (\u2191n + 2) \u2022 (q * polynomialFueterCoefficients (\u2191p) d)\n'MathResearch.Spinor.SC2_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Spinor.polynomialRepresentation_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "finished_utc": "2026-10-31T19:49:27.614004+00:00",
+  "status": "passed"
+}

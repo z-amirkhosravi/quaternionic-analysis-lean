@@ -139,3 +139,10 @@ its exact output and fingerprints. Allowed axioms are only `propext`,
 are retained rather than independently rebuilt. These are Lean verification
 and author correspondence records, not an independent review or a visitor
 approval state.
+
+The retained clean run passed: **36 local modules rebuilt, 827 declarations
+audited, zero warnings and no unexpected axioms**. The checked mathematical
+source commit is `2a88f30201da6645988280054ea92bf5c4a2c3ce`. The final statement
+check passed after the clean rebuild; its own source fingerprint identifies
+the exact script. All 32 earlier mathematical modules, including DS1, and the
+pinned dependency/configuration/checker files remained byte-identical.

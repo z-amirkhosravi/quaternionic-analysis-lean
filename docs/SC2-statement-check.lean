@@ -80,4 +80,4 @@ example : (∑ μ : Fin 4, MathResearch.Fueter.coordinateBasis μ *
   have h := congrFun (SC2_v1 1 (by decide) 1 ⟨X 0, isHomogeneous_X (R := ℂ) 0⟩).2 0
   convert h using 1
   norm_num [polynomialFueterCoefficients, pack, pderiv_X, Algebra.smul_def]
-  ext <;> norm_num
+  rfl
