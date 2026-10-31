@@ -70,6 +70,15 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Statements and correspondence](docs/SC2.md) ·
   [Proof](MathResearch/Spinor/ProjectedConnection.lean).
 
+- **SC1 and SC3, version 1:** the nonflat ball connection and curvature, the
+  moving-frame derivative, the exact weighted Schmid–Fueter identity and global
+  kernel equivalence, smooth lift correspondence, and covariance of the explicit
+  Möbius action in every positive degree.
+  [Statements and definition correspondences](docs/SC1-SC3.md) ·
+  [SC1 proof](MathResearch/Spinor/GroupKernel.lean) ·
+  [SC3 proof](MathResearch/Spinor/FullLift.lean) ·
+  [Covariance](MathResearch/Spinor/BallAction.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.

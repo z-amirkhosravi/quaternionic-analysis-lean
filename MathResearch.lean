@@ -25,3 +25,7 @@ public import MathResearch.Fueter.RotationCovariance
 public import MathResearch.Spinor.GradientIsometry
 
 public import MathResearch.Spinor.ProjectedConnection
+
+public import MathResearch.Spinor.SmoothCorrespondence
+
+public import MathResearch.Spinor.CurvatureWitness
