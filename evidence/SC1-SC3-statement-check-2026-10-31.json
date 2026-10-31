@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "SC1/v1",
+    "SC3/v1"
+  ],
+  "started_utc": "2026-10-31T20:31:08.333125+00:00",
+  "source_repository_head": "4cb788d9d59cad18ee238e6c5e6b116bacab1d90",
+  "script_path": "docs/SC1-SC3-statement-check.lean",
+  "script_sha256": "553fd380b2d37387af74cf6dba371018c543b64a292e60126ee622ba99d452fc",
+  "build_evidence_path": "evidence/SC1-SC3-v1-2026-10-31.json",
+  "build_evidence_sha256": "a5ed276d8489d0d83d052d82c08f94f37a522c95c84b2832dc77073dd0f8f170",
+  "scope": "Exact theorem signatures and small definition correspondences for G, ball, section, connection, curvature, L2 lift, real weights, exponential derivatives, all coefficients, n=1 endpoint, C7 inverse-element convention, smooth inverse formulas and global covariance. Author correspondence checks; no visitor approval state.",
+  "command": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "-DautoImplicit=false",
+    "docs/SC1-SC3-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "MathResearch.Spinor.SC1_v1 (m : ℕ) (F : QuaternionMatrix2 → ↥(BinaryForm (m + 1))) (hK : RightEquivariant (m + 1) F)\n  (hF : ∀ (g : QuaternionMatrix2), IsSp11 g → DifferentiableAt ℝ F g) (q : ℍ) (hq : q ∈ Ball) :\n  (∀ (v : ℍ),\n      ballSectionInverse q * (fderiv ℝ ballSection q) v =\n        (ballScale q)⁻¹ • !![2⁻¹ • (v * star q - q * star v), v; star v, connectionCoefficient q v]) ∧\n    (∀ (v w : ℍ), ballCurvature q v w = -(ballScale q)⁻¹ ^ 2 • (star v * w - star w * v)) ∧\n      ∀ (v : ℍ),\n        rightLieDerivative (m + 1) F (ballSection q) v =\n          ballScale q • (fderiv ℝ (fun x => F (ballSection x)) q) v +\n            (infinitesimalAction m (quaternionMatrix (connectionCoefficient q v))) (F (ballSection q))\nMathResearch.Spinor.SC3_v1 (n : ℕ) (hn : 1 ≤ n) (f : ℍ → ↥(BinaryForm n)) (hf : ∀ q ∈ Ball, DifferentiableAt ℝ f q) :\n  (∀ q ∈ Ball,\n      ∀ (d : Fin 2 →₀ ℕ),\n        24 • schmidOperator n (fullLift n f) (ballSection q) d =\n          ballWeight ((↑n + 4) / 2) q •\n            MathResearch.Fueter.leftOperator (fun x => (fueterCoefficientCLM n d) (f x)) q) ∧\n    ((∀ (g : QuaternionMatrix2), IsSp11 g → ∀ (d : Fin 2 →₀ ℕ), schmidOperator n (fullLift n f) g d = 0) ↔\n      ∀ q ∈ Ball,\n        ∀ (d : Fin 2 →₀ ℕ), MathResearch.Fueter.leftOperator (fun x => (fueterCoefficientCLM n d) (f x)) q = 0)\nMathResearch.Spinor.SC3_representation_covariance_v1 (n : ℕ) (hn : 1 ≤ n) (f : ℍ → ↥(BinaryForm n))\n  (hf : ∀ q ∈ Ball, DifferentiableAt ℝ f q)\n  (hkernel :\n    ∀ q ∈ Ball, ∀ (d : Fin 2 →₀ ℕ), MathResearch.Fueter.leftOperator (fun x => (fueterCoefficientCLM n d) (f x)) q = 0)\n  {γ : QuaternionMatrix2} (hγ : IsSp11 γ) (q : ℍ) :\n  q ∈ Ball →\n    ∀ (d : Fin 2 →₀ ℕ),\n      MathResearch.Fueter.leftOperator (fun x => (fueterCoefficientCLM n d) (ballRepresentation n γ f x)) q = 0\nMathResearch.Spinor.SC3_smooth_correspondence_v1 (n : ℕ) :\n  (∀ (f : ℍ → ↥(BinaryForm n)),\n      (∀ q ∈ Ball, ContDiffAt ℝ ∞ f q) →\n        RightEquivariant n (fullLift n f) ∧\n          (∀ (g : QuaternionMatrix2), IsSp11 g → ContDiffAt ℝ ∞ (fullLift n f) g) ∧\n            ∀ q ∈ Ball, unweightedSpinor n (fun x => fullLift n f (ballSection x)) q = f q) ∧\n    ∀ (F : QuaternionMatrix2 → ↥(BinaryForm n)),\n      RightEquivariant n F →\n        (∀ (g : QuaternionMatrix2), IsSp11 g → ContDiffAt ℝ ∞ F g) →\n          (∀ q ∈ Ball, ContDiffAt ℝ ∞ (unweightedSpinor n fun x => F (ballSection x)) q) ∧\n            ∀ (g : QuaternionMatrix2), IsSp11 g → fullLift n (unweightedSpinor n fun x => F (ballSection x)) g = F g\n'MathResearch.Spinor.SC1_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Spinor.SC3_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Spinor.SC3_representation_covariance_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Spinor.SC3_smooth_correspondence_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Spinor.curvature_origin_action_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\nMathResearch.Spinor.fullLift_ballAction (n : ℕ) (f : ℍ → ↥(BinaryForm n)) {a : QuaternionMatrix2} (ha : IsSp11 a)\n  {g : QuaternionMatrix2} (hg : IsSp11 g) : fullLift n (ballAction n a f) g = fullLift n f (a * g)\nMathResearch.Spinor.rightLieDerivative_congr_on_group (n : ℕ) (F H : QuaternionMatrix2 → ↥(BinaryForm n))\n  (he : ∀ (g : QuaternionMatrix2), IsSp11 g → F g = H g) {g : QuaternionMatrix2} (hg : IsSp11 g)\n  (hF : DifferentiableAt ℝ F g) (hH : DifferentiableAt ℝ H g) (v : ℍ) :\n  rightLieDerivative n F g v = rightLieDerivative n H g v\nMathResearch.Spinor.polynomialRepresentation_scalar (n : ℕ) (r : ℝ) (p : ↥(BinaryForm n)) :\n  ((polynomialRepresentation n) (quaternionMatrix ↑r)) p = r ^ n • p\n",
+  "finished_utc": "2026-10-31T20:31:12.656683+00:00",
+  "status": "passed"
+}
