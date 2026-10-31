@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "base_revision": "2bd70840d38a5bcf797c0f8be90f1cd2b2391b25",
+  "source_revision": "25739042cb61b0d265a4e344adc1270c0d40bb87",
+  "earlier_lean_modules_unchanged": 58,
+  "configuration_and_checker_files_unchanged": 6,
+  "comparisons": {
+    "MathResearch/Fueter/CoefficientRepresentation.lean": {
+      "base_sha256": "b182b87a5dcf13e646776a73c5f80642dc5133b901ff5389a1bab7fab1cb5407",
+      "current_sha256": "b182b87a5dcf13e646776a73c5f80642dc5133b901ff5389a1bab7fab1cb5407",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/Elliptic.lean": {
+      "base_sha256": "831ce9e2924b87ae55aecc6353834ab180b5fbd28ac74a795188d6958ae5d97b",
+      "current_sha256": "831ce9e2924b87ae55aecc6353834ab180b5fbd28ac74a795188d6958ae5d97b",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/EllipticCoefficients.lean": {
+      "base_sha256": "361b70baf5fdb2aa95d41fb5e5eff997b9499a9176999345eb3c9e303a4c885e",
+      "current_sha256": "361b70baf5fdb2aa95d41fb5e5eff997b9499a9176999345eb3c9e303a4c885e",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/EllipticDilation.lean": {
+      "base_sha256": "2d13c5f9d9c1e77baad7654e8115371a812eca30893625e17cfcc89d72b6d4fb",
+      "current_sha256": "2d13c5f9d9c1e77baad7654e8115371a812eca30893625e17cfcc89d72b6d4fb",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/EllipticEstimates.lean": {
+      "base_sha256": "2899b691c9ca1f36e126a63905bcdc53d3e4883d154f63884d5998d135988228",
+      "current_sha256": "2899b691c9ca1f36e126a63905bcdc53d3e4883d154f63884d5998d135988228",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/EllipticPeriodicity.lean": {
+      "base_sha256": "f57be324356722c5c434fe67a8c6f91cf69c6127b84a905cc92fb418028a7845",
+      "current_sha256": "f57be324356722c5c434fe67a8c6f91cf69c6127b84a905cc92fb418028a7845",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/EllipticRegularity.lean": {
+      "base_sha256": "6b8769d92a0f1042e6279e6b210ce469f6344943b801e4d8fdd0ae04bbc17517",
+      "current_sha256": "6b8769d92a0f1042e6279e6b210ce469f6344943b801e4d8fdd0ae04bbc17517",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/HalfPeriods.lean": {
+      "base_sha256": "baa86b0b7b9ee3692eb6fb3ef85dde47d3d88a31d209d6d87e803f63b779d230",
+      "current_sha256": "baa86b0b7b9ee3692eb6fb3ef85dde47d3d88a31d209d6d87e803f63b779d230",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/HarmonicPolynomial.lean": {
+      "base_sha256": "d8897c572cc0dad7c4dc4d01646856930355789a81671580f4280a1ae925bf69",
+      "current_sha256": "d8897c572cc0dad7c4dc4d01646856930355789a81671580f4280a1ae925bf69",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/HarmonicTheta.lean": {
+      "base_sha256": "9dbf26347f9077c51850428114616e1c5c91b2466f03f3d282989525cabfc1fa",
+      "current_sha256": "9dbf26347f9077c51850428114616e1c5c91b2466f03f3d282989525cabfc1fa",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/Kernel.lean": {
+      "base_sha256": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+      "current_sha256": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/KernelEstimates.lean": {
+      "base_sha256": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+      "current_sha256": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/KernelNumerator.lean": {
+      "base_sha256": "6d29e75e3ed65cf679fd361deab9965bd27fbca3a760384db1672a8719afc2f1",
+      "current_sha256": "6d29e75e3ed65cf679fd361deab9965bd27fbca3a760384db1672a8719afc2f1",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/KernelRotationAction.lean": {
+      "base_sha256": "1044bf3cfcf839dc7dea34ca9520d0a0345db876a4e83d9bc55b43dfc8bdbd20",
+      "current_sha256": "1044bf3cfcf839dc7dea34ca9520d0a0345db876a4e83d9bc55b43dfc8bdbd20",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/LatticeDilation.lean": {
+      "base_sha256": "7e97b6e54e271e67802911406dd64d7166107f3d6465220b31af79a34bbac758",
+      "current_sha256": "7e97b6e54e271e67802911406dd64d7166107f3d6465220b31af79a34bbac758",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/LatticeSums.lean": {
+      "base_sha256": "00f34cf595cfbd6b6e0da1ca5f66d017213aa06920188111b7b9658a39bafd73",
+      "current_sha256": "00f34cf595cfbd6b6e0da1ca5f66d017213aa06920188111b7b9658a39bafd73",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/Operators.lean": {
+      "base_sha256": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+      "current_sha256": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/PartialCommutation.lean": {
+      "base_sha256": "beee71a3b75caab5db817a4776b024989c0e6f2ef358b4f6373fc3724279c371",
+      "current_sha256": "beee71a3b75caab5db817a4776b024989c0e6f2ef358b4f6373fc3724279c371",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/PolynomialCalculus.lean": {
+      "base_sha256": "d6c0757ed3ba5d8e104abe64375667c93a92135658cc2f0b069f3cb11afedc8c",
+      "current_sha256": "d6c0757ed3ba5d8e104abe64375667c93a92135658cc2f0b069f3cb11afedc8c",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/PuncturedSmooth.lean": {
+      "base_sha256": "78f9c6b4c55307b475e077a07d1db0f7e1ad05d50d2cb696f804694da607ad14",
+      "current_sha256": "78f9c6b4c55307b475e077a07d1db0f7e1ad05d50d2cb696f804694da607ad14",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/QuaternionRotations.lean": {
+      "base_sha256": "6c90b2d8d6688cfebb63b8f4b4b4b3e967a363e7450da1d87391123666ec0d5e",
+      "current_sha256": "6c90b2d8d6688cfebb63b8f4b4b4b3e967a363e7450da1d87391123666ec0d5e",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/RealMellin.lean": {
+      "base_sha256": "e34e1602306807831634cf07a05bb8605dabc5ff43990915f0936165cb7049c6",
+      "current_sha256": "e34e1602306807831634cf07a05bb8605dabc5ff43990915f0936165cb7049c6",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/RotationCovariance.lean": {
+      "base_sha256": "999a0c12d8a3e19d135963f8eccefca4fc8756f35d1d675ff921a489b6bf9980",
+      "current_sha256": "999a0c12d8a3e19d135963f8eccefca4fc8756f35d1d675ff921a489b6bf9980",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/SeriesCalculus.lean": {
+      "base_sha256": "e3be2eb494e855bb5d44fd5ab46fbdb8a3ed9c2c8770f705a5c031c8ffcf1e9c",
+      "current_sha256": "e3be2eb494e855bb5d44fd5ab46fbdb8a3ed9c2c8770f705a5c031c8ffcf1e9c",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/Zeta.lean": {
+      "base_sha256": "368aff3bba3030f9d47eaec30a874ee4e1101a252f2cfd650cd965d4fa390a56",
+      "current_sha256": "368aff3bba3030f9d47eaec30a874ee4e1101a252f2cfd650cd965d4fa390a56",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/ZetaEstimates.lean": {
+      "base_sha256": "9ea9dabb3e652963d36c67d885023c837700d717fddf6922f78eae4e4a0eddb1",
+      "current_sha256": "9ea9dabb3e652963d36c67d885023c837700d717fddf6922f78eae4e4a0eddb1",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/ZetaQuasiperiods.lean": {
+      "base_sha256": "5ebf065aa22fd89fcf6911e38e1180b5eb8f14ced5d04f42e79b0de6df37a0eb",
+      "current_sha256": "5ebf065aa22fd89fcf6911e38e1180b5eb8f14ced5d04f42e79b0de6df37a0eb",
+      "unchanged": true
+    },
+    "MathResearch/Fueter/ZetaSummands.lean": {
+      "base_sha256": "19ff1be2a3abaa56508a6b2574ac44481ef994b01f9889f0686ca38ca72ede44",
+      "current_sha256": "19ff1be2a3abaa56508a6b2574ac44481ef994b01f9889f0686ca38ca72ede44",
+      "unchanged": true
+    },
+    "MathResearch/SmokeTest.lean": {
+      "base_sha256": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+      "current_sha256": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/BallAction.lean": {
+      "base_sha256": "bebcfd4fcdcc5c380ef5f889b6a8d5753169c002aeb6485f8377f53b41f59d71",
+      "current_sha256": "bebcfd4fcdcc5c380ef5f889b6a8d5753169c002aeb6485f8377f53b41f59d71",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/BallConnection.lean": {
+      "base_sha256": "3850c36f7d6d0b1f0ea852ffa6a3b6134a0e2668ffb20820db8b625441dc4794",
+      "current_sha256": "3850c36f7d6d0b1f0ea852ffa6a3b6134a0e2668ffb20820db8b625441dc4794",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/BinaryForm.lean": {
+      "base_sha256": "1598062f2dba443b8b9c97e6ac6ebfd4a199ecf07552c2076d8332c8bd52f408",
+      "current_sha256": "1598062f2dba443b8b9c97e6ac6ebfd4a199ecf07552c2076d8332c8bd52f408",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/CoefficientEmbedding.lean": {
+      "base_sha256": "803a3aa52713cd24229fb1dbd372816d54f3ee778c0727273ade569e5ffe0cf0",
+      "current_sha256": "803a3aa52713cd24229fb1dbd372816d54f3ee778c0727273ade569e5ffe0cf0",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/CompactAveraging.lean": {
+      "base_sha256": "2ffb3650aabdd61b3f0bdc9a364276a08e401d6f32af3949b303b6dabfde1b33",
+      "current_sha256": "2ffb3650aabdd61b3f0bdc9a364276a08e401d6f32af3949b303b6dabfde1b33",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/CompatibleRow.lean": {
+      "base_sha256": "a8729c3466aea281c49ac42b4dc16f118ec153d4628c01c38f9ab68e1982073e",
+      "current_sha256": "a8729c3466aea281c49ac42b4dc16f118ec153d4628c01c38f9ab68e1982073e",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/CurvatureWitness.lean": {
+      "base_sha256": "a149f8e1409ddfe10ee619450bc6a37b2bfc6a5db456fe80bd7274fd39f39554",
+      "current_sha256": "a149f8e1409ddfe10ee619450bc6a37b2bfc6a5db456fe80bd7274fd39f39554",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/FrameLift.lean": {
+      "base_sha256": "a9fd74a3e906c60cab0d82b48a67bd625a51d9adf6a5a8bd903a03715aebfcb9",
+      "current_sha256": "a9fd74a3e906c60cab0d82b48a67bd625a51d9adf6a5a8bd903a03715aebfcb9",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/FullLift.lean": {
+      "base_sha256": "c09f6f614a4778c348e2184864d74eeca9063a27595de30896ef33ca6212641b",
+      "current_sha256": "c09f6f614a4778c348e2184864d74eeca9063a27595de30896ef33ca6212641b",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/GradientIsometry.lean": {
+      "base_sha256": "0919891cbfe08218cc0694aa1dd9223af57ab5699115920e1424d07728d0d6fe",
+      "current_sha256": "0919891cbfe08218cc0694aa1dd9223af57ab5699115920e1424d07728d0d6fe",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/GroupKernel.lean": {
+      "base_sha256": "c431de21da62f04a44407b9dd95cb4ba890f6b7fd38dddf781f828f06648c8da",
+      "current_sha256": "c431de21da62f04a44407b9dd95cb4ba890f6b7fd38dddf781f828f06648c8da",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/MobiusJacobian.lean": {
+      "base_sha256": "39318573b8a61462e24d8e30a4e5f09b8c3bd6d3567db33618990ad259896082",
+      "current_sha256": "39318573b8a61462e24d8e30a4e5f09b8c3bd6d3567db33618990ad259896082",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/MobiusLaws.lean": {
+      "base_sha256": "4076e11170ceec187b0c97a325715ce99beab40fea7970eb39b02d3cfe9befcd",
+      "current_sha256": "4076e11170ceec187b0c97a325715ce99beab40fea7970eb39b02d3cfe9befcd",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/OrthonormalContraction.lean": {
+      "base_sha256": "e3019d45d1526b96a60a762abf8e6b9e68c7028ff1393f32447c72edda4507b6",
+      "current_sha256": "e3019d45d1526b96a60a762abf8e6b9e68c7028ff1393f32447c72edda4507b6",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/PolynomialRepresentation.lean": {
+      "base_sha256": "0b09c1da442ba4079c154a9b1aca9ee8da599c97c27d0dbd2c658e5fafb559b8",
+      "current_sha256": "0b09c1da442ba4079c154a9b1aca9ee8da599c97c27d0dbd2c658e5fafb559b8",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/PolynomialUnitary.lean": {
+      "base_sha256": "da886ceddc785748fd4986500af4ed2214a5b73e464d5cadf98e5775fe4e275e",
+      "current_sha256": "da886ceddc785748fd4986500af4ed2214a5b73e464d5cadf98e5775fe4e275e",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/ProjectedConnection.lean": {
+      "base_sha256": "7fa7288fd5b3704b49fc9456b30d00e9f414b753daee7d03d6c9aeea1b0f6a9e",
+      "current_sha256": "7fa7288fd5b3704b49fc9456b30d00e9f414b753daee7d03d6c9aeea1b0f6a9e",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/QuaternionMatrix.lean": {
+      "base_sha256": "405227c1e63f74bf580498833c9c6625f0697155b362d0c3dcf626df028508cb",
+      "current_sha256": "405227c1e63f74bf580498833c9c6625f0697155b362d0c3dcf626df028508cb",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/RepresentationCalculus.lean": {
+      "base_sha256": "dc14b2fe14cad6250986b956a2f66d89b5108f6f0026bf6c8acba1be76256199",
+      "current_sha256": "dc14b2fe14cad6250986b956a2f66d89b5108f6f0026bf6c8acba1be76256199",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/RowAction.lean": {
+      "base_sha256": "279a9acfdfafb1f33f44840aa41384a56ae759c28d1011b3735c5637df1c0374",
+      "current_sha256": "279a9acfdfafb1f33f44840aa41384a56ae759c28d1011b3735c5637df1c0374",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/SchmidCovariance.lean": {
+      "base_sha256": "9db06ab1975a44a6607a237323024fa05ee1988610c32ce56f4f8b6ec4235084",
+      "current_sha256": "9db06ab1975a44a6607a237323024fa05ee1988610c32ce56f4f8b6ec4235084",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/SchmidFueter.lean": {
+      "base_sha256": "f6b7108e68849753aaa70dd6055d1482ed91fa92355ec9245c023ff0b8ec11ae",
+      "current_sha256": "f6b7108e68849753aaa70dd6055d1482ed91fa92355ec9245c023ff0b8ec11ae",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/SmoothCorrespondence.lean": {
+      "base_sha256": "e13ae1ceabfb316eae6848b580a9ae0e6566a968a0b32c60f22e1434176c1dac",
+      "current_sha256": "e13ae1ceabfb316eae6848b580a9ae0e6566a968a0b32c60f22e1434176c1dac",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/Sp11.lean": {
+      "base_sha256": "d2a98783458d3fac906773ba02a44e821f985e46f5de0dd3a5016b141209b78b",
+      "current_sha256": "d2a98783458d3fac906773ba02a44e821f985e46f5de0dd3a5016b141209b78b",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/WeakConstants.lean": {
+      "base_sha256": "9aba7fbce57b8167821afde3a67a0264cf2b3fd8999655f0473ea5ca5f72c57e",
+      "current_sha256": "9aba7fbce57b8167821afde3a67a0264cf2b3fd8999655f0473ea5ca5f72c57e",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/WeakKernel.lean": {
+      "base_sha256": "0e1e6e4fc4c4d3d2a5b2236d770e579108ff2818751adb599ccd7a1d442fd68c",
+      "current_sha256": "0e1e6e4fc4c4d3d2a5b2236d770e579108ff2818751adb599ccd7a1d442fd68c",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/WeakRowSpace.lean": {
+      "base_sha256": "9a1e8a9fb556ab21d6cfae021773747c4a477d8b5691c6ab7fdea0cf255331a6",
+      "current_sha256": "9a1e8a9fb556ab21d6cfae021773747c4a477d8b5691c6ab7fdea0cf255331a6",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/WeightedFueter.lean": {
+      "base_sha256": "82e6d6e1dc383b4188e59381e624485f38582324255656985a44b3b3c9bdb2b9",
+      "current_sha256": "82e6d6e1dc383b4188e59381e624485f38582324255656985a44b3b3c9bdb2b9",
+      "unchanged": true
+    },
+    "MathResearch/Spinor/WeightedMeasure.lean": {
+      "base_sha256": "78e3a5831cdcaf590c411a8f58b699e8e581170f09ef58e28ef46cb7a3d2ca6b",
+      "current_sha256": "78e3a5831cdcaf590c411a8f58b699e8e581170f09ef58e28ef46cb7a3d2ca6b",
+      "unchanged": true
+    },
+    "lean-toolchain": {
+      "base_sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "current_sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "unchanged": true
+    },
+    "lakefile.toml": {
+      "base_sha256": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+      "current_sha256": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+      "unchanged": true
+    },
+    "lake-manifest.json": {
+      "base_sha256": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+      "current_sha256": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+      "unchanged": true
+    },
+    "scripts/verify.py": {
+      "base_sha256": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64",
+      "current_sha256": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64",
+      "unchanged": true
+    },
+    "scripts/Audit.lean": {
+      "base_sha256": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+      "current_sha256": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+      "unchanged": true
+    },
+    "scripts/lake.sh": {
+      "base_sha256": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+      "current_sha256": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+      "unchanged": true
+    }
+  },
+  "new_lean_modules": [
+    "MathResearch/Spinor/L2StrongContinuity.lean",
+    "MathResearch/Spinor/LocalClosure.lean",
+    "MathResearch/Spinor/LocalL2.lean",
+    "MathResearch/Spinor/MobiusMeasure.lean",
+    "MathResearch/Spinor/WeakHarmonic.lean",
+    "MathResearch/Spinor/WeightedL2Action.lean",
+    "MathResearch/Spinor/WeightedLocalization.lean",
+    "MathResearch/Spinor/WeylBridge.lean"
+  ],
+  "root_module_change": "Adds imports for the new analytic continuation; original imports preserved.",
+  "status": "passed",
+  "scope": "Byte preservation, not a retrospective audit of written-proof correspondence for earlier releases."
+}
