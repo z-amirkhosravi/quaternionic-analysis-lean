@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "E4/v1",
+    "E5/v1",
+    "E6/v1"
+  ],
+  "started_utc": "2026-10-31T10:13:16.432346+00:00",
+  "finished_utc": "2026-10-31T10:13:22.750386+00:00",
+  "argv": [
+    "bash",
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "-DwarningAsError=true",
+    "docs/E4-E6-statement-check.lean"
+  ],
+  "exit_code": 0,
+  "output": "E4_v1 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [inst_1 : IsZLattice ℝ L] (w : ↥L),\n  2⁻¹ • ↑w ∉ L → (zetaQuasiperiod L) w = 2 • zeta L (2⁻¹ • ↑w)\nE5_v1 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3) (w : ↥L),\n  2⁻¹ • ↑w ∉ L → HasFDerivAt (elliptic L j) 0 (2⁻¹ • ↑w) ∧ ∀ (μ : Fin 4), coordPartial μ (elliptic L j) (2⁻¹ • ↑w) = 0\nE6_v1 : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [inst_1 : IsZLattice ℝ L] (a : ℝ) (ha : 0 < a) (j : Fin 3),\n  ∀ q ∉ L,\n    ∀ (w : ↥L),\n      elliptic (dilatedLattice L a ⋯) j (a • q) = (a ^ 4)⁻¹ • elliptic L j q ∧\n        zeta (dilatedLattice L a ⋯) (a • q) = (a ^ 3)⁻¹ • zeta L q ∧\n          (zetaQuasiperiod (dilatedLattice L a ⋯)) ((latticeDilationEquiv L a ⋯) w) = (a ^ 3)⁻¹ • (zetaQuasiperiod L) w\ndef MathResearch.Fueter.realDilation : (a : ℝ) → a ≠ 0 → ℍ ≃L[ℝ] ℍ :=\nfun a ha => (LinearEquiv.smulOfNeZero ℝ ℍ a ha).toContinuousLinearEquiv\ndef MathResearch.Fueter.dilatedLattice : Submodule ℤ ℍ → (a : ℝ) → a ≠ 0 → Submodule ℤ ℍ :=\nfun L a ha => ZLattice.comap ℝ L ↑↑(realDilation a ha).symm\ndef MathResearch.Fueter.latticeDilationEquiv : (L : Submodule ℤ ℍ) →\n  (a : ℝ) → (ha : a ≠ 0) → ↥L ≃ₗ[ℤ] ↥(dilatedLattice L a ha) :=\nfun L a ha => ZLattice.comap_equiv ℝ L ↑(realDilation a ha).symm\nmem_dilatedLattice : ∀ (L : Submodule ℤ ℍ) (a : ℝ) (ha : a ≠ 0) (q : ℍ), q ∈ dilatedLattice L a ha ↔ ∃ x ∈ L, a • x = q\nsmul_mem_dilatedLattice : ∀ (L : Submodule ℤ ℍ) (a : ℝ) (ha : a ≠ 0) (q : ℍ), a • q ∈ dilatedLattice L a ha ↔ q ∈ L\nlatticeDilationEquiv_apply : ∀ (L : Submodule ℤ ℍ) (a : ℝ) (ha : a ≠ 0) (w : ↥L),\n  ↑((latticeDilationEquiv L a ha) w) = a • ↑w\nelliptic_fderiv_halfPeriod : ∀ (L : Submodule ℤ ℍ) [inst : DiscreteTopology ↥L] [IsZLattice ℝ L] (j : Fin 3) (w : ↥L),\n  2⁻¹ • ↑w ∉ L → fderiv ℝ (elliptic L j) (2⁻¹ • ↑w) = 0\nkernel_fderiv_smul_apply : ∀ (a : ℝ),\n  a ≠ 0 → ∀ (b : ℍ), b ≠ 0 → ∀ (q : ℍ), (fderiv ℝ kernel (a • b)) (a • q) = (a ^ 3)⁻¹ • (fderiv ℝ kernel b) q\n'MathResearch.Fueter.E4_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Fueter.E5_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.Fueter.E6_v1' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "source": "docs/E4-E6-statement-check.lean",
+  "source_sha256": "f827bfb233da5c7496e7bc4c50abd5f9b1d265c3b9d9e5a439c43e83f47b7170",
+  "proof_source_commit": "1b88cec7c65ba16a9fc168f5f49cf2d58787f7fc",
+  "clean_build_evidence": "evidence/E4-E6-v1-2026-10-31.json",
+  "clean_build_evidence_sha256": "c08387ab4f40fde7cd23556742bc864690e4581b1fadae77f7e3ee1d4fb2dc9c",
+  "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679"
+}
