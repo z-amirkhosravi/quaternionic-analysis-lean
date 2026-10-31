@@ -37,6 +37,13 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [Statement and correspondence](docs/E3.md) ·
   [Proof](MathResearch/Fueter/ZetaQuasiperiods.lean).
 
+- **E4, E5 and E6, version 1:** zeta values at nonlattice half-periods;
+  vanishing of the entire real differential of the elliptic functions there;
+  and real dilation laws for elliptic functions, zeta and quasiperiods.
+  [Statements and correspondence](docs/E4-E6.md) ·
+  [Half-period proofs](MathResearch/Fueter/HalfPeriods.lean) ·
+  [Dilation proofs](MathResearch/Fueter/EllipticDilation.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.

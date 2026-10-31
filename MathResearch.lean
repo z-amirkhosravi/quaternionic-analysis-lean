@@ -13,3 +13,7 @@ public import MathResearch.Fueter.EllipticPeriodicity
 public import MathResearch.Fueter.EllipticCoefficients
 
 public import MathResearch.Fueter.ZetaQuasiperiods
+
+public import MathResearch.Fueter.HalfPeriods
+
+public import MathResearch.Fueter.EllipticDilation
