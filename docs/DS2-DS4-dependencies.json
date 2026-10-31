@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "target_status": {
+    "DS2/v1": "partial_not_fully_verified",
+    "DS3/v1": "conditional_not_instantiated",
+    "DS4/v1": "conditional_not_instantiated"
+  },
+  "source_snapshot": "docs/DS2-DS4-source.json",
+  "guide": "docs/DS2-DS4.md",
+  "additional_axioms_introduced": [],
+  "proof_placeholder_policy": "No sorry or admit accepted; transitive audit allows only propext, Classical.choice, Quot.sound.",
+  "hypothesis_audit_caveat": "Explicit undischarged parameters are not listed by #print axioms. A passed build does not verify the three full wiki claims.",
+  "external_provenance": "Accepted wiki proof and research/R060/corrected-realization.md. No external theorem is registered or asserted as proved by this attempt.",
+  "unconditional_results": [
+    "quaternionAction_norm",
+    "unitQuaternionAction_norm",
+    "mobiusDenominator_cocycle",
+    "mobiusPoint_mul",
+    "ballRepresentation_mul",
+    "mobiusJacobian",
+    "weighted_integral_ballAction",
+    "weakKernel_isClosed",
+    "weakTest_toLp",
+    "constantWeakEmbedding_injective",
+    "DS2_weak_models",
+    "DS2_row_intertwining",
+    "liftedCoefficient_intertwines"
+  ],
+  "conditional_results": [
+    "DS3_irreducible_of_compactAveraging",
+    "DS3_dense_translateSpan",
+    "DS4_coefficient_integral_of_haar_schur",
+    "DS4_closed_embedding_of_inputs"
+  ],
+  "remaining_dependencies": [
+    {
+      "id": "ds2_regular",
+      "status": "missing_analytic_bridge",
+      "declarations": [],
+      "affects": [
+        "DS2/v1",
+        "DS3/v1",
+        "DS4/v1"
+      ],
+      "statement": "Distributional conjugate-Fueter factorization and injectivity of T_n; Weyl smooth harmonic representative theorem; classical/weak comparison and uniqueness."
+    },
+    {
+      "id": "ds2_lp_action",
+      "status": "missing_local_construction",
+      "declarations": [],
+      "affects": [
+        "DS2/v1",
+        "DS3/v1",
+        "DS4/v1"
+      ],
+      "statement": "Descend C7 to actual weighted L2 classes, prove MemLp preservation, kernel invariance, and strong continuity. Integral invariance alone is not this construction."
+    },
+    {
+      "id": "normalization_evaluation",
+      "status": "missing_analytic_bridge",
+      "declarations": [],
+      "affects": [
+        "DS3/v1",
+        "DS4/v1"
+      ],
+      "statement": "Prove weighted measure mass one, bounded point evaluation, reproducing pairing with constants, and origin-detecting translates."
+    },
+    {
+      "id": "ds3_inputs",
+      "status": "explicit_undischarged_hypothesis",
+      "declarations": [
+        "MathResearch.Spinor.CompactAveragingInputs"
+      ],
+      "affects": [
+        "DS3/v1"
+      ],
+      "statement": "Four fields: orbit integrability; compact average equals constant evaluation; nonzero translates detected at origin; nonzero constant orbit spans constants. Actual unitary representation, constant isometry and continuous evaluation are also parameters."
+    },
+    {
+      "id": "compact_irreducibility",
+      "status": "unproved_standard_input_and_local_application",
+      "declarations": [],
+      "affects": [
+        "DS3/v1",
+        "DS4/v1"
+      ],
+      "statement": "Irreducibility of the actual degree-n polynomial representation of unit quaternions; derive constant-orbit spanning and Schur orthogonality."
+    },
+    {
+      "id": "compact_schur",
+      "status": "explicit_undischarged_hypothesis",
+      "declarations": [
+        "MathResearch.Spinor.CompactSchurInput"
+      ],
+      "affects": [
+        "DS4/v1"
+      ],
+      "statement": "Exact compact integral of the squared coefficient is norm(u)^2 norm(v)^2/(n+1)."
+    },
+    {
+      "id": "haar_coordinates",
+      "status": "explicit_undischarged_hypothesis",
+      "declarations": [
+        "MathResearch.Spinor.CoefficientHaarInput"
+      ],
+      "affects": [
+        "DS4/v1"
+      ],
+      "statement": "Exact Haar-coordinate integral with s^-4 and compact measure. The measures are parameters; construction, left invariance, integrability and the general disintegration are not established."
+    },
+    {
+      "id": "coefficient_realization",
+      "status": "explicit_local_bridge_hypotheses",
+      "declarations": [
+        "MathResearch.Spinor.DS4_closed_embedding_of_inputs"
+      ],
+      "affects": [
+        "DS4/v1"
+      ],
+      "statement": "Parameters representative, hNorm, W and hW: complete source space, correct representative norm, actual L2-valued linear map, and almost-everywhere equality with the concrete lifted coefficient. Its existence and Hilbert matrix-coefficient meaning remain unproved."
+    },
+    {
+      "id": "regular_embedding",
+      "status": "missing_local_construction",
+      "declarations": [],
+      "affects": [
+        "DS4/v1"
+      ],
+      "statement": "Connect liftedCoefficient_intertwines with a bundled left-regular action on L2(G), instantiate concrete irreducibility, and conclude discrete-series membership."
+    }
+  ],
+  "preservation": "All earlier mathematical module files and dependency/checker files are unchanged from b009205ce6de894bd901ab6ded7b8a9cf8b89c64. The root import and README are extended; no wiki or exporter changes.",
+  "wiki_integration": "No full Lean-verified badge for DS2, DS3 or DS4. Partial and conditional status must remain visible."
+}

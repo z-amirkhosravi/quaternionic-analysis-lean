@@ -29,3 +29,7 @@ public import MathResearch.Spinor.ProjectedConnection
 public import MathResearch.Spinor.SmoothCorrespondence
 
 public import MathResearch.Spinor.CurvatureWitness
+
+public import MathResearch.Spinor.WeakRowSpace
+
+public import MathResearch.Spinor.CompactAveraging

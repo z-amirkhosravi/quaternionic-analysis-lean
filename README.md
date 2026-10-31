@@ -85,6 +85,14 @@ are retained for compatibility with published theorem and definition links.
 This repository is the source for new development. Historical F1 wiki exports
 remain fixed to the exact sources and checking evidence of their release.
 
+The **DS2–DS4 development is partial and conditional**, not three further
+verified wiki theorems. It proves the polynomial norm law, Möbius group laws
+and Jacobian, weighted change of variables, a nonzero complete weak Hilbert
+kernel, its normalized row isometry, and the exact C3/C7 intertwiner. DS3's
+Hilbert-space argument and DS4's norm/closed-image argument have explicit
+undischarged hypotheses. See [the precise scope and remaining dependencies](docs/DS2-DS4.md)
+and [machine-readable dependency record](docs/DS2-DS4-dependencies.json).
+
 ## Build and check
 
 Lean **4.35.0** and mathlib commit
