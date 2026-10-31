@@ -19,3 +19,5 @@ public import MathResearch.Fueter.HalfPeriods
 public import MathResearch.Fueter.EllipticDilation
 
 public import MathResearch.Fueter.HarmonicTheta
+
+public import MathResearch.Fueter.RotationCovariance

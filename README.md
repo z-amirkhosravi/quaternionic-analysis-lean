@@ -52,6 +52,12 @@ A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathl
   [EI1 proof](MathResearch/Fueter/KernelNumerator.lean) ·
   [TH1 proof](MathResearch/Fueter/HarmonicTheta.lean).
 
+- **EI7, version 1:** invariance of the right quaternion derivative span,
+  absolute coefficient functionals, forward rotation covariance, and a genuine
+  real representation descending from unit quaternion pairs to SO(4).
+  [Statement and correspondence](docs/EI7.md) ·
+  [Proof](MathResearch/Fueter/RotationCovariance.lean).
+
 The library uses mathlib's real quaternions, Euclidean norm, real Fréchet calculus
 and smoothness. The `MathResearch.Fueter` namespace and original F1 source files
 are retained for compatibility with published theorem and definition links.
