@@ -1,0 +1,108 @@
+{
+  "status": "passed",
+  "repository_head": "eacf12b04ae84543b128343fc56123f388017d8a",
+  "audit_path": "evidence/DS3-DS4-verified-2026-10-31.json",
+  "audit_sha256": "0595512c04a19b707fd1128703c85b09dc3268ab6ba4403658ba7a586590efa4",
+  "proof_notes_path": "docs/mean-value-quotient-haar-proofs.md",
+  "proof_notes_sha256": "3073750d1d76ca067b7168e7a55f47d3bcf86d37f01991809403b42709bbc308",
+  "claims": [
+    {
+      "topic": "spherical-mean-value",
+      "declaration": "MathResearch.Spinor.sphericalMeanValueOnBall_proved",
+      "scope": "Smooth harmonic quaternion-ball functions with complete real normed targets; all centered spherical averages.",
+      "audit": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "MathResearch.Spinor.sphericalMeanValueOnBall_proved",
+        "kind": "theorem",
+        "module": "MathResearch.Analysis.QuaternionicMeanValue",
+        "unexpected_axioms": []
+      }
+    },
+    {
+      "topic": "weighted-radial-mean-value",
+      "declaration": "MathResearch.Spinor.radialMeanValueOnBall_proved",
+      "scope": "The established weighted probability measures, n>=2, with an explicit L1 hypothesis.",
+      "audit": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "MathResearch.Spinor.radialMeanValueOnBall_proved",
+        "kind": "theorem",
+        "module": "MathResearch.Analysis.QuaternionicRadialMeanValue",
+        "unexpected_axioms": []
+      }
+    },
+    {
+      "topic": "quotient-haar",
+      "declaration": "MathResearch.Spinor.quotientHaarIntegration_proved",
+      "scope": "Sp(1,1), normalized section coordinates; continuous nonnegative real functions; Haar, integrability iff, and integral equality.",
+      "audit": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "MathResearch.Spinor.quotientHaarIntegration_proved",
+        "kind": "theorem",
+        "module": "MathResearch.Analysis.QuaternionicQuotientHaar",
+        "unexpected_axioms": []
+      }
+    },
+    {
+      "topic": "haar-construction",
+      "declaration": "MathResearch.Spinor.normalizedGroupHaar_isHaar",
+      "scope": "The explicit pushforward measure is left Haar.",
+      "audit": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "MathResearch.Spinor.normalizedGroupHaar_isHaar",
+        "kind": "theorem",
+        "module": "MathResearch.Analysis.QuaternionicHaarMeasure",
+        "unexpected_axioms": []
+      }
+    },
+    {
+      "topic": "radial-ode",
+      "declaration": "MathResearch.Analysis.radialMeanODE_constant",
+      "scope": "The regular dimension-four radial harmonic ODE for normed real targets.",
+      "audit": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "MathResearch.Analysis.radialMeanODE_constant",
+        "kind": "theorem",
+        "module": "MathResearch.Analysis.RadialMeanODE",
+        "unexpected_axioms": []
+      }
+    },
+    {
+      "topic": "compact-differentiation",
+      "declaration": "MathResearch.Analysis.hasFDerivAt_integral_compact",
+      "scope": "Compact finite-measure parameter differentiation with jointly continuous derivative; proper parameter space.",
+      "audit": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "declaration": "MathResearch.Analysis.hasFDerivAt_integral_compact",
+        "kind": "theorem",
+        "module": "MathResearch.Analysis.CompactParametricIntegral",
+        "unexpected_axioms": []
+      }
+    }
+  ],
+  "unverified_external_mathematical_premises": [],
+  "exposition_status": "Internal proof notes supplied; no wiki article edited."
+}
