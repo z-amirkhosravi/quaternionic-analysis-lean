@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "target_status": {
+    "DS2/v1": "complete_canonical_proof_with_expanded_justifications",
+    "DS3/v1": "conditional_not_instantiated",
+    "DS4/v1": "conditional_not_instantiated"
+  },
+  "complete_new_targets": [
+    "DS2/v1"
+  ],
+  "wiki_changed": false,
+  "additional_axioms_introduced": [],
+  "explicit_unproved_inputs_for_DS2": [],
+  "canonical_source": "docs/DS2-complete-source.json",
+  "proof_correspondence": "docs/DS2-complete-proof-correspondence.md",
+  "internal_proof_notes": "docs/DS2-completion-proof-notes.md",
+  "discharged_obligations": [
+    "Canonical compact-support continuity proof, density in the open ball, and restriction",
+    "Every real directional partial: bounded interior evaluation and Bochner averaging",
+    "Independent weak row distribution equation and exact C3 row representation",
+    "Probability mass one for the unchanged C_n weighted measure",
+    "Complete DS2 statement assembled with canonical local-L2 completeness"
+  ],
+  "remaining_dependencies": [
+    "DS3 compact-group averaging, mean-value and finite-dimensional irreducibility inputs",
+    "DS4 Haar-coordinate/Schur and actual L2 coefficient-realization inputs"
+  ],
+  "proof_route_check": "docs/DS2-proof-route-check.lean",
+  "historical_alternative": "Earlier bounded-continuous continuity proof preserved but excluded from the new DS2 dependency closure. No canonical or wiki rewrite is required.",
+  "audit_caveat": "Axiom checks, exact statements and mathematical proof correspondence are separate checks; this is not independent review."
+}

@@ -43,3 +43,5 @@ public import MathResearch.Spinor.L2StrongContinuity
 public import MathResearch.Spinor.ClassicalRow
 
 public import MathResearch.Spinor.RegularEvaluation
+
+public import MathResearch.Spinor.DiscreteSeriesModel
