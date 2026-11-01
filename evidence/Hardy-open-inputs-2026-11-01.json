@@ -1,0 +1,55 @@
+{
+  "status": "explicit-open-input-inventory",
+  "repository_head": "9711f5420475c96f728cc7c6a62448a102377464",
+  "main_declaration": "MathResearch.Hardy.Hardy_pi1_of_background",
+  "claim_status": "conditional; no complete research/wiki target certified",
+  "inputs": [
+    {
+      "declaration": "MathResearch.Hardy.BoundaryAreaFormula",
+      "source": "MathResearch/Analysis/BoundaryAreaFormula.lean",
+      "source_sha256": "3b990ae07dac9acc19c5c3e20a356ad28c39fcc60ce343a13c79a58781a4c602",
+      "status": "unproved explicit parameter; no axiom or instance",
+      "scope": "Surface Jacobian and change of variables; local geometric theorem unproved."
+    },
+    {
+      "declaration": "MathResearch.Hardy.RegularPolynomialBoundaryApproximation",
+      "source": "MathResearch/Analysis/RegularPolynomialApproximation.lean",
+      "source_sha256": "5fc87d83996c5698a919075db810293dd1185efb5c3896b0652bcc6f98ffc079",
+      "status": "unproved explicit parameter; no axiom or instance",
+      "scope": "Uniform regular-polynomial boundary approximation by dilation and homogeneous partial sums; unproved."
+    },
+    {
+      "declaration": "MathResearch.Hardy.HardyTraceData",
+      "source": "MathResearch/Analysis/FueterHardyTrace.lean",
+      "source_sha256": "b43b8e0ac65c462553e19502269281b27fdae1502e307385c076be6847b3c9b0",
+      "status": "unproved explicit parameter; no axiom or instance",
+      "scope": "Homogeneous harmonic expansion/Parseval trace outputs, bounded evaluations, reconstruction and local C7 trace-equivariance; unproved."
+    },
+    {
+      "declaration": "MathResearch.Hardy.SpinorCompactExpansionData",
+      "source": "MathResearch/Analysis/SpinorCompactExpansion.lean",
+      "source_sha256": "2e61a4787d4c2073f2b9d20340e4814d79712082e24dffcb5a3d7eb63f1f5d6b",
+      "status": "unproved explicit parameter; no axiom or instance",
+      "scope": "Peter–Weyl/Clebsch–Gordan plus Fueter K-type specialization and completeness; unproved."
+    },
+    {
+      "declaration": "MathResearch.Hardy.SpinorEndpointClassification",
+      "source": "MathResearch/Analysis/SpinorEndpointClassification.lean",
+      "source_sha256": "ffb716c2b944f6cb41f1bf29f7137dfd155e9520c875416226358a09a582fd9e",
+      "status": "unproved explicit parameter; no axiom or instance",
+      "scope": "External positive spinor endpoint classification, including full normalized-induction/group convention bridge; unproved. No general limit-of-discrete-series predicate encoded."
+    }
+  ],
+  "not_claimed": [
+    "general definition or classification of limits of discrete series",
+    "full normalized induced-section construction or Spin(4,1) group isomorphism",
+    "non-L2 and p>2 coefficient integrability",
+    "inequivalence of the summands",
+    "central-cover assertion",
+    "exterior Kelvin regularity"
+  ],
+  "proof_source_sha256": "e25b1205d15fab48c67b7ffca7044671b601f99a7e8475849fdab52a19cb8d94",
+  "notes_sha256": "995d2572d92bdd3dedc7d580045c71ffff2fcc8b006775ef24dfbb2944e7652d",
+  "independent_review": false,
+  "canonical_research_or_wiki_edited": false
+}
