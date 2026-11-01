@@ -1,0 +1,881 @@
+{
+  "status": "passed",
+  "base_release": "84b66cce3de6e5d9fee23838cb8657aae21592c3",
+  "checked_source": "978519602186b433be863cc02c20ad9a3e5677c5",
+  "old_math_files": 114,
+  "unchanged_math_files": 112,
+  "changed_math_files": [
+    "MathResearch/Spinor/BallConnection.lean",
+    "MathResearch/Spinor/ProjectedConnection.lean"
+  ],
+  "added_math_files": [
+    "MathResearch/Analysis/MaurerCartan.lean"
+  ],
+  "prior_background_modules": 26,
+  "prior_background_modules_all_unchanged": true,
+  "previous_theorem_statements_in_changed_files": [
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "mem_ball_iff",
+      "statement_source_sha256": "534a09b25052298c3f69aed66bdc79241c47dd3ca2c32a2877c208d82228e664",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "hasFDerivAt_ballScale",
+      "statement_source_sha256": "a42f7f16b7a692f1b5dd2c5d7ac019add841786e40072140e91b55ec1212558c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "ball_isOpen",
+      "statement_source_sha256": "69af764d0a6c6ee59cdd269fdb0810be6e6937e1d0301abae4cc32e5d655d751",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "fderiv_ballConnection",
+      "statement_source_sha256": "5d9fce72e8676af314f7a49167ac898d68c473f69fd5eadd817ed6441f4c3702",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "ballCurvature_eq",
+      "statement_source_sha256": "c37c14db598252037868416fb6cbbceabb449820afd5764c5101112b04130a01",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "ballCurvature_origin",
+      "statement_source_sha256": "8c934e6e75fc1c91fa95dbaf75d99295df48ba82b45323e715479a22833e2791",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "tangentCLM_apply",
+      "statement_source_sha256": "e6702e7b196bd69e6d8c619386a2546119ac9cff127809a2b4ac70f159b7098f",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "ballSection_inverse",
+      "statement_source_sha256": "89d919875771c9740ae800000a29b853ee4e2a629af5304170abd927afc98737",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "fderiv_ballSection",
+      "statement_source_sha256": "257f242192a3a6257ad40bb2988f0d0745588bd8e213448d3bdcfc5202b2711a",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "declaration": "ballSection_maurerCartan",
+      "statement_source_sha256": "f178799fe70b5109c34f5766a01d280136fe32bc739a7b51bb6c578a54c7b1ce",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "projected_full_identity",
+      "statement_source_sha256": "c632287dd3fba0389bb681752a2652e98f588aa671cbccb50ffe7b80b3658768",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "projected_connection_identity",
+      "statement_source_sha256": "f304b8394d34aecb7a16c572cd15843dea4ceba566bfb8a7e07a550b15cf8983",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "euler_homogeneous",
+      "statement_source_sha256": "bd05cc88ebdb2e22166ed0875a635ddd1c5d0f5f02da2edd560e215c9ebeda9f",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "projected_full_homogeneous",
+      "statement_source_sha256": "6e8762420a0499e54238c5a99acf56d610fa217c46af927cb575166852c2b0e3",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "projected_connection_homogeneous",
+      "statement_source_sha256": "40aaf610a4771b3cf653fb1a73222c1eb6710301625613debacb35cbd3ceab0a",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "matrixColumn_pack_coeff",
+      "statement_source_sha256": "7e9872f53a65844bb680029016d66c0111912bfd1424e8d031754b30326098d7",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "pack_sum",
+      "statement_source_sha256": "fc726a48e6feed964219bd35b508df2cf6654187d8fef69fb7454208d468897c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "pack_real_smul",
+      "statement_source_sha256": "651f7657814edfab13b7b1bbca66ec5af68ca4a7c4455e4116847c2229412fd5",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "column_identity_to_quaternion",
+      "statement_source_sha256": "268958c09093c04c8a9d315b7daa844d435f8bc5b51c1e29cb348a32e4202fcf",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "projected_full_quaternion",
+      "statement_source_sha256": "1e4abe33d24d61ecc643a5a85a360c06b1dfb56a448a8610eba9b029ac0bc5d0",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "projected_connection_quaternion",
+      "statement_source_sha256": "e3879c8cc4cfcae9fc3d41a4745549f5e235c87e35c5ec5a8dd2e6836dd4111b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "SC2_v1_coefficients",
+      "statement_source_sha256": "31ea0f1c7f89699aff0309af8bfa0dcb998a8602d5d511ac92a8408ca2993b67",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "declaration": "SC2_v1",
+      "statement_source_sha256": "43f3c165843f678d1ef3e5521ea804dd2d32e0dae75843ace1454b302f5695ef",
+      "unchanged": true
+    }
+  ],
+  "file_comparisons": [
+    {
+      "path": "MathResearch.lean",
+      "base_sha256": "7a4fe3fb8526d4df4e7576e7452543ce4d2b5f44c851be1b60fff03db858c000",
+      "current_sha256": "7a4fe3fb8526d4df4e7576e7452543ce4d2b5f44c851be1b60fff03db858c000",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/CompactHaarSymmetry.lean",
+      "base_sha256": "6017204dc54a657d32f573fa421689919f932061310ab0bb0f6f4685f0205ed7",
+      "current_sha256": "6017204dc54a657d32f573fa421689919f932061310ab0bb0f6f4685f0205ed7",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/CompactParametricIntegral.lean",
+      "base_sha256": "4f7b3926aac16dbca294d49a9316a65381d387a5beadcfeaf0209ba95e21966a",
+      "current_sha256": "4f7b3926aac16dbca294d49a9316a65381d387a5beadcfeaf0209ba95e21966a",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/HarmonicMeanValue.lean",
+      "base_sha256": "8138db2c0920acdb03e5c76998194ffad705ae7c00acb43ce0943d0006c7aeb3",
+      "current_sha256": "8138db2c0920acdb03e5c76998194ffad705ae7c00acb43ce0943d0006c7aeb3",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/HarmonicPartials.lean",
+      "base_sha256": "b523f4de032b724a489d5891bb39c909e10bd93fa486a9f6d3ea5dc8d7b54a79",
+      "current_sha256": "b523f4de032b724a489d5891bb39c909e10bd93fa486a9f6d3ea5dc8d7b54a79",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/InvariantDensity.lean",
+      "base_sha256": "fc2baeaf6ce8e92cfdf0205b73731a8058c9dbc86a1ca7c7441065410bee1cab",
+      "current_sha256": "fc2baeaf6ce8e92cfdf0205b73731a8058c9dbc86a1ca7c7441065410bee1cab",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/LeftRegularL2.lean",
+      "base_sha256": "cc817ddd00e2fd28d6f663f6a2079e1a788410bbf14bb7eb5d6c04a4fffebb47",
+      "current_sha256": "cc817ddd00e2fd28d6f663f6a2079e1a788410bbf14bb7eb5d6c04a4fffebb47",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuaternionicHaarCoordinates.lean",
+      "base_sha256": "488421b8166f97afa0a4d68ae7bd77eee11acfda4f45e4d7c5801ecc097ac853",
+      "current_sha256": "488421b8166f97afa0a4d68ae7bd77eee11acfda4f45e4d7c5801ecc097ac853",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuaternionicHaarMeasure.lean",
+      "base_sha256": "5c3388f091110b5e53746f4eab6231ce550d498f5c7b53eea9910bb8429a3f7f",
+      "current_sha256": "5c3388f091110b5e53746f4eab6231ce550d498f5c7b53eea9910bb8429a3f7f",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuaternionicInvariantMeasure.lean",
+      "base_sha256": "713e918a038591cdc43011eb15dcecc624f4fa8997f4453f7868e23cdc5f10dc",
+      "current_sha256": "713e918a038591cdc43011eb15dcecc624f4fa8997f4453f7868e23cdc5f10dc",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuaternionicMeanValue.lean",
+      "base_sha256": "ee32e3f288bd39d5500c12df53cfa10d5bb0fe066fe8ecebdae0826c131b3f9b",
+      "current_sha256": "ee32e3f288bd39d5500c12df53cfa10d5bb0fe066fe8ecebdae0826c131b3f9b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuaternionicQuotientHaar.lean",
+      "base_sha256": "3c744970f5b1c889c1de0ae34ae80a1aed5be3525a1e5ca846bb582511162193",
+      "current_sha256": "3c744970f5b1c889c1de0ae34ae80a1aed5be3525a1e5ca846bb582511162193",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuaternionicRadialMeanValue.lean",
+      "base_sha256": "5a42e660b9b32bb3c1ac51c1386f813083f6075bc852e8528cadf74525040bc1",
+      "current_sha256": "5a42e660b9b32bb3c1ac51c1386f813083f6075bc852e8528cadf74525040bc1",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuaternionicSphericalAverage.lean",
+      "base_sha256": "216102d8d1a9585b3f56c861239792aa0946ee0fbc2471492525a4ab6fb6106b",
+      "current_sha256": "216102d8d1a9585b3f56c861239792aa0946ee0fbc2471492525a4ab6fb6106b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/QuotientHaarIntegration.lean",
+      "base_sha256": "65a31451d042a61622613eace06d5f222d8f63c10d56d7a074ec248924795c6c",
+      "current_sha256": "65a31451d042a61622613eace06d5f222d8f63c10d56d7a074ec248924795c6c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/RadialHarmonic.lean",
+      "base_sha256": "bc3ec2e9e1e61d4f41692787e7f04e4ae61bdb5aee85d18eca11512b181c0918",
+      "current_sha256": "bc3ec2e9e1e61d4f41692787e7f04e4ae61bdb5aee85d18eca11512b181c0918",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/RadialHessian.lean",
+      "base_sha256": "9c058112d3e8f23a4242f736a6de03c5e58775f0a0639be996c6f25b23e04b3c",
+      "current_sha256": "9c058112d3e8f23a4242f736a6de03c5e58775f0a0639be996c6f25b23e04b3c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/RadialLaplacian.lean",
+      "base_sha256": "a08c3d652f5b04423c1f27ae50cb2cb6fc211d6ade3697222d2183486a2f437e",
+      "current_sha256": "a08c3d652f5b04423c1f27ae50cb2cb6fc211d6ade3697222d2183486a2f437e",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/RadialMeanODE.lean",
+      "base_sha256": "4f105d0afd92e53746c4e01ad527c2f3b3c099090404cc76ee34eaa6c41ae52c",
+      "current_sha256": "4f105d0afd92e53746c4e01ad527c2f3b3c099090404cc76ee34eaa6c41ae52c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/RotationalBallMeasure.lean",
+      "base_sha256": "2d1e0c7e36e244d62c34412c88331ea0986c2a831cd1929eb8c2252520979029",
+      "current_sha256": "2d1e0c7e36e244d62c34412c88331ea0986c2a831cd1929eb8c2252520979029",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/SmoothDistribution.lean",
+      "base_sha256": "4b6d1cf1b0a09f9b44bd4e305b38c9f72d451506678c36fb1076ff1afa5a885f",
+      "current_sha256": "4b6d1cf1b0a09f9b44bd4e305b38c9f72d451506678c36fb1076ff1afa5a885f",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/UnitaryIrreducible.lean",
+      "base_sha256": "d355f37dd49a3315aa18123c0901e6007652388ec73fc4059d476678e8a27736",
+      "current_sha256": "d355f37dd49a3315aa18123c0901e6007652388ec73fc4059d476678e8a27736",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/WeylApproximation.lean",
+      "base_sha256": "3913e5eacb3a6c8a98aa04fb4df55c760f4d1a0bf7089f6ae3f78f7c7803d416",
+      "current_sha256": "3913e5eacb3a6c8a98aa04fb4df55c760f4d1a0bf7089f6ae3f78f7c7803d416",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/WeylKernel.lean",
+      "base_sha256": "2cd0aef6e07464a624ffa5f0dc02eb396911170ccc5f48c94c2b637a9f04acd4",
+      "current_sha256": "2cd0aef6e07464a624ffa5f0dc02eb396911170ccc5f48c94c2b637a9f04acd4",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/WeylProfile.lean",
+      "base_sha256": "d3feabe409db21dd8508d2306e6a548293947c96cad70f24bd05e36d89c41fb3",
+      "current_sha256": "d3feabe409db21dd8508d2306e6a548293947c96cad70f24bd05e36d89c41fb3",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/WeylRepresentative.lean",
+      "base_sha256": "13130b1f399dd7244f7eb329fe58d6636c5702c1d5e9669b421263a3758b9770",
+      "current_sha256": "13130b1f399dd7244f7eb329fe58d6636c5702c1d5e9669b421263a3758b9770",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Analysis/WeylTests.lean",
+      "base_sha256": "9ab40e531c59109782c3607291f37e294ddb2786af32096c15f8114201ad61ce",
+      "current_sha256": "9ab40e531c59109782c3607291f37e294ddb2786af32096c15f8114201ad61ce",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/CoefficientRepresentation.lean",
+      "base_sha256": "b182b87a5dcf13e646776a73c5f80642dc5133b901ff5389a1bab7fab1cb5407",
+      "current_sha256": "b182b87a5dcf13e646776a73c5f80642dc5133b901ff5389a1bab7fab1cb5407",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/Elliptic.lean",
+      "base_sha256": "831ce9e2924b87ae55aecc6353834ab180b5fbd28ac74a795188d6958ae5d97b",
+      "current_sha256": "831ce9e2924b87ae55aecc6353834ab180b5fbd28ac74a795188d6958ae5d97b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/EllipticCoefficients.lean",
+      "base_sha256": "361b70baf5fdb2aa95d41fb5e5eff997b9499a9176999345eb3c9e303a4c885e",
+      "current_sha256": "361b70baf5fdb2aa95d41fb5e5eff997b9499a9176999345eb3c9e303a4c885e",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/EllipticDilation.lean",
+      "base_sha256": "2d13c5f9d9c1e77baad7654e8115371a812eca30893625e17cfcc89d72b6d4fb",
+      "current_sha256": "2d13c5f9d9c1e77baad7654e8115371a812eca30893625e17cfcc89d72b6d4fb",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/EllipticEstimates.lean",
+      "base_sha256": "2899b691c9ca1f36e126a63905bcdc53d3e4883d154f63884d5998d135988228",
+      "current_sha256": "2899b691c9ca1f36e126a63905bcdc53d3e4883d154f63884d5998d135988228",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/EllipticPeriodicity.lean",
+      "base_sha256": "f57be324356722c5c434fe67a8c6f91cf69c6127b84a905cc92fb418028a7845",
+      "current_sha256": "f57be324356722c5c434fe67a8c6f91cf69c6127b84a905cc92fb418028a7845",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/EllipticRegularity.lean",
+      "base_sha256": "6b8769d92a0f1042e6279e6b210ce469f6344943b801e4d8fdd0ae04bbc17517",
+      "current_sha256": "6b8769d92a0f1042e6279e6b210ce469f6344943b801e4d8fdd0ae04bbc17517",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/HalfPeriods.lean",
+      "base_sha256": "baa86b0b7b9ee3692eb6fb3ef85dde47d3d88a31d209d6d87e803f63b779d230",
+      "current_sha256": "baa86b0b7b9ee3692eb6fb3ef85dde47d3d88a31d209d6d87e803f63b779d230",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/HarmonicPolynomial.lean",
+      "base_sha256": "d8897c572cc0dad7c4dc4d01646856930355789a81671580f4280a1ae925bf69",
+      "current_sha256": "d8897c572cc0dad7c4dc4d01646856930355789a81671580f4280a1ae925bf69",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/HarmonicTheta.lean",
+      "base_sha256": "9dbf26347f9077c51850428114616e1c5c91b2466f03f3d282989525cabfc1fa",
+      "current_sha256": "9dbf26347f9077c51850428114616e1c5c91b2466f03f3d282989525cabfc1fa",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/Kernel.lean",
+      "base_sha256": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+      "current_sha256": "07b015c6e4bef604d3370eaef83edfa1328374a822d14aec44c7e4b4b037f5e5",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/KernelEstimates.lean",
+      "base_sha256": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+      "current_sha256": "43731d1faabf750888dfccf359a4d917e83a5f31916bc34749655d5fbfee103c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/KernelNumerator.lean",
+      "base_sha256": "6d29e75e3ed65cf679fd361deab9965bd27fbca3a760384db1672a8719afc2f1",
+      "current_sha256": "6d29e75e3ed65cf679fd361deab9965bd27fbca3a760384db1672a8719afc2f1",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/KernelRotationAction.lean",
+      "base_sha256": "1044bf3cfcf839dc7dea34ca9520d0a0345db876a4e83d9bc55b43dfc8bdbd20",
+      "current_sha256": "1044bf3cfcf839dc7dea34ca9520d0a0345db876a4e83d9bc55b43dfc8bdbd20",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/LatticeDilation.lean",
+      "base_sha256": "7e97b6e54e271e67802911406dd64d7166107f3d6465220b31af79a34bbac758",
+      "current_sha256": "7e97b6e54e271e67802911406dd64d7166107f3d6465220b31af79a34bbac758",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/LatticeSums.lean",
+      "base_sha256": "00f34cf595cfbd6b6e0da1ca5f66d017213aa06920188111b7b9658a39bafd73",
+      "current_sha256": "00f34cf595cfbd6b6e0da1ca5f66d017213aa06920188111b7b9658a39bafd73",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/Operators.lean",
+      "base_sha256": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+      "current_sha256": "1f353ad6c85f3827beadab970ea3853b99e94e3f45c7f41dba9301a858aa92b1",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/PartialCommutation.lean",
+      "base_sha256": "beee71a3b75caab5db817a4776b024989c0e6f2ef358b4f6373fc3724279c371",
+      "current_sha256": "beee71a3b75caab5db817a4776b024989c0e6f2ef358b4f6373fc3724279c371",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/PolynomialCalculus.lean",
+      "base_sha256": "d6c0757ed3ba5d8e104abe64375667c93a92135658cc2f0b069f3cb11afedc8c",
+      "current_sha256": "d6c0757ed3ba5d8e104abe64375667c93a92135658cc2f0b069f3cb11afedc8c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/PuncturedSmooth.lean",
+      "base_sha256": "78f9c6b4c55307b475e077a07d1db0f7e1ad05d50d2cb696f804694da607ad14",
+      "current_sha256": "78f9c6b4c55307b475e077a07d1db0f7e1ad05d50d2cb696f804694da607ad14",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/QuaternionRotations.lean",
+      "base_sha256": "6c90b2d8d6688cfebb63b8f4b4b4b3e967a363e7450da1d87391123666ec0d5e",
+      "current_sha256": "6c90b2d8d6688cfebb63b8f4b4b4b3e967a363e7450da1d87391123666ec0d5e",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/RealMellin.lean",
+      "base_sha256": "e34e1602306807831634cf07a05bb8605dabc5ff43990915f0936165cb7049c6",
+      "current_sha256": "e34e1602306807831634cf07a05bb8605dabc5ff43990915f0936165cb7049c6",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/RotationCovariance.lean",
+      "base_sha256": "999a0c12d8a3e19d135963f8eccefca4fc8756f35d1d675ff921a489b6bf9980",
+      "current_sha256": "999a0c12d8a3e19d135963f8eccefca4fc8756f35d1d675ff921a489b6bf9980",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/SeriesCalculus.lean",
+      "base_sha256": "e3be2eb494e855bb5d44fd5ab46fbdb8a3ed9c2c8770f705a5c031c8ffcf1e9c",
+      "current_sha256": "e3be2eb494e855bb5d44fd5ab46fbdb8a3ed9c2c8770f705a5c031c8ffcf1e9c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/Zeta.lean",
+      "base_sha256": "368aff3bba3030f9d47eaec30a874ee4e1101a252f2cfd650cd965d4fa390a56",
+      "current_sha256": "368aff3bba3030f9d47eaec30a874ee4e1101a252f2cfd650cd965d4fa390a56",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/ZetaEstimates.lean",
+      "base_sha256": "9ea9dabb3e652963d36c67d885023c837700d717fddf6922f78eae4e4a0eddb1",
+      "current_sha256": "9ea9dabb3e652963d36c67d885023c837700d717fddf6922f78eae4e4a0eddb1",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/ZetaQuasiperiods.lean",
+      "base_sha256": "5ebf065aa22fd89fcf6911e38e1180b5eb8f14ced5d04f42e79b0de6df37a0eb",
+      "current_sha256": "5ebf065aa22fd89fcf6911e38e1180b5eb8f14ced5d04f42e79b0de6df37a0eb",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Fueter/ZetaSummands.lean",
+      "base_sha256": "19ff1be2a3abaa56508a6b2574ac44481ef994b01f9889f0686ca38ca72ede44",
+      "current_sha256": "19ff1be2a3abaa56508a6b2574ac44481ef994b01f9889f0686ca38ca72ede44",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/SmokeTest.lean",
+      "base_sha256": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+      "current_sha256": "047a5fee4397e9bcdcea3d514e5a604f7322f309991a60f25b539ceec2d1a37c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallAction.lean",
+      "base_sha256": "bebcfd4fcdcc5c380ef5f889b6a8d5753169c002aeb6485f8377f53b41f59d71",
+      "current_sha256": "bebcfd4fcdcc5c380ef5f889b6a8d5753169c002aeb6485f8377f53b41f59d71",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/BallConnection.lean",
+      "base_sha256": "3850c36f7d6d0b1f0ea852ffa6a3b6134a0e2668ffb20820db8b625441dc4794",
+      "current_sha256": "d6af345f863e1b36fdb6acc18373c5ce023d969df2fd56d501372c788170e886",
+      "unchanged": false
+    },
+    {
+      "path": "MathResearch/Spinor/BinaryForm.lean",
+      "base_sha256": "1598062f2dba443b8b9c97e6ac6ebfd4a199ecf07552c2076d8332c8bd52f408",
+      "current_sha256": "1598062f2dba443b8b9c97e6ac6ebfd4a199ecf07552c2076d8332c8bd52f408",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ClassicalRow.lean",
+      "base_sha256": "d0ab39849bb06f7bf150d520e8a2d1c1c519a25a8631a1bcc997623f47357d9b",
+      "current_sha256": "d0ab39849bb06f7bf150d520e8a2d1c1c519a25a8631a1bcc997623f47357d9b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ClassicalWeak.lean",
+      "base_sha256": "bce202c368f4d6a9eac2b1218b7be8c9359b3903178765b527cd9accbdb18238",
+      "current_sha256": "bce202c368f4d6a9eac2b1218b7be8c9359b3903178765b527cd9accbdb18238",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CoefficientEmbedding.lean",
+      "base_sha256": "803a3aa52713cd24229fb1dbd372816d54f3ee778c0727273ade569e5ffe0cf0",
+      "current_sha256": "803a3aa52713cd24229fb1dbd372816d54f3ee778c0727273ade569e5ffe0cf0",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CompactAveraging.lean",
+      "base_sha256": "2ffb3650aabdd61b3f0bdc9a364276a08e401d6f32af3949b303b6dabfde1b33",
+      "current_sha256": "2ffb3650aabdd61b3f0bdc9a364276a08e401d6f32af3949b303b6dabfde1b33",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CompactContinuity.lean",
+      "base_sha256": "71a73e0594ee0032e00358797cb4f4e882e4f3e7fc3c26ed2133022fef4943ac",
+      "current_sha256": "71a73e0594ee0032e00358797cb4f4e882e4f3e7fc3c26ed2133022fef4943ac",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CompactDensity.lean",
+      "base_sha256": "5d3e2466cf4c9b58f29d285af9ca5916449faf19b7523c7074666c92ffe8ea82",
+      "current_sha256": "5d3e2466cf4c9b58f29d285af9ca5916449faf19b7523c7074666c92ffe8ea82",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CompactGroup.lean",
+      "base_sha256": "aca7a86eb0a3b0eee931922f3bf479edbeedcc708b59657bc96f6e8958226448",
+      "current_sha256": "aca7a86eb0a3b0eee931922f3bf479edbeedcc708b59657bc96f6e8958226448",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CompactIrreducible.lean",
+      "base_sha256": "022d557b9eddbaa39ef965f39708a4b1a2e588caa2ae3c95764c2470dcc7c0b7",
+      "current_sha256": "022d557b9eddbaa39ef965f39708a4b1a2e588caa2ae3c95764c2470dcc7c0b7",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CompactSchur.lean",
+      "base_sha256": "c5f9698ff7b60989a4201ad633630dc600c275bb0be0a7e606ae742be8ed382c",
+      "current_sha256": "c5f9698ff7b60989a4201ad633630dc600c275bb0be0a7e606ae742be8ed382c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CompatibleRow.lean",
+      "base_sha256": "a8729c3466aea281c49ac42b4dc16f118ec153d4628c01c38f9ab68e1982073e",
+      "current_sha256": "a8729c3466aea281c49ac42b4dc16f118ec153d4628c01c38f9ab68e1982073e",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/CurvatureWitness.lean",
+      "base_sha256": "a149f8e1409ddfe10ee619450bc6a37b2bfc6a5db456fe80bd7274fd39f39554",
+      "current_sha256": "a149f8e1409ddfe10ee619450bc6a37b2bfc6a5db456fe80bd7274fd39f39554",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/DiscreteSeriesCoefficient.lean",
+      "base_sha256": "f861ab346723f983e6aeda5c597575d714f88b49657ee48c7afb906462c5c408",
+      "current_sha256": "f861ab346723f983e6aeda5c597575d714f88b49657ee48c7afb906462c5c408",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/DiscreteSeriesIrreducible.lean",
+      "base_sha256": "5ef8745be9afd8c2ded602f58babc6387e52004b62d34bed37a41118cc1fc179",
+      "current_sha256": "5ef8745be9afd8c2ded602f58babc6387e52004b62d34bed37a41118cc1fc179",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/DiscreteSeriesModel.lean",
+      "base_sha256": "82e9b7ff0591250aa89d876a734424323a827de5651bd2e01da431b576f7fc02",
+      "current_sha256": "82e9b7ff0591250aa89d876a734424323a827de5651bd2e01da431b576f7fc02",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/DiscreteSeriesVerified.lean",
+      "base_sha256": "1273ff96a56bf680a7a2ac14c769d1ea2a2df4fe920a7e9f9a16da60f3aa2203",
+      "current_sha256": "1273ff96a56bf680a7a2ac14c769d1ea2a2df4fe920a7e9f9a16da60f3aa2203",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/FrameLift.lean",
+      "base_sha256": "a9fd74a3e906c60cab0d82b48a67bd625a51d9adf6a5a8bd903a03715aebfcb9",
+      "current_sha256": "a9fd74a3e906c60cab0d82b48a67bd625a51d9adf6a5a8bd903a03715aebfcb9",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/FullLift.lean",
+      "base_sha256": "c09f6f614a4778c348e2184864d74eeca9063a27595de30896ef33ca6212641b",
+      "current_sha256": "c09f6f614a4778c348e2184864d74eeca9063a27595de30896ef33ca6212641b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/GradientIsometry.lean",
+      "base_sha256": "0919891cbfe08218cc0694aa1dd9223af57ab5699115920e1424d07728d0d6fe",
+      "current_sha256": "0919891cbfe08218cc0694aa1dd9223af57ab5699115920e1424d07728d0d6fe",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/GroupKernel.lean",
+      "base_sha256": "c431de21da62f04a44407b9dd95cb4ba890f6b7fd38dddf781f828f06648c8da",
+      "current_sha256": "c431de21da62f04a44407b9dd95cb4ba890f6b7fd38dddf781f828f06648c8da",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/InteriorEvaluation.lean",
+      "base_sha256": "a5268ec336a453d117cbb24e6f8e9817126d1a0c53d630e1626e300cc9c00e0d",
+      "current_sha256": "a5268ec336a453d117cbb24e6f8e9817126d1a0c53d630e1626e300cc9c00e0d",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/L2StrongContinuity.lean",
+      "base_sha256": "44b138128145a5d0f1e12d06ae6cb058636f15ef232d71423cd31502d0297b5c",
+      "current_sha256": "44b138128145a5d0f1e12d06ae6cb058636f15ef232d71423cd31502d0297b5c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/LocalClosure.lean",
+      "base_sha256": "53907b183d6c1368a6463e9cec9a53fb72f30d545c1b716160616bfbfe40881e",
+      "current_sha256": "53907b183d6c1368a6463e9cec9a53fb72f30d545c1b716160616bfbfe40881e",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/LocalL2.lean",
+      "base_sha256": "a1b67b4f42767ca6c22b2b2c2919791b183c2b9ab50f54183a81658a2aa83d40",
+      "current_sha256": "a1b67b4f42767ca6c22b2b2c2919791b183c2b9ab50f54183a81658a2aa83d40",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/MobiusJacobian.lean",
+      "base_sha256": "39318573b8a61462e24d8e30a4e5f09b8c3bd6d3567db33618990ad259896082",
+      "current_sha256": "39318573b8a61462e24d8e30a4e5f09b8c3bd6d3567db33618990ad259896082",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/MobiusLaws.lean",
+      "base_sha256": "4076e11170ceec187b0c97a325715ce99beab40fea7970eb39b02d3cfe9befcd",
+      "current_sha256": "4076e11170ceec187b0c97a325715ce99beab40fea7970eb39b02d3cfe9befcd",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/MobiusMeasure.lean",
+      "base_sha256": "d01a53d2c972f43ee5f88a48a4402f2b10f6ccfae205f8b4eb655cc622de85c2",
+      "current_sha256": "d01a53d2c972f43ee5f88a48a4402f2b10f6ccfae205f8b4eb655cc622de85c2",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/OrthonormalContraction.lean",
+      "base_sha256": "e3019d45d1526b96a60a762abf8e6b9e68c7028ff1393f32447c72edda4507b6",
+      "current_sha256": "e3019d45d1526b96a60a762abf8e6b9e68c7028ff1393f32447c72edda4507b6",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/PolynomialRepresentation.lean",
+      "base_sha256": "0b09c1da442ba4079c154a9b1aca9ee8da599c97c27d0dbd2c658e5fafb559b8",
+      "current_sha256": "0b09c1da442ba4079c154a9b1aca9ee8da599c97c27d0dbd2c658e5fafb559b8",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/PolynomialUnitary.lean",
+      "base_sha256": "da886ceddc785748fd4986500af4ed2214a5b73e464d5cadf98e5775fe4e275e",
+      "current_sha256": "da886ceddc785748fd4986500af4ed2214a5b73e464d5cadf98e5775fe4e275e",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProbabilityMeasure.lean",
+      "base_sha256": "b4bf2d6e65523c4aefac88465fda865992b3a4e0c3f1aa66eb58985b6d66092c",
+      "current_sha256": "b4bf2d6e65523c4aefac88465fda865992b3a4e0c3f1aa66eb58985b6d66092c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/ProjectedConnection.lean",
+      "base_sha256": "7fa7288fd5b3704b49fc9456b30d00e9f414b753daee7d03d6c9aeea1b0f6a9e",
+      "current_sha256": "32e5885e76084ec689e316681d2d52963d84fc364011f17d4161741dc908e25a",
+      "unchanged": false
+    },
+    {
+      "path": "MathResearch/Spinor/QuaternionMatrix.lean",
+      "base_sha256": "405227c1e63f74bf580498833c9c6625f0697155b362d0c3dcf626df028508cb",
+      "current_sha256": "405227c1e63f74bf580498833c9c6625f0697155b362d0c3dcf626df028508cb",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RegularAction.lean",
+      "base_sha256": "13eb95a5f9299f62c9bcceef63b12506ff96cdbfbb3fb7c4ff404b014b55f069",
+      "current_sha256": "13eb95a5f9299f62c9bcceef63b12506ff96cdbfbb3fb7c4ff404b014b55f069",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RegularCoefficient.lean",
+      "base_sha256": "540acd490f72d1e728d8e8dc12454e0775ee98ac09e522ad5817c7fd602c92d0",
+      "current_sha256": "540acd490f72d1e728d8e8dc12454e0775ee98ac09e522ad5817c7fd602c92d0",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RegularEvaluation.lean",
+      "base_sha256": "558290a7d8a6cdb019dd8d455aacaf23cb4933bdba01c148b7bfbbb85dd584b6",
+      "current_sha256": "558290a7d8a6cdb019dd8d455aacaf23cb4933bdba01c148b7bfbbb85dd584b6",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RegularOrbit.lean",
+      "base_sha256": "5946e61a94f50a3a76ae00cefd15e714ee20e1854cd14c405987f02d1939d874",
+      "current_sha256": "5946e61a94f50a3a76ae00cefd15e714ee20e1854cd14c405987f02d1939d874",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RegularRowAction.lean",
+      "base_sha256": "d2c4368a95ec4d3792b6ed87474f796bc2edfcef6016a837ca8a5e54f6571247",
+      "current_sha256": "d2c4368a95ec4d3792b6ed87474f796bc2edfcef6016a837ca8a5e54f6571247",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RegularSquareIntegrable.lean",
+      "base_sha256": "da08b060e97752518eb9519e71768bd18c55ab68327f52d4144ca5d7b3253cec",
+      "current_sha256": "da08b060e97752518eb9519e71768bd18c55ab68327f52d4144ca5d7b3253cec",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RepresentationCalculus.lean",
+      "base_sha256": "dc14b2fe14cad6250986b956a2f66d89b5108f6f0026bf6c8acba1be76256199",
+      "current_sha256": "dc14b2fe14cad6250986b956a2f66d89b5108f6f0026bf6c8acba1be76256199",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RowAction.lean",
+      "base_sha256": "279a9acfdfafb1f33f44840aa41384a56ae759c28d1011b3735c5637df1c0374",
+      "current_sha256": "279a9acfdfafb1f33f44840aa41384a56ae759c28d1011b3735c5637df1c0374",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/RowWeakEquation.lean",
+      "base_sha256": "2c66b14b2b7ab733de36e6684dcaff22a9c9826d5f0e8cefed5648cc820e8f05",
+      "current_sha256": "2c66b14b2b7ab733de36e6684dcaff22a9c9826d5f0e8cefed5648cc820e8f05",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/SchmidCovariance.lean",
+      "base_sha256": "9db06ab1975a44a6607a237323024fa05ee1988610c32ce56f4f8b6ec4235084",
+      "current_sha256": "9db06ab1975a44a6607a237323024fa05ee1988610c32ce56f4f8b6ec4235084",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/SchmidFueter.lean",
+      "base_sha256": "f6b7108e68849753aaa70dd6055d1482ed91fa92355ec9245c023ff0b8ec11ae",
+      "current_sha256": "f6b7108e68849753aaa70dd6055d1482ed91fa92355ec9245c023ff0b8ec11ae",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/SmoothCorrespondence.lean",
+      "base_sha256": "e13ae1ceabfb316eae6848b580a9ae0e6566a968a0b32c60f22e1434176c1dac",
+      "current_sha256": "e13ae1ceabfb316eae6848b580a9ae0e6566a968a0b32c60f22e1434176c1dac",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/Sp11.lean",
+      "base_sha256": "d2a98783458d3fac906773ba02a44e821f985e46f5de0dd3a5016b141209b78b",
+      "current_sha256": "d2a98783458d3fac906773ba02a44e821f985e46f5de0dd3a5016b141209b78b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeakConstants.lean",
+      "base_sha256": "9aba7fbce57b8167821afde3a67a0264cf2b3fd8999655f0473ea5ca5f72c57e",
+      "current_sha256": "9aba7fbce57b8167821afde3a67a0264cf2b3fd8999655f0473ea5ca5f72c57e",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeakHarmonic.lean",
+      "base_sha256": "ab12315a0f74fe2121c478600f7fb5aa7ddd6927c6281bcd2fc24c5b3d601ce9",
+      "current_sha256": "ab12315a0f74fe2121c478600f7fb5aa7ddd6927c6281bcd2fc24c5b3d601ce9",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeakKernel.lean",
+      "base_sha256": "0e1e6e4fc4c4d3d2a5b2236d770e579108ff2818751adb599ccd7a1d442fd68c",
+      "current_sha256": "0e1e6e4fc4c4d3d2a5b2236d770e579108ff2818751adb599ccd7a1d442fd68c",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeakRowSpace.lean",
+      "base_sha256": "9a1e8a9fb556ab21d6cfae021773747c4a477d8b5691c6ab7fdea0cf255331a6",
+      "current_sha256": "9a1e8a9fb556ab21d6cfae021773747c4a477d8b5691c6ab7fdea0cf255331a6",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeightedFueter.lean",
+      "base_sha256": "82e6d6e1dc383b4188e59381e624485f38582324255656985a44b3b3c9bdb2b9",
+      "current_sha256": "82e6d6e1dc383b4188e59381e624485f38582324255656985a44b3b3c9bdb2b9",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeightedL2Action.lean",
+      "base_sha256": "ae6a6dcc0dc8d8f2b64755290018361f29f72c25199a3d78fed381fa09c80ad4",
+      "current_sha256": "ae6a6dcc0dc8d8f2b64755290018361f29f72c25199a3d78fed381fa09c80ad4",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeightedLocalization.lean",
+      "base_sha256": "8ab951d68a267bd9df6d134d94afa3713fda6a807fa5b26f4e8d236cae95ad2a",
+      "current_sha256": "8ab951d68a267bd9df6d134d94afa3713fda6a807fa5b26f4e8d236cae95ad2a",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeightedMeasure.lean",
+      "base_sha256": "78e3a5831cdcaf590c411a8f58b699e8e581170f09ef58e28ef46cb7a3d2ca6b",
+      "current_sha256": "78e3a5831cdcaf590c411a8f58b699e8e581170f09ef58e28ef46cb7a3d2ca6b",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeylBridge.lean",
+      "base_sha256": "10a157abf28070702d7de48c7cc341f5e227e6b5a0f56b73d6559a34b6fff40f",
+      "current_sha256": "10a157abf28070702d7de48c7cc341f5e227e6b5a0f56b73d6559a34b6fff40f",
+      "unchanged": true
+    },
+    {
+      "path": "MathResearch/Spinor/WeylRegularity.lean",
+      "base_sha256": "a3e657c30ee812dfd096030ad02c1ba3ba405f42ac9e0ff68c22de2db58acda8",
+      "current_sha256": "a3e657c30ee812dfd096030ad02c1ba3ba405f42ac9e0ff68c22de2db58acda8",
+      "unchanged": true
+    },
+    {
+      "path": "lean-toolchain",
+      "base_sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "current_sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "unchanged": true
+    },
+    {
+      "path": "lakefile.toml",
+      "base_sha256": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+      "current_sha256": "fa07a60b6ecb303784d5b4914a121b9fc02c90ba27543f82686d9af54f84d00d",
+      "unchanged": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "base_sha256": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+      "current_sha256": "68bd235b4362a35ea6d2163322ebcdcdbff1e5c9f6af9f5c9cf7e473d0227b78",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/verify.py",
+      "base_sha256": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64",
+      "current_sha256": "37e900a9073dedfeb315b36eba932f4a05ac61b89528a49e7fcad0f9af98ce64",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/Audit.lean",
+      "base_sha256": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+      "current_sha256": "b0ae7435265510aad40eca8b6b9da663dedef056b147d8901c61059c587b6b20",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/lake.sh",
+      "base_sha256": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+      "current_sha256": "567fc48c59e878e826317a8ca0c4a2f7c840cbe9d50c78e9eddf323017e4ffe6",
+      "unchanged": true
+    }
+  ],
+  "new_file_sha256": {
+    "MathResearch/Analysis/MaurerCartan.lean": "baa734b423130e7fcf4e7b85de0c02f55479d7ade4232a66237102ea64954aea"
+  }
+}

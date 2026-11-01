@@ -1,0 +1,300 @@
+{
+  "status": "passed",
+  "checked_source": "978519602186b433be863cc02c20ad9a3e5677c5",
+  "module": "MathResearch.Analysis.MaurerCartan",
+  "declaration": "MathResearch.Analysis.maurerCartan",
+  "source_path": "MathResearch/Analysis/MaurerCartan.lean",
+  "source_sha256": "baa734b423130e7fcf4e7b85de0c02f55479d7ade4232a66237102ea64954aea",
+  "proof_note_path": "docs/MaurerCartan-proof.md",
+  "proof_note_sha256": "e2d0b7e253533fc7e1fbcdda706e5bcc23d2c47da2cd9e5624ae62d5d5abfb6f",
+  "scope": "Local pulled-back matrix Maurer-Cartan equation over a finite-dimensional real normed associative algebra. f is C2 at x, g differentiable, gf=1 near x and fg=1 at x. No global Lie-group or bundled-form comparison is claimed.",
+  "unverified_mathematical_premises": [],
+  "application_hypotheses_discharged_by": [
+    "MathResearch.Spinor.ballSections_contDiffAt_two",
+    "MathResearch.Spinor.ballSection_inverse"
+  ],
+  "mathlib_inputs": [
+    "ContinuousLinearMap.fderiv_of_bilinear",
+    "ContDiffAt.isSymmSndFDerivAt",
+    "Filter.EventuallyEq.fderiv_eq",
+    "LinearMap.toContinuousLinearMap"
+  ],
+  "audit_rows": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM",
+      "kind": "definition-or-generated",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_1",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_10",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_11",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_12",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_13",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_14",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_15",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_16",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_17",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_18",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_2",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_3",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_4",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_5",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_6",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_7",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_8",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM._proof_9",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.algebraMulCLM_apply",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.fderiv_algebra_mul",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "MathResearch.Analysis.maurerCartan",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [],
+      "declaration": "_private.MathResearch.Analysis.MaurerCartan.0.MathResearch.Analysis._aux_MathResearch_Analysis_MaurerCartan___macroRules__private_MathResearch_Analysis_MaurerCartan_0_MathResearch_Analysis_termM_1",
+      "kind": "definition-or-generated",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [],
+      "declaration": "_private.MathResearch.Analysis.MaurerCartan.0.MathResearch.Analysis._aux_MathResearch_Analysis_MaurerCartan___unexpand_Matrix_1",
+      "kind": "definition-or-generated",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "_private.MathResearch.Analysis.MaurerCartan.0.MathResearch.Analysis.maurerCartan._abel_1_1",
+      "kind": "theorem",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    },
+    {
+      "axioms": [],
+      "declaration": "_private.MathResearch.Analysis.MaurerCartan.0.MathResearch.Analysis.termM",
+      "kind": "definition-or-generated",
+      "module": "MathResearch.Analysis.MaurerCartan",
+      "unexpected_axioms": []
+    }
+  ],
+  "full_audit_sha256": "2001ee84b35446f4c7c1b5b3caf10d200bd5409e3dff293def99dc75a4af8340",
+  "independent_correspondence_review": "pending"
+}
