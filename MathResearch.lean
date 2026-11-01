@@ -49,3 +49,5 @@ public import MathResearch.Spinor.DiscreteSeriesModel
 public import MathResearch.Spinor.DiscreteSeriesCoefficient
 
 public import MathResearch.Spinor.DiscreteSeriesVerified
+
+public import MathResearch.Hardy.Endpoint
