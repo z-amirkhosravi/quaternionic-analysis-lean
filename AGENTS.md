@@ -21,3 +21,13 @@ audit does not discharge theorem parameters or establish proof correspondence.
 Run the local verification and statement checks, retain actual output and input
 hashes, and distinguish author self-checks from independent review. Do not
 introduce visitor approval controls or human-gated verification.
+
+When the written proof invokes a standard theorem, invoke the corresponding
+named theorem in Lean. If it is missing from mathlib, keep its proof in a
+separate background module with its own exact statement and evidence. If that
+proof is not available, expose the theorem as an explicit hypothesis and label
+the research result conditional. Never insert a replacement background proof
+inside the research argument merely to obtain an unconditional result. Audit
+previous work for this boundary and maintain an internal list for separate
+expository articles. Do not expand the scope of a verification label beyond
+the actual specialized declaration.

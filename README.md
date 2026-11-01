@@ -146,3 +146,15 @@ This development is AI-assisted. Checking establishes the precise Lean
 statements from their definitions and admitted standard axioms. Correspondence
 with informal mathematics is explained separately; neither compilation nor
 an axiom audit can establish that correspondence by itself.
+
+## Concrete DS3–DS4 arguments, with explicit background hypotheses
+
+[DS3–DS4](docs/DS3-DS4.md) now instantiate the averaging and coefficient
+arguments on the actual polynomial and row Hilbert models, including genuine
+L² coefficients and closed invariant image. They remain **conditional** on the
+named mean-value and quotient-Haar theorems. Compact polynomial irreducibility
+and its Schur orthogonality formula are separately proved. The
+[standard-theorem inventory](docs/standard-theorems.md) and
+[proof correspondence](docs/DS3-DS4-proof-correspondence.md) keep the background
+proofs, open inputs and research argument distinct. No wiki publication is
+part of this development.
