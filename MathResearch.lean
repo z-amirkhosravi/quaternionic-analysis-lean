@@ -47,3 +47,5 @@ public import MathResearch.Spinor.RegularEvaluation
 public import MathResearch.Spinor.DiscreteSeriesModel
 
 public import MathResearch.Spinor.DiscreteSeriesCoefficient
+
+public import MathResearch.Spinor.DiscreteSeriesVerified

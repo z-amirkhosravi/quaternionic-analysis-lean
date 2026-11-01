@@ -2,14 +2,13 @@
 
 A Lean 4 library for Fueter regularity and quaternionic analysis, built on mathlib.
 
-Latest milestone: [DS2/v1](docs/DS2.md) verifies the regular Hilbert models,
-smooth harmonic representatives, and concrete strongly continuous unitary
-actions with the normalized intertwiner. The canonical compact-support
-continuity proof, all-order interior estimates/averaging, independent weak
-row equation and probability normalization are now supplied. See the
-[complete proof correspondence](docs/DS2-complete-proof-correspondence.md).
-DS3 and DS4 remain conditional. Earlier delivery records below retain their
-original scope.
+Latest milestone: [DS3–DS4](docs/DS3-DS4-verified.md) now have all named
+background inputs proved separately. The spherical and weighted mean-value
+theorems and normalized quotient-Haar theorem discharge the earlier premises.
+The original compact-averaging and Haar–Schur research arguments are preserved.
+[DS2](docs/DS2.md) already supplies the concrete strongly continuous Hilbert
+models and smooth harmonic representatives. Earlier delivery records below
+retain their historical scope; they do not describe the latest verification.
 
 - **F1, version 2:** both left and right regularity of the Cauchy–Fueter kernel
   and every real coordinate partial derivative.
@@ -94,7 +93,7 @@ are retained for compatibility with published theorem and definition links.
 This repository is the source for new development. Historical F1 wiki exports
 remain fixed to the exact sources and checking evidence of their release.
 
-The **DS2–DS4 development is partial and conditional**, not three further
+The **initial DS2–DS4 development was partial and conditional**, not three further
 verified wiki theorems. It proves the polynomial norm law, Möbius group laws
 and Jacobian, weighted change of variables, a nonzero complete weak Hilbert
 kernel, its normalized row isometry, and the exact C3/C7 intertwiner. DS3's
@@ -147,12 +146,13 @@ statements from their definitions and admitted standard axioms. Correspondence
 with informal mathematics is explained separately; neither compilation nor
 an axiom audit can establish that correspondence by itself.
 
-## Concrete DS3–DS4 arguments, with explicit background hypotheses
+## Historical conditional DS3–DS4 release
 
-[DS3–DS4](docs/DS3-DS4.md) now instantiate the averaging and coefficient
+[The earlier DS3–DS4 release](docs/DS3-DS4.md) instantiated the averaging and coefficient
 arguments on the actual polynomial and row Hilbert models, including genuine
-L² coefficients and closed invariant image. They remain **conditional** on the
-named mean-value and quotient-Haar theorems. Compact polynomial irreducibility
+L² coefficients and closed invariant image. Those signatures are **conditional** on the
+named mean-value and quotient-Haar theorems. The [current completion](docs/DS3-DS4-verified.md)
+supplies their separate proofs and exports unconditional final declarations. Compact polynomial irreducibility
 and its Schur orthogonality formula are separately proved. The
 [standard-theorem inventory](docs/standard-theorems.md) and
 [proof correspondence](docs/DS3-DS4-proof-correspondence.md) keep the background

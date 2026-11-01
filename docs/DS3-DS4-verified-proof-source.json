@@ -1,0 +1,24 @@
+{
+  "base_release": "377a46bd591ec859e5022183b4e252880aa104b8",
+  "proof_source": "docs/DS3-DS4-proof-source.json",
+  "proof_source_sha256": "9c8f01d00731765aeaaed5f7c48b5e49673c0b47f07827cfbb409b63abb8c9ff",
+  "background_proof_note": "docs/mean-value-quotient-haar-proofs.md",
+  "background_proof_note_sha256": "3073750d1d76ca067b7168e7a55f47d3bcf86d37f01991809403b42709bbc308",
+  "new_claims": {
+    "spherical": "MathResearch.Spinor.sphericalMeanValueOnBall_proved",
+    "radial": "MathResearch.Spinor.radialMeanValueOnBall_proved",
+    "haar": "MathResearch.Spinor.quotientHaarIntegration_proved",
+    "research": [
+      "MathResearch.Spinor.DS3_v1",
+      "MathResearch.Spinor.DS3_row_v1",
+      "MathResearch.Spinor.DS4_v1",
+      "MathResearch.Spinor.DS4_row_v1",
+      "MathResearch.Spinor.DS4_coefficient_formula"
+    ]
+  },
+  "unverified_external_mathematical_premises": [],
+  "research_argument_changed": false,
+  "background_proof_choice": "Weighted mean via rotation invariance and Fubini, with the earlier polar proof of probability normalization; detailed separately in the notes.",
+  "review_scope": "Author proof correspondence inspection, not independent review.",
+  "wiki_changed": false
+}
