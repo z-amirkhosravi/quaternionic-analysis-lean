@@ -56,16 +56,71 @@ theorem projected_full_homogeneous (m : ℕ) (q : ℍ) (p : BinaryForm (m + 1)) 
   simp [matrixColumn, he, smul_eq_C_mul, map_ofNat]
   ring
 
-/-- The second SC2 identity in polynomial column coordinates. -/
+/-- The real scalar removed from conjugate(v)q is the Euclidean inner product. -/
+theorem connectionCoefficient_eq_inner (q v : ℍ) :
+    connectionCoefficient q v = star v * q - (inner ℝ v q : ℍ) := by
+  rw [connectionCoefficient_eq]
+  congr 2
+  simp [Quaternion.inner_def]
+
+/-- Reconstruction in the real orthonormal basis 1,i,j,k. -/
+theorem coordinateBasis_inner_sum (q : ℍ) :
+    (∑ μ : Fin 4, (inner ℝ (Fueter.coordinateBasis μ) q) • Fueter.coordinateBasis μ) = q := by
+  ext <;> simp [Fueter.coordinateBasis_eq, Fin.sum_univ_succ, Quaternion.inner_def]
+
+theorem infinitesimal_quaternion_sub (a b : ℍ) (p : ComplexPoly2) :
+    infinitesimal (quaternionMatrix (a - b)) p =
+      infinitesimal (quaternionMatrix a) p - infinitesimal (quaternionMatrix b) p := by
+  have h := quaternionMatrixHom.map_sub a b
+  change quaternionMatrix (a - b) = quaternionMatrix a - quaternionMatrix b at h
+  rw [h]
+  simp [infinitesimal, substitution, sub_mul]
+  ring
+
+/-- The scalar correction in L11, reconstructed before using homogeneity. -/
+theorem matrixColumn_inner_sum (q : ℍ) (h : Fin 2 → ComplexPoly2) (i : Fin 2) :
+    (∑ μ : Fin 4, (inner ℝ (Fueter.coordinateBasis μ) q : ℂ) •
+      matrixColumn (quaternionMatrix (Fueter.coordinateBasis μ)) h i) =
+      matrixColumn (quaternionMatrix q) h i := by
+  have hs : (∑ μ : Fin 4, (inner ℝ (Fueter.coordinateBasis μ) q : ℂ) •
+      quaternionMatrix (Fueter.coordinateBasis μ)) = quaternionMatrix q := by
+    calc
+      _ = ∑ μ : Fin 4, quaternionMatrix ((inner ℝ (Fueter.coordinateBasis μ) q) •
+          Fueter.coordinateBasis μ) := by simp only [quaternionMatrix_real_smul]
+      _ = quaternionMatrixHom (∑ μ : Fin 4, (inner ℝ (Fueter.coordinateBasis μ) q) •
+          Fueter.coordinateBasis μ) := (map_sum quaternionMatrixHom _ _).symm
+      _ = _ := congrArg quaternionMatrix (coordinateBasis_inner_sum q)
+  have hi := congrArg (fun M => matrixColumn M h i) hs
+  simpa [matrixColumn, Matrix.sum_apply, Matrix.smul_apply, smul_eq_mul,
+    smul_eq_C_mul, Finset.sum_add_distrib, Finset.sum_mul,
+    map_sum, map_mul, mul_assoc, mul_add] using hi
+
+/-- The second SC2 identity: L9 minus the degree-n scalar action, as in L11. -/
 theorem projected_connection_homogeneous (m : ℕ) (q : ℍ) (p : BinaryForm (m + 1)) (i : Fin 2) :
     (∑ μ : Fin 4, matrixColumn (quaternionMatrix (Fueter.coordinateBasis μ))
       (fun j => pderiv j (infinitesimal (quaternionMatrix (connectionCoefficient q (Fueter.coordinateBasis μ))) p)) i) =
     (m + 3 : ℂ) • matrixColumn (quaternionMatrix q) (fun j => pderiv j (p : ComplexPoly2)) i := by
-  rw [projected_connection_identity]
-  have he (j : Fin 2) : euler (pderiv j (p : ComplexPoly2)) = (m : ℂ) • pderiv j (p : ComplexPoly2) :=
-    euler_homogeneous m (derivative m j p)
-  simp [matrixColumn, he, smul_eq_C_mul, map_ofNat]
-  ring
+  have hsplit (v : ℍ) :
+      infinitesimal (quaternionMatrix (connectionCoefficient q v)) p =
+        infinitesimal (quaternionMatrix (star v * q)) p -
+        ((m + 1 : ℂ) * (inner ℝ v q : ℂ)) • (p : ComplexPoly2) := by
+    rw [connectionCoefficient_eq_inner, infinitesimal_quaternion_sub, infinitesimal_real]
+    simp
+  calc
+    _ = (∑ μ : Fin 4, matrixColumn (quaternionMatrix (Fueter.coordinateBasis μ))
+          (fun j => pderiv j (infinitesimal (quaternionMatrix (star (Fueter.coordinateBasis μ) * q)) p)) i) -
+        (m + 1 : ℂ) • (∑ μ : Fin 4, (inner ℝ (Fueter.coordinateBasis μ) q : ℂ) •
+          matrixColumn (quaternionMatrix (Fueter.coordinateBasis μ)) (fun j => pderiv j (p : ComplexPoly2)) i) := by
+      simp only [hsplit, map_sub, Finset.smul_sum, smul_smul,
+        ← Finset.sum_sub_distrib]
+      apply Finset.sum_congr rfl
+      intro μ _
+      simp [matrixColumn, smul_eq_C_mul]
+      ring
+    _ = _ := by
+      rw [projected_full_homogeneous, matrixColumn_inner_sum, ← sub_smul]
+      congr 1
+      ring
 
 /-- Taking a coefficient commutes with the matrix action, using left quaternion multiplication. -/
 theorem matrixColumn_pack_coeff (q : ℍ) (h : Fin 2 → ComplexPoly2) (d : Fin 2 →₀ ℕ) :

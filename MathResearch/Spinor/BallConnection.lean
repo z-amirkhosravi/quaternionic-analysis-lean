@@ -1,5 +1,6 @@
 module
 public import MathResearch.Spinor.ProjectedConnection
+public import MathResearch.Analysis.MaurerCartan
 public import MathResearch.Fueter.Kernel
 public import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
 public import Mathlib.Analysis.SpecialFunctions.Sqrt
@@ -9,7 +10,7 @@ public import Mathlib.Analysis.Matrix.Normed
 @[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
-open scoped Quaternion BigOperators Matrix.Norms.Elementwise
+open scoped Quaternion BigOperators Matrix.Norms.Elementwise Topology
 namespace MathResearch.Spinor
 
 local instance : StarModule ℝ ℍ where
@@ -58,19 +59,6 @@ def ballCurvature (q v w : ℍ) : ℍ :=
   fderiv ℝ (fun x => ballConnection x w) q v -
   fderiv ℝ (fun x => ballConnection x v) q w +
   (ballConnection q v * ballConnection q w - ballConnection q w * ballConnection q v)
-
-theorem ballCurvature_eq (q v w : ℍ) (hq : q ∈ Ball) :
-    ballCurvature q v w = -(ballScale q)⁻¹ ^ 2 • (star v * w - star w * v) := by
-  rw [ballCurvature, fderiv_ballConnection q v w hq, fderiv_ballConnection q w v hq]
-  have hs : ballScale q ≠ 0 := ne_of_gt hq
-  ext <;> simp [ballConnection, connectionCoefficient, Quaternion.inner_def,
-    Quaternion.normSq_def', ballScale, div_eq_mul_inv] at * <;>
-    field_simp <;> ring
-
-/-- The curvature does not vanish even at the origin. -/
-theorem ballCurvature_origin : ballCurvature 0 1 (⟨0, 1, 0, 0⟩ : ℍ) = ⟨0, -2, 0, 0⟩ := by
-  rw [ballCurvature_eq _ _ _ (by simp [Ball, ballScale])]
-  ext <;> norm_num [ballScale]
 
 /-- ξ_v is a quaternionic 2×2 matrix, not the quaternion v. -/
 def tangentMatrix (v : ℍ) : QuaternionMatrix2 := !![0, v; star v, 0]
@@ -145,5 +133,78 @@ theorem ballSection_maurerCartan (q v : ℍ) (hq : q ∈ Ball) :
     field_simp [hs, hs0] <;>
     simp only [show (4 : ℕ) = 2 * 2 from rfl, pow_mul, hs2] <;>
     simp [ballScale, Quaternion.normSq_def'] <;> ring_nf <;> simp
+
+/-- The regularity hypotheses for the Maurer–Cartan equation on the ball. -/
+theorem ballSections_contDiffAt_two (q : ℍ) (hq : q ∈ Ball) :
+    ContDiffAt ℝ 2 ballSection q ∧ ContDiffAt ℝ 2 ballSectionInverse q := by
+  have hs : ContDiff ℝ 2 ballScale := by
+    have hn : ContDiff ℝ 2 (Quaternion.normSq : ℍ → ℝ) := by
+      simpa only [id_eq, Quaternion.inner_self] using!
+        (contDiff_id.inner ℝ contDiff_id : ContDiff ℝ 2 (fun x : ℍ => inner ℝ x x))
+    exact contDiff_const.sub hn
+  have hr := (hs.contDiffAt.sqrt (ne_of_gt hq)).inv (Real.sqrt_pos.mpr hq).ne'
+  constructor
+  · have hb : ContDiffAt ℝ 2 (fun x : ℍ => (1 : QuaternionMatrix2) + tangentCLM x) q :=
+      contDiffAt_const.add tangentCLM.contDiff.contDiffAt
+    convert! hr.smul hb using 1
+    funext x
+    apply Matrix.ext; intro i j
+    fin_cases i <;> fin_cases j <;> simp [ballSection, tangentMatrix]
+  · have hb : ContDiffAt ℝ 2 (fun x : ℍ => (1 : QuaternionMatrix2) - tangentCLM x) q :=
+      contDiffAt_const.sub tangentCLM.contDiff.contDiffAt
+    convert! hr.smul hb using 1
+    funext x
+    apply Matrix.ext; intro i j
+    fin_cases i <;> fin_cases j <;> simp [ballSectionInverse, tangentMatrix]
+
+/-- L6 is the lower-right block of Maurer–Cartan, using the full L4 form. -/
+theorem ballCurvature_eq (q v w : ℍ) (hq : q ∈ Ball) :
+    ballCurvature q v w = -(ballScale q)⁻¹ ^ 2 • (star v * w - star w * v) := by
+  let θ (x u : ℍ) : QuaternionMatrix2 := ballSectionInverse x * fderiv ℝ ballSection x u
+  let e : QuaternionMatrix2 →L[ℝ] ℍ :=
+    (ContinuousLinearMap.proj (R := ℝ) (φ := fun _ : Fin 2 => ℍ) 1).comp
+      (ContinuousLinearMap.proj (R := ℝ) (φ := fun _ : Fin 2 => Fin 2 → ℍ) 1)
+  have hf := (ballSections_contDiffAt_two q hq).1
+  have hg := (ballSections_contDiffAt_two q hq).2.differentiableAt (by norm_num)
+  have hgf : (fun x => ballSectionInverse x * ballSection x) =ᶠ[𝓝 q] fun _ => 1 := by
+    filter_upwards [ball_isOpen.mem_nhds hq] with x hx
+    exact (ballSection_inverse x hx).1
+  have hmc := MathResearch.Analysis.maurerCartan hf hg hgf (ballSection_inverse q hq).2 v w
+  change fderiv ℝ (fun x => θ x w) q v - fderiv ℝ (fun x => θ x v) q w +
+    (θ q v * θ q w - θ q w * θ q v) = 0 at hmc
+  have hd (u : ℍ) : DifferentiableAt ℝ (fun x => θ x u) q := by
+    have hd2 : DifferentiableAt ℝ (fderiv ℝ ballSection) q :=
+      (hf.fderiv_right (m := 1) (by norm_num)).differentiableAt (by norm_num)
+    exact (MathResearch.Analysis.algebraMulCLM.hasFDerivAt_of_bilinear hg.hasFDerivAt
+      (hd2.clm_apply (differentiableAt_const u)).hasFDerivAt).differentiableAt
+  have he (u z : ℍ) : e (fderiv ℝ (fun x => θ x u) q z) =
+      fderiv ℝ (fun x => ballConnection x u) q z := by
+    have hlocal : (fun x => e (θ x u)) =ᶠ[𝓝 q] (fun x => ballConnection x u) := by
+      filter_upwards [ball_isOpen.mem_nhds hq] with x hx
+      change (ballSectionInverse x * fderiv ℝ ballSection x u) 1 1 = ballConnection x u
+      rw [ballSection_maurerCartan x u hx]
+      rfl
+    have hder := (e.hasFDerivAt.comp q (hd u).hasFDerivAt).fderiv
+    exact (congrArg (fun L : ℍ →L[ℝ] ℍ => L z) hder).symm.trans
+      (congrArg (fun L : ℍ →L[ℝ] ℍ => L z) hlocal.fderiv_eq)
+  have h := congrArg e hmc
+  simp only [map_add, map_sub, map_zero, he] at h
+  have hblock (u z : ℍ) : e (θ q u * θ q z) =
+      (ballScale q)⁻¹ ^ 2 • (star u * z) + ballConnection q u * ballConnection q z := by
+    change (θ q u * θ q z) 1 1 = _
+    simp only [θ, ballSection_maurerCartan q u hq, ballSection_maurerCartan q z hq,
+      Matrix.mul_apply, Fin.sum_univ_two]
+    simp [ballConnection, smul_smul, pow_two]
+  rw [hblock v w, hblock w v] at h
+  unfold ballCurvature
+  rw [neg_smul, smul_sub]
+  apply eq_neg_of_add_eq_zero_left
+  convert h using 1
+  abel
+
+/-- The curvature does not vanish even at the origin. -/
+theorem ballCurvature_origin : ballCurvature 0 1 (⟨0, 1, 0, 0⟩ : ℍ) = ⟨0, -2, 0, 0⟩ := by
+  rw [ballCurvature_eq _ _ _ (by simp [Ball, ballScale])]
+  ext <;> norm_num [ballScale]
 
 end MathResearch.Spinor
