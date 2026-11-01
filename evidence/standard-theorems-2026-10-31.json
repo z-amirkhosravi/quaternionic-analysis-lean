@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "source_revision": "c226b8203da602a2415338e98ecb91c9374315a9",
+  "audit_path": "evidence/DS3-DS4-conditional-2026-10-31.json",
+  "audit_sha256": "53e1662fce625d4ca63d6ec537e4fc72d27a72b565a35eed56ff9fcf3df1af86",
+  "status": "claim_specific_index_of_passed_audit",
+  "verified_background_claims": [
+    {
+      "title": "Weyl regularity on the unit ball",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "Any complete real normed target for the first theorem; finite-dimensional Weyl interface for the second.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.smooth_harmonic_representative",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.WeylRegularity",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.weylRegularityOnBall",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.WeylRegularity",
+          "unexpected_axioms": []
+        }
+      ]
+    },
+    {
+      "title": "Interior estimates and Bochner averaging",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "All finite lists of real directions in the weighted unit-ball model; Bochner integrability required for averaging.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.harmonicPartials_test_formula",
+          "kind": "theorem",
+          "module": "MathResearch.Analysis.HarmonicPartials",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.regularPartials_bound",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.InteriorEvaluation",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.regularPartials_integral",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.InteriorEvaluation",
+          "unexpected_axioms": []
+        }
+      ]
+    },
+    {
+      "title": "Interior compact-support density",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "Weighted quaternionic ball; compact topological support contained in the open ball.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.dense_compactContinuousBallClasses",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.CompactDensity",
+          "unexpected_axioms": []
+        }
+      ]
+    },
+    {
+      "title": "Compact polynomial irreducibility",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "Actual quaternionic homogeneous binary forms in every positive degree; n=0 not included.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.compactPolynomial_irreducible",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.CompactIrreducible",
+          "unexpected_axioms": []
+        }
+      ]
+    },
+    {
+      "title": "Compact scalar commutant and Schur orthogonality",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "Positive-degree quaternionic polynomial representations with normalized compact Haar; not a general compact-group theorem.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.compactPolynomial_commutant_scalar",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.CompactSchur",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.compactPolynomial_schur",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.CompactSchur",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.compactSchurInput_proved",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.CompactSchur",
+          "unexpected_axioms": []
+        }
+      ]
+    },
+    {
+      "title": "Abstract Hilbert compact-averaging criterion",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "Abstract criterion with four explicit inputs; not an unconditional instance of the quaternionic DS3 statement.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.DS3_irreducible_of_compactAveraging",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.CompactAveraging",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.DS3_dense_translateSpan",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.CompactAveraging",
+          "unexpected_axioms": []
+        }
+      ]
+    },
+    {
+      "title": "Polynomial norm scaling and unitarity",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "Explicit quaternionic polynomial representation and binomial norm, all degrees.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.quaternionAction_norm",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.PolynomialUnitary",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Spinor.unitQuaternionAction_norm",
+          "kind": "theorem",
+          "module": "MathResearch.Spinor.PolynomialUnitary",
+          "unexpected_axioms": []
+        }
+      ]
+    },
+    {
+      "title": "Quaternionic map onto SO(4) and its kernel",
+      "status": "kernel_checked_in_exact_scope",
+      "scope": "Surjectivity and two-element kernel; no topological covering-space assertion. Cartan–Dieudonné imported from mathlib.",
+      "declarations": [
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Fueter.quaternionSpinCover_surjective",
+          "kind": "theorem",
+          "module": "MathResearch.Fueter.QuaternionRotations",
+          "unexpected_axioms": []
+        },
+        {
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "declaration": "MathResearch.Fueter.quaternionRotation_kernel",
+          "kind": "theorem",
+          "module": "MathResearch.Fueter.QuaternionRotations",
+          "unexpected_axioms": []
+        }
+      ]
+    }
+  ],
+  "unverified_named_inputs": [
+    "MathResearch.Spinor.SphericalMeanValueOnBall",
+    "MathResearch.Spinor.RadialMeanValueOnBall",
+    "MathResearch.Spinor.QuotientHaarIntegration"
+  ],
+  "complete_research_targets_added": [],
+  "interpretation": "Each verified item is restricted to its Lean signature. Article attribution/publication and independent review are separate. Axiom checks do not discharge hypotheses.",
+  "inventory_sha256": "c4fd501321ec4f060753d239f09fef8b8bf28d73182a4e245caa783fdd35c836",
+  "boundary_audit_sha256": "4502a704af05161200c9a8eb62fdd296b3c4af987568e85df90e8e8052b8cc1a"
+}
